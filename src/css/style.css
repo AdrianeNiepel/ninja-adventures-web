@@ -141,42 +141,42 @@ h6, .h6 {
 }
 
 .btn-primary {
-  background: blue;
+  background: #c2bf19;
   color: #fff;
 }
 .btn-primary::before {
   background: #fff;
 }
 .btn-primary:active {
-  background: blue !important;
-  color: blue;
+  background: #c2bf19 !important;
+  color: #c2bf19;
 }
 .btn-primary:active::before {
   height: 80%;
 }
 .btn-primary:hover {
-  background: #0000cc;
-  color: blue;
+  background: #959313;
+  color: #c2bf19;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0000cc;
-  border-color: #0000cc;
+  background-color: #959313;
+  border-color: #959313;
 }
 
 .btn-secondary {
   background: #fff;
-  color: blue;
+  color: #c2bf19;
   border: 1px solid #fff;
 }
 .btn-secondary::before {
-  background: blue;
+  background: #c2bf19;
 }
 .btn-secondary:active {
-  background: blue;
+  background: #c2bf19;
   color: #fff;
   border: 1px solid #fff;
 }
@@ -187,19 +187,19 @@ h6, .h6 {
 }
 
 .btn-primary-outline {
-  border: 1px solid blue;
-  color: blue;
+  border: 1px solid #c2bf19;
+  color: #c2bf19;
   background: transparent;
 }
 .btn-primary-outline::before {
   background: #fff;
 }
 .btn-primary-outline:hover {
-  background: blue;
-  color: blue;
+  background: #c2bf19;
+  color: #c2bf19;
 }
 .btn-primary-outline:active {
-  background: blue;
+  background: #c2bf19;
   color: #fff;
 }
 
@@ -209,7 +209,7 @@ body {
 }
 
 ::selection {
-  background: #3333ff;
+  background: #e4e02a;
   color: #fff;
 }
 
@@ -257,15 +257,15 @@ select:focus {
 }
 
 a:hover {
-  color: blue;
+  color: #c2bf19;
 }
 
 a.text-primary:hover {
-  color: blue !important;
+  color: #c2bf19 !important;
 }
 
 a.text-light:hover {
-  color: blue !important;
+  color: #c2bf19 !important;
 }
 
 h4 {
@@ -273,7 +273,7 @@ h4 {
 }
 
 a h4:hover {
-  color: blue;
+  color: #c2bf19;
 }
 
 .slick-slide {
@@ -313,7 +313,7 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background: #1a1a37;
+  background: #00495b;
   opacity: 0.8;
 }
 
@@ -326,11 +326,11 @@ a h4:hover {
 }
 
 .bg-primary {
-  background: blue !important;
+  background: #c2bf19 !important;
 }
 
 .bg-secondary {
-  background: #1a1a37 !important;
+  background: #00495b !important;
 }
 
 .bg-gray {
@@ -338,7 +338,7 @@ a h4:hover {
 }
 
 .text-primary {
-  color: blue !important;
+  color: #c2bf19 !important;
 }
 
 .text-color {
@@ -461,7 +461,7 @@ a h4:hover {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: blue;
+  background: #c2bf19;
   left: -25px;
   top: 5px;
 }
@@ -487,34 +487,34 @@ textarea.form-control {
 }
 
 .navigation {
-  background: linear-gradient(to right, transparent 50%, blue 50%);
+  background: linear-gradient(to right, transparent 50%, #c2bf19 50%);
   transition: 0.2s ease;
 }
 @media (max-width: 991px) {
   .navigation {
-    background: #1a1a37;
+    background: #00495b;
   }
 }
 
 @media (max-width: 991px) {
   .navbar-collapse {
-    background: #1a1a37;
+    background: #00495b;
   }
 }
 
 .navbar-nav {
   padding-left: 50px;
-  background: blue;
+  background: #c2bf19;
 }
 @media (max-width: 991px) {
   .navbar-nav {
     padding-left: 0;
-    background: #1a1a37;
+    background: #00495b;
   }
 }
 
 .nav-bg {
-  background-color: #1a1a37;
+  background-color: #00495b;
 }
 
 .nav-item {
@@ -583,7 +583,7 @@ link:focus,
 }
 .navbar .dropdown-menu {
   box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.12);
-  border-bottom: 5px solid blue;
+  border-bottom: 5px solid #c2bf19;
   padding: 15px;
   top: 96px;
   border-radius: 0;
@@ -628,7 +628,7 @@ link:focus,
   margin-bottom: 10px;
 }
 .navbar .dropdown-item:hover {
-  color: blue;
+  color: #c2bf19;
   background: transparent;
 }
 
@@ -654,7 +654,7 @@ link:focus,
 }
 .hero-slider .prevArrow:hover,
 .hero-slider .nextArrow:hover {
-  color: blue;
+  color: #c2bf19;
 }
 .hero-slider .prevArrow {
   right: 60px;
@@ -673,7 +673,7 @@ link:focus,
   margin: 0 6px;
 }
 .hero-slider .slick-dots li.slick-active button {
-  background: blue;
+  background: #c2bf19;
 }
 .hero-slider .slick-dots li button {
   color: transparent;
@@ -689,7 +689,7 @@ link:focus,
 /* banner feature */
 .feature-icon {
   font-size: 50px;
-  color: blue;
+  color: #c2bf19;
   display: inline-block;
 }
 
@@ -765,7 +765,7 @@ link:focus,
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background: blue;
+  background: #c2bf19;
   color: #fff;
   font-size: 20px;
   text-align: center;
@@ -793,7 +793,7 @@ link:focus,
   height: 80%;
   width: 80%;
   transform: translate(-50%, -50%);
-  background: blue;
+  background: #c2bf19;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -815,7 +815,7 @@ link:focus,
 /* events */
 .card-date {
   position: absolute;
-  background: blue;
+  background: #c2bf19;
   font-family: "futura-bold";
   text-align: center;
   padding: 10px;
@@ -839,7 +839,7 @@ link:focus,
 /* /teacher */
 /* footer */
 .newsletter {
-  background-image: linear-gradient(to right, transparent 50%, blue 50%);
+  background-image: linear-gradient(to right, transparent 50%, #c2bf19 50%);
   margin-bottom: -170px;
   position: relative;
   z-index: 1;
@@ -870,7 +870,7 @@ link:focus,
   padding-left: 25px;
 }
 .form-control:focus {
-  border-color: blue;
+  border-color: #c2bf19;
   box-shadow: none;
 }
 
@@ -899,10 +899,10 @@ link:focus,
 }
 .filter-controls li.active {
   font-weight: 600;
-  color: blue;
+  color: #c2bf19;
 }
 .filter-controls li:hover {
-  color: blue;
+  color: #c2bf19;
 }
 
 /*# sourceMappingURL=style.css.map */
