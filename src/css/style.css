@@ -313,7 +313,7 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background: #00495b;
+  background: #3f2c5f;
   opacity: 0.8;
 }
 
@@ -330,7 +330,7 @@ a h4:hover {
 }
 
 .bg-secondary {
-  background: #00495b !important;
+  background: #3f2c5f !important;
 }
 
 .bg-gray {
@@ -492,13 +492,13 @@ textarea.form-control {
 }
 @media (max-width: 991px) {
   .navigation {
-    background: #00495b;
+    background: #3f2c5f;
   }
 }
 
 @media (max-width: 991px) {
   .navbar-collapse {
-    background: #00495b;
+    background: #3f2c5f;
   }
 }
 
@@ -509,12 +509,12 @@ textarea.form-control {
 @media (max-width: 991px) {
   .navbar-nav {
     padding-left: 0;
-    background: #00495b;
+    background: #3f2c5f;
   }
 }
 
 .nav-bg {
-  background-color: #00495b;
+  background-color: #3f2c5f;
 }
 
 .nav-item {
@@ -879,7 +879,7 @@ link:focus,
 }
 
 .bg-footer {
-  background-color: #182b45;
+  background-color: #3f2c5f;
 }
 
 .logo-footer {
