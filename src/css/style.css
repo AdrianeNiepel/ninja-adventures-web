@@ -383,6 +383,10 @@ a h4:hover {
   max-width: 30%;
 }
 
+.maxwidth-30 {
+  max-width: 40%;
+}
+
 .mb-10 {
   margin-bottom: 10px !important;
 }
