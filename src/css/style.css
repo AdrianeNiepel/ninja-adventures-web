@@ -220,7 +220,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FFDC11;
+  background-color: #3f2c5f;
   z-index: 999999;
   display: flex;
   align-items: center;
@@ -369,6 +369,10 @@ a h4:hover {
 
 .text-dark {
   color: #1e1e4b !important;
+}
+
+.text-dark-Ninja {
+  color: #3f2c5f !important;
 }
 
 .font-secondary {
