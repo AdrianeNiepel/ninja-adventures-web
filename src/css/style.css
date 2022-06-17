@@ -360,6 +360,7 @@ a h4:hover {
 
 .justify-center-Ninja {
   justify-content: center;
+  margin: 5px;
 }
 
 .text-muted {
@@ -372,6 +373,14 @@ a h4:hover {
 
 .font-secondary {
   font-family: "futura-bold";
+}
+
+.maxwidth-10 {
+  max-width: 10%;
+}
+
+.maxwidth-30 {
+  max-width: 30%;
 }
 
 .mb-10 {
