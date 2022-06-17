@@ -355,7 +355,11 @@ a h4:hover {
 
 .text-lighten-Ninja {
   font-size: 12px !important;
-  color: #d6d6e0 !important;
+  color: #aeaeb1 !important;
+}
+
+.justify-center-Ninja {
+  justify-content: center;
 }
 
 .text-muted {
