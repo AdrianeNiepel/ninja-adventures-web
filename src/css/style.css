@@ -379,6 +379,12 @@ a h4:hover {
   font-family: "futura-bold";
 }
 
+.img-responisve {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
 .maxheight-25 {
   max-height: 25%;
 }

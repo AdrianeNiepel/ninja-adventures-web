@@ -175,6 +175,12 @@ a h4{
 .font-secondary {
   font-family: $secondary-font;
 }
+
+.img-responisve{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
 .maxheight-25{
   max-height: 25%;
 }
