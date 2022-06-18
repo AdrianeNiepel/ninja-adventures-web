@@ -379,6 +379,10 @@ a h4:hover {
   font-family: "futura-bold";
 }
 
+.w-30 {
+  width: 30% !important;
+}
+
 .img-responisve {
   width: 35%;
   max-width: 250px;
