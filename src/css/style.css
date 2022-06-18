@@ -379,12 +379,24 @@ a h4:hover {
   font-family: "futura-bold";
 }
 
+.maxheight-25 {
+  max-height: 25%;
+}
+
+.maxheight-40 {
+  max-height: 40%;
+}
+
 .maxwidth-10 {
   max-width: 10%;
 }
 
 .maxwidth-30 {
   max-width: 30%;
+}
+
+.maxwidth-35 {
+  max-width: 35%;
 }
 
 .maxwidth-40 {
