@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>http://www.ninjaadventures.de/index.html</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+<url>
+  <loc>http://www.ninjaadventures.de/karten/werteadventurebasis/wertereise-karten.html</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+<url>
+  <loc>http://www.ninjaadventures.de/kurs_erwecke_den_ninja_in_dir.html</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+<url>
+  <loc>http://www.ninjaadventures.de/about.html</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+<url>
+  <loc>http://www.ninjaadventures.de/kontakt.html</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+<url>
+  <loc>http://www.ninjaadventures.de/impressum.html</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+<url>
+  <loc>http://www.ninjaadventures.de/datenschutz.html</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+
+<url>
+  <loc>http://www.ninjaadventures.de/@@page-link</loc>
+  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-17</lastmod>
+</url>
+</urlset>
