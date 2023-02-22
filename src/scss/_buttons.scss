@@ -125,3 +125,47 @@
     color: $white;
   }
 }
+
+.btn-third {
+  background: $primary-color;
+  color: $secondary-color;
+  border: 1px solid $primary-color;
+
+  &::before {
+    background: $white;
+  }
+
+  &:active {
+    background: $white;
+    color: $secondary-color;
+    border: 1px solid $primary-color;
+  }
+
+  &:hover {
+    background: $primary-color;
+    color: $secondary-color;
+    border: 1px solid $primary-color;
+  }
+}
+
+.btn-dark {
+  background: $secondary-color;
+  color: $white;
+  border: 1px solid $secondary-color;
+
+  &::before {
+    background: $white;
+  }
+
+  &:active {
+    background: $white;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+  }
+
+  &:hover {
+    background: $secondary-color;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+  }
+}
