@@ -32,9 +32,16 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-  <script type="application/javascript" src="https://app.usercentrics.eu/latest/main.js" id="TodeXqsbp"></script>
-  <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
- <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+  <!--Cookie Banner-->
+  <link rel="preconnect" href="//app.eu.usercentrics.eu">
+<link rel="preconnect" href="//api.eu.usercentrics.eu">
+<link rel="preconnect" href="//sdp.eu.usercentrics.eu">
+<link rel="preload" href="//app.eu.usercentrics.eu/browser-ui/latest/loader.js" as="script">
+<link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+  <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="TodeXqsbp" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
+  <script type="application/javascript" src="https://sdp.eu.usercentrics.eu/latest/uc-block.bundle.js"></script>
+  <!-- <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
+<script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script> -->
  
  
    <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -396,8 +403,8 @@
         <div class="col-sm-7 text-sm-left text-center">
           <a class="text-color" href="../../impressum.html">Impressum</a> | <a class="text-color" href="../../datenschutz.html">Datenschutz</a> | <a class="text-color" href="../../kontakt.html">Kontakt</a> | 
    
-          <a class="text-color" href="../../#uc-corner-modal-show">Cookie-Einstellungen</a>
-      
+          <a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a>
+          
            
           <p class="mb-0">Copyright
             <script>
