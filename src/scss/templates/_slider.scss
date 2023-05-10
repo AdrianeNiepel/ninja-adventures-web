@@ -62,3 +62,38 @@
     }
   }
 }
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: 50px;
+  @include mobile {
+    font-size: 40px;
+  }
+  color: $primary-color;
+  line-height: 1.2;
+  font-family: $primary-font;
+  font-weight: 700;
+ 
+}
+.counter span {
+  padding: 0 20px;
+}
+
+
+.counterdescription {
+  display: flex;
+  justify-content: center;
+  color: $primary-color;
+  font-size: 20px;
+  @include mobile {
+    font-size: 18px;
+  }
+ 
+}
+
+.counterdescription span {
+  padding: 0 20px;
+}

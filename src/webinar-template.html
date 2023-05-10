@@ -36,8 +36,8 @@
   <link rel="preconnect" href="//app.eu.usercentrics.eu">
 <link rel="preconnect" href="//api.eu.usercentrics.eu">
 <link rel="preconnect" href="//sdp.eu.usercentrics.eu">
-<link rel="preload" href="//app.eu.usercentrics.eu/browser-ui/latest/loader.js" as="script">
-<link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+<!-- <link rel="preload" href="//app.eu.usercentrics.eu/browser-ui/latest/loader.js" as="script">
+<link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script">  -->
   <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="TodeXqsbp" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
   <script type="application/javascript" src="https://sdp.eu.usercentrics.eu/latest/uc-block.bundle.js"></script>
   <!-- <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
@@ -53,6 +53,30 @@
  
    gtag('config', 'G-GLNHKGE6K6');
  </script> 
+
+ <!-- <style>
+ 
+  .counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    
+    h6 text-primary font-secondary
+    /* font-size: 80px; */
+    /* margin-bottom: 20px; */
+  }
+  
+  .description {
+    display: flex;
+    justify-content: center;
+    /* font-size: 30px; */
+    /* font-family: sans-serif; */
+  }
+  .description span {
+    padding: 0 20px;
+  }
+</style> -->
 </head>
 
 <body>
@@ -125,7 +149,57 @@
       </div>
       <div class="col-md-6 order-1 order-md-2 ">
         <p>
-          <iframe src="https://free.timeanddate.com/countdown/i8ubtzfj/n311/cf100/cm0/cu4/ct5/cs1/cace4d550/co0/cr0/ss0/cace4d550/cpc3f2c5f/pcfff/tcfff/fs300/szw448/szh189/iso2023-05-26T12:30:00" allowtransparency="true" frameborder="0" width="448" height="189"></iframe>
+          <!-- <iframe src="https://free.timeanddate.com/countdown/i8ubtzfj/n311/cf100/cm0/cu4/ct5/cs1/cace4d550/co0/cr0/ss0/cace4d550/cpc3f2c5f/pcfff/tcfff/fs300/szw448/szh189/iso2023-05-26T12:30:00" allowtransparency="true" frameborder="0" width="448" height="189"></iframe> -->
+
+          <div class="counter">
+            <span id="days">00</span>:
+            <span id="hours">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+          </div>
+          <div class="counterdescription">
+            <span>Tage</span>
+            <span>Stunden</span>
+            <span>Minuten</span>
+            <span>Sekunden</span>
+          </div>
+        
+          <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("May 26, 2023 12:30:00 GMT+0200").getTime();
+        
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+        
+              // Get today's date and time
+              var now = new Date().getTime();
+        
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+        
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+              // Display the result in the element with id="demo"
+              document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+              document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+              document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+              document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        
+              // If the count down is finished, write some text
+              if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".counter").innerHTML = "<h2>Dieses Event ist leider vorbei!</h2>";
+                document.querySelector(".description").style.display = "none";
+              }
+            }, 1000);
+          </script>
+
+        </br></br>
+
 
 
           <!-- <h6 class="section-title">Was jede vielseitige Frau im Hamsterrad wissen sollte:</h3> -->

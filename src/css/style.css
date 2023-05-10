@@ -855,6 +855,43 @@ link:focus,
   outline: 0;
 }
 
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: 50px;
+  color: #e4d550ff;
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+@media (max-width: 575px) {
+  .counter {
+    font-size: 40px;
+  }
+}
+
+.counter span {
+  padding: 0 20px;
+}
+
+.counterdescription {
+  display: flex;
+  justify-content: center;
+  color: #e4d550ff;
+  font-size: 20px;
+}
+@media (max-width: 575px) {
+  .counterdescription {
+    font-size: 18px;
+  }
+}
+
+.counterdescription span {
+  padding: 0 20px;
+}
+
 /* banner feature */
 .feature-icon {
   font-size: 50px;
