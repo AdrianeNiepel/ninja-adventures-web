@@ -4,13 +4,14 @@
   font-family: $primary-font;
   text-transform: capitalize;
   padding: 15px 40px;
-  border-radius: 0;
+  border-radius: 5px;
   font-weight: 500;
   border: 0;
   position: relative;
   z-index: 1;
   transition: .2s ease;
   overflow: hidden;
+  
 
   &::before {
     position: absolute;
