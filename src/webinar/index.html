@@ -172,7 +172,7 @@
       <!-- </div> -->
       <div class="col-md-12 order-1 order-md-2 ">
         <p>
-          <h3 class="section-title">Montag, 24. July 2023, 19:30 Uhr</h3> 
+          <h3 class="section-title">Donnerstag, 27. July 2023, 19:00 Uhr</h3> 
           <!-- <iframe src="https://free.timeanddate.com/countdown/i8ubtzfj/n311/cf100/cm0/cu4/ct5/cs1/cace4d550/co0/cr0/ss0/cace4d550/cpc3f2c5f/pcfff/tcfff/fs300/szw448/szh189/iso2023-05-26T12:30:00" allowtransparency="true" frameborder="0" width="448" height="189"></iframe> -->
 
           <div class="counter">
@@ -182,7 +182,7 @@
             <span id="minutes">00</span>:
             <span id="seconds">00</span>
           </div>
-          <div class="counterdescription">
+          <div class="counterdescription" id="counterdescriptiontext">
             <span>Tage</span>
             <span>Stunden</span>
             <span>Minuten</span>
@@ -191,7 +191,7 @@
         
           <script>
             // Set the date we're counting down to
-            var countDownDate = new Date("July 24, 2023 19:30:00 GMT+0200").getTime();
+            var countDownDate = new Date("July 27, 2023 19:00:00 GMT+0200").getTime();
         
             // Update the count down every 1 second
             var x = setInterval(function() {
@@ -219,6 +219,7 @@
                 clearInterval(x);
                 document.querySelector(".counter").innerHTML = "<h2>Dieses Event ist leider vorbei!</h2>";
                 document.querySelector(".description").style.display = "none";
+                document.querySelector(".counterdescriptiontext").style.display = "none";
               }
             }, 1000);
           </script>
