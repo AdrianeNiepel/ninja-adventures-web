@@ -91,7 +91,7 @@
 <!-- /header -->
 
 <!-- page title -->
-<section class="page-title overlay text-center" data-background="../images/Banner/selbsttest.jpg" >
+<section class="page-title overlay text-center" data-background="../images/backgrounds/ninjas4.png" >
   <div class="container">
     <div class="row">
       <div class="col-md">
@@ -99,12 +99,12 @@
      <!-- <a title="Ninja Adventures Logo" ><img width="200px" title="Ninja Adventures Potenzialentwicklung" src="../images/logo.png" alt="logo" ></a> 
         </br></br>  -->
       </br>
-      <p class=" h6 text-primary font-secondary">Mache jetzt den Test!</p>
-      <p class=" h2 text-white font-secondary">Schlummert in DIR eine der wichtigsten Zukunftsfähigkeiten?</p>
-      <!-- <p class=" h6 text-primary font-secondary">Hast du eine der wichtigsten Zukunftsfähigkeiten?</p> -->
-    
+      <p class=" h6 text-primary font-secondary">Mache jetzt den Selbsttest!</p>
+      <p class=" h2 text-white font-secondary">Bist du ein Spezialist oder Generalist?</p>
+      <p class=" h6 text-primary font-secondary">Hast du eine der wichtigsten Zukunftsfähigkeiten?</p>
+      </br>
       
-    </br>
+    </br></br>
         </div>
    
       </div>
@@ -126,6 +126,103 @@
       <div class="col-md-12 order-1 order-md-2 ">
      
 
+<!---->
+
+
+  <form id="selfTestForm">
+   
+    <h2>Einfach die Fragen beantworten und absenden!</h2>
+    <div class="question">
+      <p>Frage 1: Was ist 1 + 1?</p>  
+      <input type="checkbox" name="q1[]" value="1"> 2   <br>
+      <input type="checkbox" name="q1[]" value="2"> 3   <br>
+      <input type="checkbox" name="q1[]" value="3"> 4   <br>   <br>   <br>
+    </div>
+    <div class="question">
+      <p>Frage 2: Welche Farben sind Primärfarben?</p>   
+      <input type="checkbox" name="q2[]" value="1"> Rot   <br>
+      <input type="checkbox" name="q2[]" value="2"> Blau   <br>
+      <input type="checkbox" name="q2[]" value="3"> Grün   <br> <br>   <br>
+    </div>
+    <div class="question">
+      <p>Frage 3: Was ist die Hauptstadt von Frankreich?</p>   
+      <input type="checkbox" name="q3[]" value="1"> London   <br>
+      <input type="checkbox" name="q3[]" value="2"> Berlin   <br>
+      <input type="checkbox" name="q3[]" value="3"> Paris   <br> <br>   <br>
+    </div>
+    <br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Emailadresse:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="button" id="submitBtn">Absenden</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.addEventListener("click", function () {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        const form = document.getElementById("selfTestForm");
+        const formData = new FormData(form);
+
+        const checkedItems = {};
+
+        formData.forEach(function (value, key) {
+          if (key.includes("q")) {
+            if (!checkedItems[key]) {
+              checkedItems[key] = [];
+            }
+            checkedItems[key].push(value);
+          }
+        });
+
+        let emailContent = name + "\n" + email + "\n\n";
+
+        for (const question in checkedItems) {
+          if (checkedItems.hasOwnProperty(question)) {
+            const answerList = checkedItems[question].join(", ");
+            emailContent += question + ": " + answerList + "\n";
+          }
+        }
+
+        const emailSubject = "Selbsttest & " + name;
+
+        const emailBody = {
+          to: "adriane@ninjaadventures.de",
+          subject: emailSubject,
+          body: emailContent,
+        };
+
+        fetch("https://api.example.com/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(emailBody),
+        })
+          .then(function (response) {
+            if (response.ok) {
+              alert("Erfolgreich abgesendet!");
+            } else {
+              alert("Fehler beim Absenden");
+            }
+          })
+          .catch(function (error) {
+            alert("Fehler beim Absenden");
+            console.error(error);
+          });
+      });
+    });
+  </script>
+
+
+<!---->
 
 
 <div data-aidaform-widget="form-2019-12" data-url="https://ninja.aidaform.com/selbsttestvielseitigkeitlead" data-width="100%" data-height="500px" data-do-resize></div><script>(function(){var r,d=document,gt=d.getElementById,cr=d.createElement,tg=d.getElementsByTagName,id="aidaform-embed";if(!gt.call(d,id)){r=cr.call(d,"script");r.id=id;r.src="https://embed.aidaform.com/embed.js";(d.head || tg.call(d,"head")[0]).appendChild(r);}})()</script>
