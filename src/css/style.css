@@ -861,7 +861,7 @@ link:focus,
   align-items: center;
   font-family: monospace;
   font-size: 50px;
-  color: #e4d550ff;
+  color: #3f2c5f;
   line-height: 1.2;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -879,7 +879,7 @@ link:focus,
 .counterdescription {
   display: flex;
   justify-content: center;
-  color: #e4d550ff;
+  color: #3f2c5f;
   font-size: 20px;
 }
 @media (max-width: 575px) {
