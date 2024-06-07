@@ -8,7 +8,7 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/fish.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <video crossorigin="anonymous" id="vid" autoplay loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
+        <video crossorigin="anonymous" id="vid" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -19,16 +19,53 @@
     </a-scene>
 
     <script>
-      document.querySelector('#vid').addEventListener('error', (e) => {
-        console.error('Video Error:', e);
-      });
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM fully loaded and parsed');
+        const video = document.querySelector('#vid');
 
-      document.querySelector('#vid').addEventListener('play', () => {
-        console.log('Video is playing');
-      });
+        const tryPlayVideo = () => {
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise
+              .then(() => {
+                console.log('Video is playing');
+              })
+              .catch(error => {
+                console.error('Error attempting to play video:', error);
+              });
+          }
+        };
 
-      document.querySelector('#vid').addEventListener('canplay', () => {
-        console.log('Video can play');
+        // Event-Listener für das Erkennen des Bildziels
+        document.querySelector('[mindar-image-target]').addEventListener('targetFound', (event) => {
+          console.log('Image target found');
+          tryPlayVideo();
+        });
+
+        video.addEventListener('loadeddata', () => {
+          console.log('Video data loaded');
+          tryPlayVideo();
+        });
+
+        video.addEventListener('canplay', () => {
+          console.log('Video can play');
+        });
+
+        video.addEventListener('play', () => {
+          console.log('Video is playing');
+        });
+
+        video.addEventListener('pause', () => {
+          console.log('Video is paused');
+        });
+
+        video.addEventListener('error', (e) => {
+          console.error('Video Error:', e);
+        });
+
+        document.querySelector('a-scene').addEventListener('loaded', () => {
+          console.log('A-Frame scene loaded');
+        });
       });
     </script>
   </body>
