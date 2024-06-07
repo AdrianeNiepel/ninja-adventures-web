@@ -20,7 +20,7 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOM fully loaded and parsed');
+        // console.log('DOM fully loaded and parsed');
         const video = document.querySelector('#vid');
 
         const tryPlayVideo = () => {
@@ -28,43 +28,43 @@
           if (playPromise !== undefined) {
             playPromise
               .then(() => {
-                console.log('Video is playing');
+                // console.log('Video is playing');
               })
               .catch(error => {
-                console.error('Error attempting to play video:', error);
+                // console.error('Error attempting to play video:', error);
               });
           }
         };
 
         // Event-Listener für das Erkennen des Bildziels
         document.querySelector('[mindar-image-target]').addEventListener('targetFound', (event) => {
-          console.log('Image target found');
+          // console.log('Image target found');
           tryPlayVideo();
         });
 
         video.addEventListener('loadeddata', () => {
-          console.log('Video data loaded');
+          // console.log('Video data loaded');
           tryPlayVideo();
         });
 
         video.addEventListener('canplay', () => {
-          console.log('Video can play');
+          // console.log('Video can play');
         });
 
         video.addEventListener('play', () => {
-          console.log('Video is playing');
+          // console.log('Video is playing');
         });
 
         video.addEventListener('pause', () => {
-          console.log('Video is paused');
+          // console.log('Video is paused');
         });
 
         video.addEventListener('error', (e) => {
-          console.error('Video Error:', e);
+          // console.error('Video Error:', e);
         });
 
         document.querySelector('a-scene').addEventListener('loaded', () => {
-          console.log('A-Frame scene loaded');
+          // console.log('A-Frame scene loaded');
         });
       });
     </script>
