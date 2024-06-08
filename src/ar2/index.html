@@ -6,65 +6,98 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/fish.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/fish.mind; https://www.ninjaadventures.de/ar2/assets/passion.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <video crossorigin="anonymous" id="vid" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
+        <video crossorigin="anonymous" id="vid1" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
+        <video crossorigin="anonymous" id="vid2" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/paission.webm"></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-video src="#vid" position="0 0 0" width="16" height="9" scale="0.07 0.07 0.07"></a-video>
+        <a-video src="#vid1" position="0 0 0" width="16" height="9" scale="0.07 0.07 0.07"></a-video>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-video src="#vid2" position="0 0 0" width="20" height="20" scale="0.07 0.07 0.07"></a-video>
       </a-entity>
     </a-scene>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        // console.log('DOM fully loaded and parsed');
-        const video = document.querySelector('#vid');
+        console.log('DOM fully loaded and parsed');
+        
+        const video1 = document.querySelector('#vid1');
+        const video2 = document.querySelector('#vid2');
 
-        const tryPlayVideo = () => {
+        const tryPlayVideo = (video) => {
           const playPromise = video.play();
           if (playPromise !== undefined) {
             playPromise
               .then(() => {
-                // console.log('Video is playing');
+                console.log('Video is playing');
               })
               .catch(error => {
-                // console.error('Error attempting to play video:', error);
+                console.error('Error attempting to play video:', error);
               });
           }
         };
 
-        // Event-Listener für das Erkennen des Bildziels
-        document.querySelector('[mindar-image-target]').addEventListener('targetFound', (event) => {
-          // console.log('Image target found');
-          tryPlayVideo();
+        // Event-Listener für das Erkennen der Bildziele
+        document.querySelector('[mindar-image-target="targetIndex: 0"]').addEventListener('targetFound', () => {
+          console.log('Image target 0 found');
+          tryPlayVideo(video1);
         });
 
-        video.addEventListener('loadeddata', () => {
-          // console.log('Video data loaded');
-          tryPlayVideo();
+        document.querySelector('[mindar-image-target="targetIndex: 1"]').addEventListener('targetFound', () => {
+          console.log('Image target 1 found');
+          tryPlayVideo(video2);
         });
 
-        video.addEventListener('canplay', () => {
-          // console.log('Video can play');
+        video1.addEventListener('loadeddata', () => {
+          console.log('Video 1 data loaded');
+          tryPlayVideo(video1);
         });
 
-        video.addEventListener('play', () => {
-          // console.log('Video is playing');
+        video2.addEventListener('loadeddata', () => {
+          console.log('Video 2 data loaded');
+          tryPlayVideo(video2);
         });
 
-        video.addEventListener('pause', () => {
-          // console.log('Video is paused');
+        video1.addEventListener('canplay', () => {
+          console.log('Video 1 can play');
         });
 
-        video.addEventListener('error', (e) => {
-          // console.error('Video Error:', e);
+        video2.addEventListener('canplay', () => {
+          console.log('Video 2 can play');
+        });
+
+        video1.addEventListener('play', () => {
+          console.log('Video 1 is playing');
+        });
+
+        video2.addEventListener('play', () => {
+          console.log('Video 2 is playing');
+        });
+
+        video1.addEventListener('pause', () => {
+          console.log('Video 1 is paused');
+        });
+
+        video2.addEventListener('pause', () => {
+          console.log('Video 2 is paused');
+        });
+
+        video1.addEventListener('error', (e) => {
+          console.error('Video 1 Error:', e);
+        });
+
+        video2.addEventListener('error', (e) => {
+          console.error('Video 2 Error:', e);
         });
 
         document.querySelector('a-scene').addEventListener('loaded', () => {
-          // console.log('A-Frame scene loaded');
+          console.log('A-Frame scene loaded');
         });
       });
     </script>
