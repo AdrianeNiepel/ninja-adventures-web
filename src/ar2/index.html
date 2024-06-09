@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/targets.mind; filterMinCF:0.0001; filterBeta: 0.001" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <video crossorigin="anonymous" id="vid1" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
         <video crossorigin="anonymous" id="vid2" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/passion.webm"></video>
@@ -19,7 +19,7 @@
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 1" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid2" position="0 0 0" width="10" height="10" scale="0.07 0.07 0.07"></a-video>
+        <a-video src="#vid2" position="0 0 0" width="30" height="30" scale="0.07 0.07 0.07"></a-video>
       </a-entity>
     </a-scene>
 
