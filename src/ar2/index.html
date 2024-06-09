@@ -44,20 +44,20 @@
         };
 
         // Event-Listener für das Erkennen der Bildziele
-        const target0 = document.querySelector('[mindar-image-target="targetIndex: 0"]');
+        const target3 = document.querySelector('[mindar-image-target="targetIndex: 3"]');
         const target1 = document.querySelector('[mindar-image-target="targetIndex: 1"]');
         
-        if (target0) {
-          target0.addEventListener('targetFound', () => {
-            console.log('Image target 0 found');
+        if (target3) {
+          target3.addEventListener('targetFound', () => {
+            console.log('Image target 3 found');
             tryPlayVideo(video1);
           });
-          target0.addEventListener('targetLost', () => {
-            console.log('Image target 0 lost');
+          target3.addEventListener('targetLost', () => {
+            console.log('Image target 3 lost');
             video1.pause();
           });
         } else {
-          console.error('Target 0 not found');
+          console.error('Target 3 not found');
         }
 
         if (target1) {
