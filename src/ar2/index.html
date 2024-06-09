@@ -6,10 +6,10 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/targets.mind; " color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/targets.mind; maxTrack:2 " color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <video crossorigin="anonymous" id="vid1" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
-        <video crossorigin="anonymous" id="vid2" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/passion.webm"></video>
+        <video crossorigin="anonymous" id="vid1" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
+        <video crossorigin="anonymous" id="vid2" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/passion.webm"></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
