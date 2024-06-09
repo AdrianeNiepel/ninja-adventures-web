@@ -6,10 +6,10 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/fish.mind; https://www.ninjaadventures.de/ar2/assets/passion.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <!-- Erste Szene mit dem ersten Marker -->
+    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/fish.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <video crossorigin="anonymous" id="vid1" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
-        <video crossorigin="anonymous" id="vid2" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/passion.webm"></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -17,8 +17,17 @@
       <a-entity mindar-image-target="targetIndex: 0">
         <a-video src="#vid1" position="0 0 0" width="16" height="9" scale="0.07 0.07 0.07"></a-video>
       </a-entity>
+    </a-scene>
 
-      <a-entity mindar-image-target="targetIndex: 1">
+    <!-- Zweite Szene mit dem zweiten Marker -->
+    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/passion.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <video crossorigin="anonymous" id="vid2" loop muted playsinline src="https://www.ninjaadventures.de/ar2/assets/passion.webm"></video>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
         <a-video src="#vid2" position="0 0 0" width="20" height="20" scale="0.07 0.07 0.07"></a-video>
       </a-entity>
     </a-scene>
@@ -44,25 +53,21 @@
         };
 
         // Event-Listener für das Erkennen der Bildziele
-        const target0 = document.querySelector('[mindar-image-target="targetIndex: 0"]');
-        const target1 = document.querySelector('[mindar-image-target="targetIndex: 1"]');
+        const target0FirstScene = document.querySelector('a-scene:nth-of-type(1) [mindar-image-target="targetIndex: 0"]');
+        const target0SecondScene = document.querySelector('a-scene:nth-of-type(2) [mindar-image-target="targetIndex: 0"]');
         
-        if (target0) {
-          target0.addEventListener('targetFound', () => {
-            console.log('Image target 0 found');
+        if (target0FirstScene) {
+          target0FirstScene.addEventListener('targetFound', () => {
+            console.log('Image target 0 in first scene found');
             tryPlayVideo(video1);
           });
-        } else {
-          console.error('Target 0 not found');
         }
 
-        if (target1) {
-          target1.addEventListener('targetFound', () => {
-            console.log('Image target 1 found');
+        if (target0SecondScene) {
+          target0SecondScene.addEventListener('targetFound', () => {
+            console.log('Image target 0 in second scene found');
             tryPlayVideo(video2);
           });
-        } else {
-          console.error('Target 1 not found');
         }
 
         video1.addEventListener('loadeddata', () => {
@@ -107,12 +112,20 @@
           console.error('Video 2 Error:', e);
         });
 
-        document.querySelector('a-scene').addEventListener('loaded', () => {
-          console.log('A-Frame scene loaded');
+        document.querySelector('a-scene:nth-of-type(1)').addEventListener('loaded', () => {
+          console.log('A-Frame first scene loaded');
         });
 
-        document.querySelector('a-scene').addEventListener('mindar-image-ready', (event) => {
-          console.log('MindAR image system ready', event.detail);
+        document.querySelector('a-scene:nth-of-type(2)').addEventListener('loaded', () => {
+          console.log('A-Frame second scene loaded');
+        });
+
+        document.querySelector('a-scene:nth-of-type(1)').addEventListener('mindar-image-ready', (event) => {
+          console.log('MindAR image system for first scene ready', event.detail);
+        });
+
+        document.querySelector('a-scene:nth-of-type(2)').addEventListener('mindar-image-ready', (event) => {
+          console.log('MindAR image system for second scene ready', event.detail);
         });
       });
     </script>
