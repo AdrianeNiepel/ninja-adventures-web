@@ -19,7 +19,7 @@
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 1" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid2" position="0 0 0" width="50" height="50" scale="0.07 0.07 0.07"></a-video>
+        <a-video src="#vid2" position="0 0 0" width="10" height="10" scale="0.07 0.07 0.07"></a-video>
       </a-entity>
     </a-scene>
 
@@ -44,18 +44,18 @@
           target3.addEventListener('targetFound', () => {
             tryPlayVideo(video1);
           });
-          target3.addEventListener('targetLost', () => {
-            video1.pause();
-          });
+          // target3.addEventListener('targetLost', () => {
+          //   video1.pause();
+          // });
         }
 
         if (target1) {
           target1.addEventListener('targetFound', () => {
             tryPlayVideo(video2);
           });
-          target1.addEventListener('targetLost', () => {
-            video2.pause();
-          });
+          // target1.addEventListener('targetLost', () => {
+          //   video2.pause();
+          // });
         }
 
         video1.addEventListener('loadeddata', () => {});
@@ -69,13 +69,13 @@
         video1.addEventListener('error', (e) => { console.error('Video 1 Error:', e); });
         video2.addEventListener('error', (e) => { console.error('Video 2 Error:', e); });
 
-        document.querySelector('a-scene').addEventListener('loaded', () => {
-          console.log('A-Frame scene loaded');
-        });
+        // document.querySelector('a-scene').addEventListener('loaded', () => {
+        //   console.log('A-Frame scene loaded');
+        // });
 
-        document.querySelector('a-scene').addEventListener('mindar-image-ready', (event) => {
-          console.log('MindAR image system ready', event.detail);
-        });
+        // document.querySelector('a-scene').addEventListener('mindar-image-ready', (event) => {
+        //   console.log('MindAR image system ready', event.detail);
+        // });
       });
     </script>
   </body>
