@@ -84,6 +84,7 @@
       document.addEventListener('DOMContentLoaded', () => {
         const video1 = document.querySelector('#vid1');
         const video2 = document.querySelector('#vid2');
+        const video3 = document.querySelector('#vid3');
 
         const tryPlayVideo = (video) => {
           const playPromise = video.play();
@@ -94,37 +95,59 @@
           }
         };
 
-        const target3 = document.querySelector('[mindar-image-target="targetIndex: 3"]');
-        const target1 = document.querySelector('[mindar-image-target="targetIndex: 1"]');
         
-        if (target3) {
-          target3.addEventListener('targetFound', () => {
-            tryPlayVideo(video1);
-          });
-          // target3.addEventListener('targetLost', () => {
-          //   video1.pause();
-          // });
-        }
-
+        const target1 = document.querySelector('[mindar-image-target="targetIndex: 1"]');
+        const target2 = document.querySelector('[mindar-image-target="targetIndex: 2"]');
+        const target3 = document.querySelector('[mindar-image-target="targetIndex: 3"]');
+        
         if (target1) {
           target1.addEventListener('targetFound', () => {
-            tryPlayVideo(video2);
+            tryPlayVideo(video1);
           });
           // target1.addEventListener('targetLost', () => {
           //   video2.pause();
           // });
         }
 
+        if (target2) {
+          target2.addEventListener('targetFound', () => {
+            tryPlayVideo(video2);
+          });
+          // target1.addEventListener('targetLost', () => {
+          //   video2.pause();
+          // });
+        }
+       
+        if (target3) {
+          target3.addEventListener('targetFound', () => {
+            tryPlayVideo(video3);
+          });
+          // target3.addEventListener('targetLost', () => {
+          //   video1.pause();
+          // });
+        }
+
+       
+
         video1.addEventListener('loadeddata', () => {});
         video2.addEventListener('loadeddata', () => {});
+        video3.addEventListener('loadeddata', () => {});
+
         video1.addEventListener('canplay', () => {});
         video2.addEventListener('canplay', () => {});
+        video3.addEventListener('canplay', () => {});
+
         video1.addEventListener('play', () => {});
         video2.addEventListener('play', () => {});
+        video3.addEventListener('play', () => {});
+
         video1.addEventListener('pause', () => {});
         video2.addEventListener('pause', () => {});
+        video3.addEventListener('pause', () => {});
+
         video1.addEventListener('error', (e) => { console.error('Video 1 Error:', e); });
         video2.addEventListener('error', (e) => { console.error('Video 2 Error:', e); });
+        video3.addEventListener('error', (e) => { console.error('Video 3 Error:', e); });
 
         // document.querySelector('a-scene').addEventListener('loaded', () => {
         //   console.log('A-Frame scene loaded');
