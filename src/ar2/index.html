@@ -82,9 +82,19 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        const video0 = document.querySelector('#vid0');
         const video1 = document.querySelector('#vid1');
         const video2 = document.querySelector('#vid2');
         const video3 = document.querySelector('#vid3');
+        const video4 = document.querySelector('#vid4');
+        const video5 = document.querySelector('#vid5');
+        const video6 = document.querySelector('#vid6');
+        const video7 = document.querySelector('#vid7');
+        const video8 = document.querySelector('#vid8');
+        const video9 = document.querySelector('#vid9');
+        const video10 = document.querySelector('#vid10');
+        const video11 = document.querySelector('#vid11');
+        const video12 = document.querySelector('#vid12');
 
         const tryPlayVideo = (video) => {
           const playPromise = video.play();
@@ -95,10 +105,19 @@
           }
         };
 
-        
+        const target0 = document.querySelector('[mindar-image-target="targetIndex: 0"]');
         const target1 = document.querySelector('[mindar-image-target="targetIndex: 1"]');
         const target2 = document.querySelector('[mindar-image-target="targetIndex: 2"]');
         const target3 = document.querySelector('[mindar-image-target="targetIndex: 3"]');
+        const target4 = document.querySelector('[mindar-image-target="targetIndex: 4"]');
+        const target5 = document.querySelector('[mindar-image-target="targetIndex: 5"]');
+        const target6 = document.querySelector('[mindar-image-target="targetIndex: 6"]');
+        const target7 = document.querySelector('[mindar-image-target="targetIndex: 7"]');
+        const target8 = document.querySelector('[mindar-image-target="targetIndex: 8"]');
+        const target9 = document.querySelector('[mindar-image-target="targetIndex: 9"]');
+        const target10 = document.querySelector('[mindar-image-target="targetIndex: 10"]');
+        const target11 = document.querySelector('[mindar-image-target="targetIndex: 11"]');
+        const target12 = document.querySelector('[mindar-image-target="targetIndex: 12"]');
         
         if (target1) {
           target1.addEventListener('targetFound', () => {
