@@ -24,6 +24,7 @@
       <a-assets>
         <video crossorigin="anonymous" id="vid12" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/transparenz.mp4"></video>
         <video crossorigin="anonymous" id="vid9" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/stroemung2.mp4"></video>
+        <video crossorigin="anonymous" id="vid7" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/konzentration.mp4"></video>
         <video crossorigin="anonymous" id="vid6" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/konzentration.mp4"></video>
         <video crossorigin="anonymous" id="vid5" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/hoffnung.mp4"></video>
         <video crossorigin="anonymous" id="vid3" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/fishvideo.mp4"></video>
@@ -60,9 +61,9 @@
       </a-entity> -->
 
       <!-- loslassen -->
-      <!-- <a-entity mindar-image-target="targetIndex: 7" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+       <a-entity mindar-image-target="targetIndex: 7" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
         <a-video src="#vid7" position="0 0 0" width="40" height="30" scale="0.07 0.07 0.07"></a-video>
-      </a-entity> -->
+      </a-entity> 
 
       <!-- konzentration -->
        <a-entity mindar-image-target="targetIndex: 6" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
@@ -111,7 +112,7 @@
         // const video4 = document.querySelector('#vid4');
         const video5 = document.querySelector('#vid5');
         const video6 = document.querySelector('#vid6');
-        // const video7 = document.querySelector('#vid7');
+        const video7 = document.querySelector('#vid7');
         // const video8 = document.querySelector('#vid8');
         const video9 = document.querySelector('#vid9');
         // const video10 = document.querySelector('#vid10');
@@ -179,6 +180,11 @@
             tryPlayVideo(video6);
           });
         }
+        if (target7) {
+          target7.addEventListener('targetFound', () => {
+            tryPlayVideo(video7);
+          });
+        }
         if (target9) {
           target9.addEventListener('targetFound', () => {
             tryPlayVideo(video9);
@@ -197,6 +203,7 @@
         video3.addEventListener('loadeddata', () => {});
         video5.addEventListener('loadeddata', () => {});
         video6.addEventListener('loadeddata', () => {});
+        video7.addEventListener('loadeddata', () => {});
         video9.addEventListener('loadeddata', () => {});
         video12.addEventListener('loadeddata', () => {});
 
@@ -206,6 +213,7 @@
         video3.addEventListener('canplay', () => {});
         video5.addEventListener('canplay', () => {});
         video6.addEventListener('canplay', () => {});
+        video7.addEventListener('canplay', () => {});
         video9.addEventListener('canplay', () => {});
         video12.addEventListener('canplay', () => {});
 
@@ -215,6 +223,7 @@
         video3.addEventListener('play', () => {});
         video5.addEventListener('play', () => {});
         video6.addEventListener('play', () => {});
+        video7.addEventListener('play', () => {});
         video9.addEventListener('play', () => {});
         video12.addEventListener('play', () => {});
 
@@ -224,6 +233,7 @@
         video3.addEventListener('pause', () => {});
         video5.addEventListener('pause', () => {});
         video6.addEventListener('pause', () => {});
+        video7.addEventListener('pause', () => {});
         video9.addEventListener('pause', () => {});
         video12.addEventListener('pause', () => {});
 
@@ -233,6 +243,7 @@
         video3.addEventListener('error', (e) => { console.error('Video 3 Error:', e); });
         video5.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
         video6.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
+        video7.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
         video9.addEventListener('error', (e) => { console.error('Video 9 Error:', e); });
         video12.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
 
