@@ -23,7 +23,10 @@
     <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/ar2/assets/targets.mind; filterMinCF:0.0001; filterBeta: 0.001; maxTrack: 4;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <video crossorigin="anonymous" id="vid12" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/transparenz.mp4"></video>
-        <video crossorigin="anonymous" id="vid9" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/stroemung2.mp4"></video>
+        <video crossorigin="anonymous" id="vid11" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/stroemung4.webm"></video>
+        <video crossorigin="anonymous" id="vid10" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/stroemung3.webm"></video>
+        <video crossorigin="anonymous" id="vid9" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/stroemung2.webm"></video>
+        <video crossorigin="anonymous" id="vid8" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/stroemung1.webm"></video>
         <video crossorigin="anonymous" id="vid7" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/loslassen.mp4"></video>
         <video crossorigin="anonymous" id="vid6" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/konzentration.mp4"></video>
         <video crossorigin="anonymous" id="vid5" loop autoplay muted playsinline src="https://www.ninjaadventures.de/ar2/assets/hoffnung.mp4"></video>
@@ -42,14 +45,14 @@
       </a-entity> 
 
       <!-- strömung 4 -->
-      <!-- <a-entity mindar-image-target="targetIndex: 11" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+      <a-entity mindar-image-target="targetIndex: 11" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
         <a-video src="#vid11" position="0 0 0" width="20" height="20" scale="0.07 0.07 0.07"></a-video>
-      </a-entity> -->
+      </a-entity>
 
       <!-- strömung 3 -->
-      <!-- <a-entity mindar-image-target="targetIndex: 10" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+      <a-entity mindar-image-target="targetIndex: 10" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
         <a-video src="#vid10" position="0 0 0" width="20" height="20" scale="0.07 0.07 0.07"></a-video>
-      </a-entity> -->
+      </a-entity>
 
       <!-- strömung 2 -->
       <a-entity mindar-image-target="targetIndex: 9" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
@@ -57,9 +60,9 @@
       </a-entity>
 
       <!-- strömung 1 -->
-      <!-- <a-entity mindar-image-target="targetIndex: 8" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+      <a-entity mindar-image-target="targetIndex: 8" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
         <a-video src="#vid8" position="0 0 0" width="20" height="20" scale="0.07 0.07 0.07"></a-video>
-      </a-entity> -->
+      </a-entity>
 
       <!-- loslassen -->
        <a-entity mindar-image-target="targetIndex: 7" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
@@ -114,10 +117,10 @@
         const video5 = document.querySelector('#vid5');
         const video6 = document.querySelector('#vid6');
         const video7 = document.querySelector('#vid7');
-        // const video8 = document.querySelector('#vid8');
+        const video8 = document.querySelector('#vid8');
         const video9 = document.querySelector('#vid9');
-        // const video10 = document.querySelector('#vid10');
-        // const video11 = document.querySelector('#vid11');
+        const video10 = document.querySelector('#vid10');
+        const video11 = document.querySelector('#vid11');
         const video12 = document.querySelector('#vid12');
 
         const tryPlayVideo = (video) => {
@@ -194,9 +197,24 @@
             tryPlayVideo(video7);
           });
         }
+        if (target8) {
+          target8.addEventListener('targetFound', () => {
+            tryPlayVideo(video8);
+          });
+        }
         if (target9) {
           target9.addEventListener('targetFound', () => {
             tryPlayVideo(video9);
+          });
+        }
+        if (target10) {
+          target10.addEventListener('targetFound', () => {
+            tryPlayVideo(video10);
+          });
+        }
+        if (target11) {
+          target11.addEventListener('targetFound', () => {
+            tryPlayVideo(video11);
           });
         }
         if (target12) {
@@ -214,7 +232,10 @@
         video5.addEventListener('loadeddata', () => {});
         video6.addEventListener('loadeddata', () => {});
         video7.addEventListener('loadeddata', () => {});
+        video8.addEventListener('loadeddata', () => {});
         video9.addEventListener('loadeddata', () => {});
+        video10.addEventListener('loadeddata', () => {});
+        video11.addEventListener('loadeddata', () => {});
         video12.addEventListener('loadeddata', () => {});
 
         video0.addEventListener('canplay', () => {});
@@ -225,7 +246,10 @@
         video5.addEventListener('canplay', () => {});
         video6.addEventListener('canplay', () => {});
         video7.addEventListener('canplay', () => {});
+        video8.addEventListener('canplay', () => {});
         video9.addEventListener('canplay', () => {});
+        video10.addEventListener('canplay', () => {});
+        video11.addEventListener('canplay', () => {});
         video12.addEventListener('canplay', () => {});
 
         video0.addEventListener('play', () => {});
@@ -236,7 +260,10 @@
         video5.addEventListener('play', () => {});
         video6.addEventListener('play', () => {});
         video7.addEventListener('play', () => {});
+        video8.addEventListener('play', () => {});
         video9.addEventListener('play', () => {});
+        video10.addEventListener('play', () => {});
+        video11.addEventListener('play', () => {});
         video12.addEventListener('play', () => {});
 
         video0.addEventListener('pause', () => {});
@@ -247,7 +274,10 @@
         video5.addEventListener('pause', () => {});
         video6.addEventListener('pause', () => {});
         video7.addEventListener('pause', () => {});
+        video8.addEventListener('pause', () => {});
         video9.addEventListener('pause', () => {});
+        video10.addEventListener('pause', () => {});
+        video11.addEventListener('pause', () => {});
         video12.addEventListener('pause', () => {});
 
         video0.addEventListener('error', (e) => { console.error('Video 0 Error:', e); });
@@ -258,8 +288,11 @@
         video5.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
         video6.addEventListener('error', (e) => { console.error('Video 6 Error:', e); });
         video7.addEventListener('error', (e) => { console.error('Video 7 Error:', e); });
+        video8.addEventListener('error', (e) => { console.error('Video 8 Error:', e); });
         video9.addEventListener('error', (e) => { console.error('Video 9 Error:', e); });
-        video12.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
+        video10.addEventListener('error', (e) => { console.error('Video 10 Error:', e); });
+        video11.addEventListener('error', (e) => { console.error('Video 11 Error:', e); });
+        video12.addEventListener('error', (e) => { console.error('Video 12 Error:', e); });
 
         // document.querySelector('a-scene').addEventListener('loaded', () => {
         //   console.log('A-Frame scene loaded');
