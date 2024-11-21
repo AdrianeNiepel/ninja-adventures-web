@@ -2,227 +2,440 @@
 <html lang="de">
 
 <head>
-  <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
-  <title>Digitale Schnitzeljagd zum Selbermachen </title>
-  <meta name="description" content="Digitale Schnitzeljagd selbst gemacht"/>
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ninja Adventures - Digitale Schnitzeljagd</title>
+  <meta name="description" content="Digitale Schnitzeljagd selbst gestalten und erleben mit AR"/>
+  
 
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <!--Favicon-->
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="../plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="../plugins/themify-icons/themify-icons.css">
+  <!-- animation css -->
+  <link rel="stylesheet" href="../plugins/animate/animate.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="../plugins/aos/aos.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="../plugins/venobox/venobox.css">
+
+  <!-- Main Stylesheet -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!--Favicon-->
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="icon" href="../images/favicon.png" type="image/x-icon">
 
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <!--Cookie Banner-->
+  <!-- <link rel="preconnect" href="//app.eu.usercentrics.eu">
+<link rel="preconnect" href="//api.eu.usercentrics.eu">
+<link rel="preconnect" href="//sdp.eu.usercentrics.eu">
+<link rel="preload" href="//app.eu.usercentrics.eu/browser-ui/latest/loader.js" as="script">
+<link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script"> -->
+  <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="TodeXqsbp" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
+  <script type="application/javascript" src="https://sdp.eu.usercentrics.eu/latest/uc-block.bundle.js"></script>
+  <!-- <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
+<script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script> -->
 
-    <!-- https://hiukim.github.io/mind-ar-js-doc/tools/compile/ -->
 
-  </head>
-  <body>
-    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/schnitzeljagd/assets/targets.mind; filterMinCF:0.0001; filterBeta: 0.001; maxTrack: 1;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-assets>
-       
-        <video crossorigin="anonymous" id="vid7" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/8_station.mp4"></video>
-        <video crossorigin="anonymous" id="vid6" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/7_station.mp4"></video>
-        <video crossorigin="anonymous" id="vid5" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/6_station.mp4"></video>
-        <video crossorigin="anonymous" id="vid4" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/5_station.mp4"></video>
-        <video crossorigin="anonymous" id="vid3" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/4_station.mp4"></video>
-        <video crossorigin="anonymous" id="vid2" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/3_station.mp4"></video>
-        <video crossorigin="anonymous" id="vid1" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/2_station.mp4"></video>
-        <video crossorigin="anonymous" id="vid0" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/assets/1_start.mp4"></video>
-      </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    
-      <!-- loslassen -->
-       <a-entity mindar-image-target="targetIndex: 7" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid7" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-      </a-entity> 
+  <!-- Global site tag (gtag.js) - Google    -->
+ <script type="text/plain" data-usercentrics="Google Analytics 4" async src="https://www.googletagmanager.com/gtag/js?id=G-GLNHKGE6K6"></script>
+<script type="text/plain" data-usercentrics="Google Analytics 4">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      <!-- konzentration -->
-       <a-entity mindar-image-target="targetIndex: 6" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid6" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-      </a-entity> 
+  gtag('config', 'G-GLNHKGE6K6');
+</script> 
 
-      <!-- hoffnung -->
-      <a-entity mindar-image-target="targetIndex: 5" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid5" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-      </a-entity>
-     
-     <!-- flutlicht -->
-      <a-entity mindar-image-target="targetIndex: 4" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-      <a-video src="#vid4" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-    </a-entity> 
-     
-      <!-- fische groß -->
-      <a-entity mindar-image-target="targetIndex: 3" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid3" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-      </a-entity>
+</head>
 
-      <!-- santulan -->
-      <a-entity mindar-image-target="targetIndex: 2" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid2" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-      </a-entity> 
+<body>
+  <!-- preloader start -->
+  <!-- <div class="preloader">
+    <img src="images/preloader.gif" alt="preloader">
+  </div> -->
+  <!-- preloader end -->
 
-      <!-- passion -->
-      <a-entity mindar-image-target="targetIndex: 1" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid1" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-      </a-entity>
+<!-- header -->
+<header class="fixed-top header">
+  <!-- <a  href="../index.html"><img width="300px" src="../images/logo_dark.png" alt="logo"></a> -->
+ 
+  <!-- navbar -->
+ <!-- <div class="navigation w-100">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a class="navbar-brand" href="../index.html"><img width="300px" src="../images/logo.png" alt="logo"></a>
+        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- lebensschwung -->
-      <a-entity mindar-image-target="targetIndex: 0" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
-        <a-video src="#vid0" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
-      </a-entity>
-    </a-scene>
+        <div class="collapse navbar-collapse" id="navigation">
+           <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item ">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li> 
+            <li class="nav-item dropdown view ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Angebote
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" title="Multitalente fördern im Unternehmen" rel="noopener" href="../business/">Business Ninjas</a>
+                <hr> 
+                <a class="dropdown-item" title="Vielseitig leben mit allen Ideen" rel="noopener" active href="../index.html#ideenninja">Ideen Ninjas </a>
+                 <hr>
+               
+                <a class="dropdown-item" title="Multipassion in der Familie leben" rel="noopener"  href="../family/">Family Ninjas </a>
+                
+                <hr>
+                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
 
-    <!-- test -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const video0 = document.querySelector('#vid0');
-        const video1 = document.querySelector('#vid1');
-        const video2 = document.querySelector('#vid2');
-        const video3 = document.querySelector('#vid3');
-        const video4 = document.querySelector('#vid4');
-        const video5 = document.querySelector('#vid5');
-        const video6 = document.querySelector('#vid6');
-        const video7 = document.querySelector('#vid7');
-    
+              </div>
+            </li>
+            
+            <li class="nav-item @@blog">
+              <a class="nav-link" title="Blog" href="../blog.html">Blog</a>
+            </li>
+            
+            
+            
+            <li class="nav-item ">
+              <a class="nav-link" title="Über Ninja Adventures" href="../about/">Über</a>
+            </li>
+           
+           
+            <li class="nav-item @@kontakt">
+              <a class="nav-link" href="../kontakt.html">Kontakt</a>
+            </li>
+          </ul> 
+        </div>
+      </nav>
+    </div>
+  </div>-->
+</header>
+<!-- /header -->
 
-        const tryPlayVideo = (video) => {
-          const playPromise = video.play();
-          if (playPromise !== undefined) {
-            playPromise.catch(error => {
-              console.error('Error attempting to play video:', error);
-            });
-          }
-        };
 
-        const target0 = document.querySelector('[mindar-image-target="targetIndex: 0"]');
-        const target1 = document.querySelector('[mindar-image-target="targetIndex: 1"]');
-        const target2 = document.querySelector('[mindar-image-target="targetIndex: 2"]');
-        const target3 = document.querySelector('[mindar-image-target="targetIndex: 3"]');
-        const target4 = document.querySelector('[mindar-image-target="targetIndex: 4"]');
-        const target5 = document.querySelector('[mindar-image-target="targetIndex: 5"]');
-        const target6 = document.querySelector('[mindar-image-target="targetIndex: 6"]');
-        const target7 = document.querySelector('[mindar-image-target="targetIndex: 7"]');
-  
-        
-        if (target0) {
-          target0.addEventListener('targetFound', () => {
-            tryPlayVideo(video0);
-          });
-         
-        }
-        if (target1) {
-          target1.addEventListener('targetFound', () => {
-            tryPlayVideo(video1);
-          });
-          // target1.addEventListener('targetLost', () => {
-          //   video1.pause();
-          // });
-        }
+<!-- page title -->
+<!-- <section class="page-title-section  bg-cover" data-background="../images/wohnzimmerunikate/wohnzimmerunikate_back.png"> -->
+  <section class="page-title-section  bg-cover" ></section>
+<!-- <section class="page-title-section overlay" > -->
 
-        if (target2) {
-          target2.addEventListener('targetFound', () => {
-            tryPlayVideo(video2);
-          });
-         
-        }
-       
-        if (target3) {
-          target3.addEventListener('targetFound', () => {
-            tryPlayVideo(video3);
-          });
-       
-         }
-
-         if (target4) {
-          target4.addEventListener('targetFound', () => {
-            tryPlayVideo(video4);
-          });
-       
-         }
-
-        if (target5) {
-          target5.addEventListener('targetFound', () => {
-            tryPlayVideo(video5);
-          });
-        }
-        if (target6) {
-          target6.addEventListener('targetFound', () => {
-            tryPlayVideo(video6);
-          });
-        }
-        if (target7) {
-          target7.addEventListener('targetFound', () => {
-            tryPlayVideo(video7);
-          });
-        }
+<!-- </section>data-background="../images/backgrounds/ /page-title.jpg"> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="font-secondary">Digitale Schnitzeljagd</h1>
+        <h3 class="font-secondary">Selbst gemacht</h3>
+        <p class=" h4">
+        </br>
       
+          Schnitzeljagd trifft AR</br>
+          
+      
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
 
+
+
+
+
+<!-- courses -->
+<section class="section-sm bg-gray" id="section-course">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
        
-        video0.addEventListener('loadeddata', () => {});
-        video1.addEventListener('loadeddata', () => {});
-        video2.addEventListener('loadeddata', () => {});
-        video3.addEventListener('loadeddata', () => {});
-        video4.addEventListener('loadeddata', () => {});
-        video5.addEventListener('loadeddata', () => {});
-        video6.addEventListener('loadeddata', () => {});
-        video7.addEventListener('loadeddata', () => {});
-    
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h5 class="mb-0  mr-3">Nächstes Event: </h5> </br></br>
+          <div>
+            
+          <!-- <h3><a class="text-primary" href="https://www.hospizimahrtal.de/hospiz" target="_blank">Hospiz Bad Neuenahr</a> </h3> -->
+        <h3> Test</h3>   </br>
+        <a class="text-primary" href="start.html" target="_blank">Schnitzeljagd beginnen</a>   </br>   </br>
+        <a class="text-primary" href="https://ninjaadventures-my.sharepoint.com/:f:/g/personal/adriane_ninjaadventures_de/EtVhEbBfc0pEhOcUxUJwvkoB1fwNnCeLHX7XFGmdpXmZ4A?e=Cufh3P" target="_blank">Für Schnitzeljagd hochladen</a>
+          </div>
+         
+        </div> 
+        
+         
+        <p>
+      </p>
+      </div>
+    </div>
+ <!-- course list -->
+ <!-- <div class="row justify-content-center"> -->
 
-        video0.addEventListener('canplay', () => {});
-        video1.addEventListener('canplay', () => {});
-        video2.addEventListener('canplay', () => {});
-        video3.addEventListener('canplay', () => {});
-        video4.addEventListener('canplay', () => {});
-        video5.addEventListener('canplay', () => {});
-        video6.addEventListener('canplay', () => {});
-        video7.addEventListener('canplay', () => {});
-   
 
-        video0.addEventListener('play', () => {});
-        video1.addEventListener('play', () => {});
-        video2.addEventListener('play', () => {});
-        video3.addEventListener('play', () => {});
-        video4.addEventListener('play', () => {});
-        video5.addEventListener('play', () => {});
-        video6.addEventListener('play', () => {});
-        video7.addEventListener('play', () => {});
-    
+  <!-- course item -->
+   <!-- <div class="col-lg-12 col-sm-6 mb-8">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <div class="card-body">
+        <h3 class="mb-0  mr-6">So kommst du zur Ausstellung:</h3>
+        
+        <p>
+        </br>
+          <b>Adresse:</b> Dorotheenweg 6, 53474 Bad Neuenahr-Ahrweiler</br></br>
 
-        video0.addEventListener('pause', () => {});
-        video1.addEventListener('pause', () => {});
-        video2.addEventListener('pause', () => {});
-        video3.addEventListener('pause', () => {});
-        video4.addEventListener('pause', () => {});
-        video5.addEventListener('pause', () => {});
-        video6.addEventListener('pause', () => {});
-        video7.addEventListener('pause', () => {});
-   
+        <b>Öffnungszeiten:</b> </br>
+          offizielle Eröffnung / Vernissage: Termin steht noch nicht fest</br>          
+          Die Ausstellung ist öffentlich zugänglich. </br>
+          Bitte im Hospiz anrufen und die Öffnungszeiten erfragen: 02641 918750 </br></br>
 
-        video0.addEventListener('error', (e) => { console.error('Video 0 Error:', e); });
-        video1.addEventListener('error', (e) => { console.error('Video 1 Error:', e); });
-        video2.addEventListener('error', (e) => { console.error('Video 2 Error:', e); });
-        video3.addEventListener('error', (e) => { console.error('Video 3 Error:', e); });
-        video4.addEventListener('error', (e) => { console.error('Video 4 Error:', e); });
-        video5.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
-        video6.addEventListener('error', (e) => { console.error('Video 6 Error:', e); });
-        video7.addEventListener('error', (e) => { console.error('Video 7 Error:', e); });
+          <i>Weitere Details demnächst hier. </i></br></br>
+
+        <b>Kontakt:</b> Bei Interesse kannst du dich auch direkt mit dem Bildhaueratelier in Verbindung setzen: </br>
+          <a class="text-primary" href="mailto:info@beates-skulpturengalerie.de">info@beates-skulpturengalerie.de</a>
+        </p>
+      </div>
   
 
-        // document.querySelector('a-scene').addEventListener('loaded', () => {
-        //   console.log('A-Frame scene loaded');
-        // });
+    </div>
+  </br></br>
+  </div>  -->
 
-        // document.querySelector('a-scene').addEventListener('mindar-image-ready', (event) => {
-        //   console.log('MindAR image system ready', event.detail);
-        // });
-      });
-    </script>
-  </body>
+
+
+    <!-- course list -->
+<!-- <div class="row justify-content-center"> -->
+
+
+    <!-- course item -->
+     <!-- <div class="col-lg-12 col-sm-6 mb-8">
+      <div class="card p-0 border-primary rounded-0 hover-shadow">
+        <div class="card-body">
+          <h3 class="mb-0  mr-6">Erleben hier starten!</h3>
+          
+        </br></br>
+        Du befindest dich jetzt gerade auf der Ausstellung?</br>
+        Perfekt, dann starte hier deine AR (Augmented Realtity) Anwendung. So geht's:</br></br>
+        1. <b>Klick</b> auf den gelben "Jetzt starten" Link unter dieser Anleitung</br>
+        2. Anfrage deines Handys zulassen, auf die <b>Kamera</b> zuzugreifen.*</br>
+        3. Dir ein <b>Bild aussuchen</b> und mit dem Handy darauf halten, so dass im angezeigten Feld das Bild zu sehen ist.</br>
+        4. <b>Entdecken</b> wie sich das Bild verändert und weitere Bilder einscannen.
+        
+        </br></br>
+           
+        <i> *Hinweis: Du wirst aufgefordert deine Kamera freizugeben. Dies wird benötigt, um die Kunstwerke über die Kamera zu erkennen und dir deine AR Erfahrung anzuzeigen!
+          Es werden keinerzeit Daten von dir aufgenommen oder gespeichert!</i>
+      </br></br></br></br>
+    <a href="https://www.ninjaadventures.de/ar2" target="_blank" title="Wohnzimmerunikate Ausstellung" class="btn btn-sm-xs btn-primary ">Jetzt Starten</a>
+        </div>
+      </div>
+    </div>  -->
+   
+      
+    
+   <!-- course item -->
+   <!-- <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <div class="card-body">
+        <h3 class="mb-0  mr-3">Ticket zur Ausstellung:</h3>
+        
+      </br></br>
+      Falls du noch gar kein Ticket hast, kannst du dir dies hier besorgen: 
+      </br></br></br>
+      <a href="https://offeneahr.de/2024/04/02/kreativer-nachmittag/" target="_blank" title="Wohnzimmerunikate Ausstellung Offene Gärten Bad Neuenahr" class="btn btn-sm-xs btn-dark ">Ticketkauf</a>
+      </div>
+    </div>
+  </div>  -->
+    
+    
+    </div>
+    
+    
+    </div>
+    </section>
+    
+
+ 
+
+
+
+
+
+
+
+
+
+<!-- about us grau -->
+<section class="bg-gray section-sm ">
+  <!-- <div class="container">
+   
+    <h4>Das Konzept:</h4>
+  </br></br>
+    </div> -->
+  <div class="container-fluid ">
+
+    <div class="row ">
+      
+      <div class="col-xl-4 col-lg-5 align-self-center text-center">
+
+        <!-- <img class="img-fluid w-50" src="../images/wohnzimmerunikate/beispiel1.jpg" alt="Wohnzimmerunikate Beispiel"> -->
+      </div>
+      <div class="col-xl-7 col-lg-7">
+        <div class="row  justify-content-between">
+          <div class="col-md-10">
+        <h2 class="section-title">So funktioniert die digitale Schatzsuche:</h2>
+        
+          <!-- <p>
+            <h6>Die perfekte Harmonie zwischen Skulptur und Bild für dein Wohlfühl-Zuhause mit einzigartigem Erlebnis!
+              </h6></br>
+            <p>
+              
+              Das Projekt betont die Idee, dass <b>Kunst</b> nicht nur für spezielle Anlässe oder Galerien
+              reserviert sein sollte, sondern dass sie wieder ein <b>Bestandteil unseres täglichen
+              Lebens</b> sein kann. </br>
+              Nicht nur Deko aus dem Baumarkt, auch <b>Unikate</b> von Künstlern dürfen hier wieder Einzug halten. </br></br>
+
+              Durch das Leben in <b>Harmonie</b> mit exklusiver Kunst wird die
+            <b>Umgebung wieder einzigartiger</b>, bereichert den Alltag der Menschen durch <b>Liebe zum Detail</b>, statt zu Massenkonsum.
+            Läd ein zu <b>Tiefgang</b>, Innehalten beim Betrachten, zu Perspektivwechsel und Spüren von etwas <b>Echtem im digitalen Zeitalter</b>.</br></br>
+               Es stehen <b>individuell gestaltete Skulpturen</b> in verschiedenen Materialien von Beate Niepel im Mittelpunkt.</br>
+               Die <b>Bilder</b> von Adriane Niepel (mit Unterstützung von KI (künstlicher Intelligenz)) sind in Farbe, Form und Aussage der entsprechenden Skulptur angepasst und bieten so ein <b>perfektes Ensemble</b> mit den Skulpturen. </br>
+               Gemeinsam verbinden Skulptur und Bild <b>Tadition und Moderne</b>.</br></br>
+              Das besondere, <b>innovative Erlebnis</b> bildet die Einbindung von AR (Augmented Reality) Erlebnissen. Hier gibt es die Möglichkeit mit dem eigenen Handy noch <b>tieferen Kontakt zu den Unikaten</b> aufzunehmen - und das ganz <b>einfach</b>: Website öffnen, Bild scannen, überraschen lassen und eintauchen.
+            </br></br>
+
+              Oder zusammengefasst:</br></br>
+<strong>Wohnzimmerunikate erleben mit allen Sinnen.</br>
+  Klassisch trifft modern mit KI und AR!</br>
+              Kunstunikate als Gut für jede und jeden zugänglich - für dein Zuhause zum Wohlfühlen.</strong>
+
+          </p> -->
+        
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /streifen about -->
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+<footer>
+  <!-- newsletter -->
+  <div class="newsletter">
+
+    <div class="container">
+    
+      <div class="row">
+        <div class="col-md-10 ml-auto bg-primary py-5 newsletter-block">
+          <h5 class="text-white"> Du hast Fragen? Zur Ausstellung, zum Format?</h5>
+              <h5 class="text-white"> 
+                Schreib mir eine E-Mail!</h5>
+          <!-- <div class="col-12 text-center"> -->
+            <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">E-Mail an adriane@ninjaAdventures.de</a>
+          <!-- <form action="#">
+            <div class="input-wrapper">
+              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
+              <button type="submit" value="send" class="btn btn-primary">Join</button>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- footer content -->
+  <div class="footer bg-footer section border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <!-- logo -->
+          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="logo"></a>
+          <!-- <ul class="list-unstyled">
+            <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
+            <li class="mb-2">+1 (2) 345 6789</li>
+            <li class="mb-2">adriane@ninjaadventures.de</li>
+          </ul> -->
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
+            <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
+            <!-- <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="../AGB_AdrianeNiepel.pdf">AGB</a></li> -->
+            <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
+            <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
+
+          </ul>
+        </div>
+       
+        <!-- support -->
+         <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
+       
+          <h4 class="text-white mb-5">In Kooperation mit:</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"> <a class="logo-footer" title="beArte Partner" href="https://beates-skulpturengalerie.de/"><img class="img-fluid mb-4" src="../images/partner/bearte.png" alt="beArte Partner"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright -->
+  <div class="copyright py-4 bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 text-sm-left text-center">
+          <p class="mb-0">Copyright
+            <script>
+              var CurrentYear = new Date().getFullYear()
+              document.write(CurrentYear)
+            </script> 
+            © Adriane Niepel, also thanks to themefisher</p>
+        </div>
+        <div class="col-sm-5 text-sm-right text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel"><i class="ti-linkedin text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/"><i class="ti-instagram text-primary"></i></a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="../plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="../plugins/slick/slick.min.js"></script>
+<!-- aos -->
+<script src="../plugins/aos/aos.js"></script>
+<!-- venobox popup -->
+<script src="../plugins/venobox/venobox.min.js"></script>
+<!-- filter -->
+<script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
+<!-- google map -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+<script src="plugins/google-map/gmap.js"></script> -->
+
+<!-- Main Script -->
+<script src="../js/script.js"></script>
+
+</body>
 </html>
