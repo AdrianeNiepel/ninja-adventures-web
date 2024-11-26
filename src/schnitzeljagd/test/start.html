@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <title>Digitale Schnitzeljagd zum Selbermachen </title>
+  <meta name="description" content="Digitale Schnitzeljagd selbst gemacht"/>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <!--Favicon-->
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <!-- https://hiukim.github.io/mind-ar-js-doc/tools/compile/ -->
+
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: https://www.ninjaadventures.de/schnitzeljagd/test/assets/targets.mind; filterMinCF:0.0001; filterBeta: 0.001; maxTrack: 1;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+       
+        <video crossorigin="anonymous" id="vid7" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/8_station.mp4"></video>
+        <video crossorigin="anonymous" id="vid6" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/7_station.mp4"></video>
+        <video crossorigin="anonymous" id="vid5" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/6_station.mp4"></video>
+        <video crossorigin="anonymous" id="vid4" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/5_station.mp4"></video>
+        <video crossorigin="anonymous" id="vid3" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/4_station.mp4"></video>
+        <video crossorigin="anonymous" id="vid2" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/3_station.mp4"></video>
+        <video crossorigin="anonymous" id="vid1" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/2_station.mp4"></video>
+        <video crossorigin="anonymous" id="vid0" loop autoplay muted playsinline src="https://www.ninjaadventures.de/schnitzeljagd/test/assets/1_start.mp4"></video>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    
+      <!-- loslassen -->
+       <a-entity mindar-image-target="targetIndex: 7" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+        <a-video src="#vid7" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+      </a-entity> 
+
+      <!-- konzentration -->
+       <a-entity mindar-image-target="targetIndex: 6" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+        <a-video src="#vid6" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+      </a-entity> 
+
+      <!-- hoffnung -->
+      <a-entity mindar-image-target="targetIndex: 5" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+        <a-video src="#vid5" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+      </a-entity>
+     
+     <!-- flutlicht -->
+      <a-entity mindar-image-target="targetIndex: 4" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+      <a-video src="#vid4" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+    </a-entity> 
+     
+      <!-- fische groß -->
+      <a-entity mindar-image-target="targetIndex: 3" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+        <a-video src="#vid3" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+      </a-entity>
+
+      <!-- santulan -->
+      <a-entity mindar-image-target="targetIndex: 2" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+        <a-video src="#vid2" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+      </a-entity> 
+
+      <!-- passion -->
+      <a-entity mindar-image-target="targetIndex: 1" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+        <a-video src="#vid1" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+      </a-entity>
+
+      <!-- lebensschwung -->
+      <a-entity mindar-image-target="targetIndex: 0" animation__position="property: position; to: 0 0 0; dur: 300; easing: easeInOutQuad" animation__rotation="property: rotation; to: 0 0 0; dur: 300; easing: easeInOutQuad">
+        <a-video src="#vid0" position="0 0 0" width="16" height="9" scale="0.1 0.1 0.1"></a-video>
+      </a-entity>
+    </a-scene>
+
+    <!-- test -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const video0 = document.querySelector('#vid0');
+        const video1 = document.querySelector('#vid1');
+        const video2 = document.querySelector('#vid2');
+        const video3 = document.querySelector('#vid3');
+        const video4 = document.querySelector('#vid4');
+        const video5 = document.querySelector('#vid5');
+        const video6 = document.querySelector('#vid6');
+        const video7 = document.querySelector('#vid7');
+    
+
+        const tryPlayVideo = (video) => {
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(error => {
+              console.error('Error attempting to play video:', error);
+            });
+          }
+        };
+
+        const target0 = document.querySelector('[mindar-image-target="targetIndex: 0"]');
+        const target1 = document.querySelector('[mindar-image-target="targetIndex: 1"]');
+        const target2 = document.querySelector('[mindar-image-target="targetIndex: 2"]');
+        const target3 = document.querySelector('[mindar-image-target="targetIndex: 3"]');
+        const target4 = document.querySelector('[mindar-image-target="targetIndex: 4"]');
+        const target5 = document.querySelector('[mindar-image-target="targetIndex: 5"]');
+        const target6 = document.querySelector('[mindar-image-target="targetIndex: 6"]');
+        const target7 = document.querySelector('[mindar-image-target="targetIndex: 7"]');
+  
+        
+        if (target0) {
+          target0.addEventListener('targetFound', () => {
+            tryPlayVideo(video0);
+          });
+         
+        }
+        if (target1) {
+          target1.addEventListener('targetFound', () => {
+            tryPlayVideo(video1);
+          });
+          // target1.addEventListener('targetLost', () => {
+          //   video1.pause();
+          // });
+        }
+
+        if (target2) {
+          target2.addEventListener('targetFound', () => {
+            tryPlayVideo(video2);
+          });
+         
+        }
+       
+        if (target3) {
+          target3.addEventListener('targetFound', () => {
+            tryPlayVideo(video3);
+          });
+       
+         }
+
+         if (target4) {
+          target4.addEventListener('targetFound', () => {
+            tryPlayVideo(video4);
+          });
+       
+         }
+
+        if (target5) {
+          target5.addEventListener('targetFound', () => {
+            tryPlayVideo(video5);
+          });
+        }
+        if (target6) {
+          target6.addEventListener('targetFound', () => {
+            tryPlayVideo(video6);
+          });
+        }
+        if (target7) {
+          target7.addEventListener('targetFound', () => {
+            tryPlayVideo(video7);
+          });
+        }
+      
+
+       
+        video0.addEventListener('loadeddata', () => {});
+        video1.addEventListener('loadeddata', () => {});
+        video2.addEventListener('loadeddata', () => {});
+        video3.addEventListener('loadeddata', () => {});
+        video4.addEventListener('loadeddata', () => {});
+        video5.addEventListener('loadeddata', () => {});
+        video6.addEventListener('loadeddata', () => {});
+        video7.addEventListener('loadeddata', () => {});
+    
+
+        video0.addEventListener('canplay', () => {});
+        video1.addEventListener('canplay', () => {});
+        video2.addEventListener('canplay', () => {});
+        video3.addEventListener('canplay', () => {});
+        video4.addEventListener('canplay', () => {});
+        video5.addEventListener('canplay', () => {});
+        video6.addEventListener('canplay', () => {});
+        video7.addEventListener('canplay', () => {});
+   
+
+        video0.addEventListener('play', () => {});
+        video1.addEventListener('play', () => {});
+        video2.addEventListener('play', () => {});
+        video3.addEventListener('play', () => {});
+        video4.addEventListener('play', () => {});
+        video5.addEventListener('play', () => {});
+        video6.addEventListener('play', () => {});
+        video7.addEventListener('play', () => {});
+    
+
+        video0.addEventListener('pause', () => {});
+        video1.addEventListener('pause', () => {});
+        video2.addEventListener('pause', () => {});
+        video3.addEventListener('pause', () => {});
+        video4.addEventListener('pause', () => {});
+        video5.addEventListener('pause', () => {});
+        video6.addEventListener('pause', () => {});
+        video7.addEventListener('pause', () => {});
+   
+
+        video0.addEventListener('error', (e) => { console.error('Video 0 Error:', e); });
+        video1.addEventListener('error', (e) => { console.error('Video 1 Error:', e); });
+        video2.addEventListener('error', (e) => { console.error('Video 2 Error:', e); });
+        video3.addEventListener('error', (e) => { console.error('Video 3 Error:', e); });
+        video4.addEventListener('error', (e) => { console.error('Video 4 Error:', e); });
+        video5.addEventListener('error', (e) => { console.error('Video 5 Error:', e); });
+        video6.addEventListener('error', (e) => { console.error('Video 6 Error:', e); });
+        video7.addEventListener('error', (e) => { console.error('Video 7 Error:', e); });
+  
+
+        // document.querySelector('a-scene').addEventListener('loaded', () => {
+        //   console.log('A-Frame scene loaded');
+        // });
+
+        // document.querySelector('a-scene').addEventListener('mindar-image-ready', (event) => {
+        //   console.log('MindAR image system ready', event.detail);
+        // });
+      });
+    </script>
+  </body>
+</html>
