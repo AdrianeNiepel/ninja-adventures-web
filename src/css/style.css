@@ -256,6 +256,25 @@ h6, .h6 {
   border: 1px solid #3f2c5f;
 }
 
+.btn-hausliebe {
+  background: #d775c2;
+  color: #fff;
+  border: 1px solid #d775c2;
+}
+.btn-hausliebe::before {
+  background: #fff;
+}
+.btn-hausliebe:active {
+  background: #fff;
+  color: #d775c2;
+  border: 1px solid #d775c2;
+}
+.btn-hausliebe:hover {
+  background: #d775c2;
+  color: #d775c2;
+  border: 1px solid #d775c2;
+}
+
 body {
   background-color: #fff;
   overflow-x: hidden;
@@ -386,6 +405,10 @@ a h4:hover {
   background: #3f2c5f !important;
 }
 
+.bg-hausliebe {
+  background: #d775c2 !important;
+}
+
 .bg-gray {
   background: #f8f8f8;
 }
@@ -404,6 +427,10 @@ a h4:hover {
 
 .text-energy2 {
   color: #e4d550ff !important;
+}
+
+.text-hausliebe {
+  color: #d775c2 !important;
 }
 
 .text-color {

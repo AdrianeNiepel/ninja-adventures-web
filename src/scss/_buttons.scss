@@ -174,3 +174,26 @@
     border: 1px solid $secondary-color;
   }
 }
+
+.btn-hausliebe {
+  background: $hausliebe-color;
+  color: $white;
+  border: 1px solid $hausliebe-color;
+
+  &::before {
+    background: $white;
+  }
+
+  &:active {
+    background: $white;
+    color: $hausliebe-color;
+    border: 1px solid $hausliebe-color;
+  }
+
+  &:hover {
+    background: $hausliebe-color;
+    color: $hausliebe-color;
+    border: 1px solid $hausliebe-color;
+  }
+}
+
