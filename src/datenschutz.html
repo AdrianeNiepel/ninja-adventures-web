@@ -27,17 +27,65 @@
 
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+  
+  <!-- Accessibility CSS -->
+  <style>
+    /* Skip Links - nur für Screen Reader sichtbar */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    .sr-only:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: inherit;
+      margin: inherit;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+      background-color: #fff;
+      border: 2px solid #000;
+      padding: 10px;
+      z-index: 9999;
+    }
+    
+    /* Fokus-Indikatoren für alle interaktiven Elemente */
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 3px solid #e4d550;
+      outline-offset: 2px;
+    }
+    
+    /* Keyboard-Navigation Indikatoren */
+    *:focus-visible {
+      outline: 3px solid #e4d550;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px rgba(228, 213, 80, 0.25);
+    }
+  </style>
 
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
   <!--Cookie Banner-->
-  <link rel="preconnect" href="//app.eu.usercentrics.eu">
+  <!-- <link rel="preconnect" href="//app.eu.usercentrics.eu">
 <link rel="preconnect" href="//api.eu.usercentrics.eu">
 <link rel="preconnect" href="//sdp.eu.usercentrics.eu">
 <link rel="preload" href="//app.eu.usercentrics.eu/browser-ui/latest/loader.js" as="script">
-<link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+<link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script"> -->
   <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="TodeXqsbp" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
   <script type="application/javascript" src="https://sdp.eu.usercentrics.eu/latest/uc-block.bundle.js"></script>
   <!-- <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
@@ -58,6 +106,15 @@
 </head>
 
 <body>
+  <!-- Skip Links für Barrierefreiheit -->
+  <nav class="sr-only" aria-label="Skiplinks">
+    <ul>
+      <li><a href="#main-content">Zum Hauptinhalt springen</a></li>
+      <li><a href="#footer">Zur Fußzeile springen</a></li>
+      <li><a href="#navigation">Zur Navigation springen</a></li>
+    </ul>
+  </nav>
+  
   <!-- preloader start -->
   <!-- <div class="preloader">
     <img src="images/preloader.gif" alt="preloader">
@@ -71,11 +128,12 @@
   <div class="navigation w-100">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="index.html"><img width="200px" src="images/logo.png" alt="logo"></a>
+        <a class="navbar-brand" href="index.html"><img width="200px" src="images/logo.png" alt="Ninja Adventures Logo - Startseite"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navigation" aria-expanded="false" aria-label="Navigationsmenü umschalten">
           <span class="navbar-toggler-icon"></span>
         </button>
+      
 
         <div class="collapse navbar-collapse" id="navigation">
           <ul class="navbar-nav ml-auto text-center">
@@ -88,19 +146,32 @@
                 Angebote
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="karten/werteadventurebasis/wertereise-karten.html">Finde deine Mission</a>
+                <a class="dropdown-item" title="Business Angebote Workshops Vielbegabte Multitalente" rel="noopener" href="business/">Business Ninjas </a>
+                <hr> 
+                <a class="dropdown-item" title="Vielseitig leben Angebote" rel="noopener" href="ideen/">Idien Ninjas</a>
+                <!-- <a class="dropdown-item" href="karten/werteadventurebasis/wertereise-karten.html">-> Kurs - Finde deine Mission</a> -->
                  <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" rel="noopener" href="kurs_erwecke_den_ninja_in_dir.html">Kurs: Erwecke den Ninja in dir</a> -->
-                 <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" target="_blank" rel="noopener" href="https://www.erwecke-den-ninja-in-dir.de/">Kurs: Erwecke den Ninja in dir</a>
+                 <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" target="_blank" rel="noopener" href="https://www.erwecke-den-ninja-in-dir.de/">Kurs: Erwecke den Ninja in dir</a> -->
                  <hr>
-                 <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="teamworkshops.html">Teamworkshops</a>
-                 <hr> 
+               
                 <!-- <a class="dropdown-item" rel="noopener" target="_blank" href="https://book.timify.com/services?accountId=61e48b39754c0011652a68eb">Virtueller Kaffee</a> -->
-              
+                <a class="dropdown-item" title="Family" rel="noopener"  href="family/">Family Ninjas </a>
+                  <!-- <a class="dropdown-item" title="Family" rel="noopener" href="family/empfehlungen-kinder-staerken.html">-> Kinder stärken Produkte</a>
+                <a class="dropdown-item" title="Family" rel="noopener" href="family/aktuelle-events.html">-> Aktuelle Events</a>
+                <a class="dropdown-item" title="Family" rel="noopener" href="family/kindergeburtstage.html">-> Kindergeburtstage</a>
+                <a class="dropdown-item" title="Family" rel="noopener" href="family/mom-load.html">-> Mom Load</a> -->
+                <!-- <a class="dropdown-item" title="Family" rel="noopener" href="family/index.html#schule">-> Schulformate</a> -->
                 
+                
+             
+              <hr>
+                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
               </div>
             </li>
             
-            
+            <li class="nav-item @@blog">
+              <a class="nav-link" title="Blog für Multipassionierte" href="blog.html">Blog</a>
+            </li>
             
             <li class="nav-item @@about">
               <a class="nav-link" href="about/">Über</a>
@@ -142,31 +213,27 @@
 <!-- /header -->
 
 
-<!-- page title -->
-<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="@@page-link">Datenschutz</a></li>
-          <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
-        </ul>
-        <p class="text-lighten">
-          
-          
-          
-        </p>
-      </div>
+<!-- Main Content -->
+<main id="main-content">
+  <!-- page title -->
+  <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+         
+           <h1 class="text-white">Datenschutz</h1> <br>
+          </p>
+        </div>
     </div>
-  </div>
-</section>
-<!-- /page title -->
+   
+  </section>
+  <!-- /page title -->
 
-<!-- about -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
+  <!-- about -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
         <p>
 <h2>1. Datenschutz auf einen Blick</h2>
 <h3>Allgemeine Hinweise</h3> <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
@@ -240,11 +307,11 @@ E-Mail: adriane@ninjaadventures.de</p>
             <li class="mb-2">adriane@ninjaadventures.de</li>
           </ul> -->
           <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="impressum.html">Impressum</a></li>
-            <li class="mb-3"><a class="text-color" href="datenschutz.html">Datenschutz</a></li>
-            <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="AGB_AdrianeNiepel.pdf">AGB</a></li>
-            <li class="mb-3"><a class="text-color" href="kontakt.html">Kontakt</a></li>
-            <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
+            <li class="mb-3"><a class="text-white" href="impressum.html">Impressum</a></li>
+            <li class="mb-3"><a class="text-white" href="datenschutz.html">Datenschutz</a></li>
+            <!-- <li class="mb-3"><a class="text-white" title="AGB" target="_blank" href="AGB_AdrianeNiepel.pdf">AGB</a></li> -->
+            <li class="mb-3"><a class="text-white" href="kontakt.html">Kontakt</a></li>
+            <li class="mb-3"><a class="text-white" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
 
           </ul>
         </div>
@@ -285,7 +352,7 @@ E-Mail: adriane@ninjaadventures.de</p>
           </ul> -->
         <!-- </div>  -->
         <!-- support -->
-         <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
+         <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">  -->
         <!--   <h4 class="text-white mb-5">RECOMMEND</h4>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="#">WordPress</a></li>
@@ -293,17 +360,22 @@ E-Mail: adriane@ninjaadventures.de</p>
             <li class="mb-3"><a class="text-color" href="#">WooCommerce</a></li>
             <li class="mb-3"><a class="text-color" href="#">bbPress</a></li>
           </ul> -->
-          <h4 class="text-white mb-5">Sharing is caring - Empfehlungen von Herzen</h4>
+          <!-- <h4 class="text-white mb-5">Sharing is caring - Empfehlungen von Herzen</h4>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="https://www.leadventure.de/" target="about_blank">Agile: https://www.leadventure.de/</a></li>
             <li class="mb-3"><a class="text-color" href="https://visuellklar.ch" target="about_blank">Coaching:  https://visuellklar.ch/</a></li>
-            <li class="mb-3"><a class="text-color" href="https://romanrackwitz.de" target="about_blank">Gamification: https://romanrackwitz.de/ </a></li>
+            <li class="mb-3"><a class="text-color" href="https://romanrackwitz.de" target="about_blank">Gamification: https://romanrackwitz.de/ </a></li> -->
             <!-- <li class="mb-3"><a class="text-color" href="https://valuty.de" target="about_blank">Werte: https://valuty.de/ </a></li> -->
-          </ul>
-        </div>
+          <!-- </ul> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>
+</main>
+<!-- End Main Content -->
+
+<!-- footer -->
+<footer id="footer" class="bg-dark footer-section">
   <!-- copyright -->
   <div class="copyright py-4 bg-footer">
     <div class="container">
