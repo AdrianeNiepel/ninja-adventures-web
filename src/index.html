@@ -29,6 +29,54 @@
   <!-- <link rel="stylesheet" href="css/cookies-eu-banner.default.css"> -->
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+  
+  <!-- Accessibility CSS -->
+  <style>
+    /* Skip Links - nur für Screen Reader sichtbar */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    .sr-only:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: inherit;
+      margin: inherit;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+      background-color: #fff;
+      border: 2px solid #000;
+      padding: 10px;
+      z-index: 9999;
+    }
+    
+    /* Fokus-Indikatoren für alle interaktiven Elemente */
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 3px solid #e4d550;
+      outline-offset: 2px;
+    }
+    
+    /* Keyboard-Navigation Indikatoren */
+    *:focus-visible {
+      outline: 3px solid #e4d550;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px rgba(228, 213, 80, 0.25);
+    }
+  </style>
 
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -76,9 +124,18 @@
 </head>
 
 <body>
+  <!-- Skip Links für Barrierefreiheit -->
+  <nav class="sr-only" aria-label="Skiplinks">
+    <ul>
+      <li><a href="#main-content">Zum Hauptinhalt springen</a></li>
+      <li><a href="#footer">Zur Fußzeile springen</a></li>
+      <li><a href="#navigation">Zur Navigation springen</a></li>
+    </ul>
+  </nav>
+  
   <!-- preloader start -->
   <!-- <div class="preloader">
-    <img src="images/preloader.gif" alt="preloader">
+    <img src="images/preloader.gif" alt="Seite wird geladen - Warte-Animation">
   </div> -->
   <!-- preloader end -->
 
@@ -90,9 +147,9 @@
   <div class="navigation w-100">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" title="Ninja Adventures Vielseitigkeit leben" href="index.html"><img width="350px" title="Ninja Adventures Potenzialentwicklung" src="images/logo.png" alt="logo" ></a>
+        <a class="navbar-brand" title="Ninja Adventures Vielseitigkeit leben" href="index.html"><img width="350px" title="Ninja Adventures Potenzialentwicklung" src="images/logo.png" alt="Ninja Adventures Logo - Startseite" ></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navigation" aria-expanded="false" aria-label="Navigationsmenü umschalten">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -178,28 +235,30 @@
 
  
 
+<!-- main content -->
+<main id="main-content">
+
 <!-- page title -->
-<section class="page-title-section overlay bg-cover" data-background="images/banner/banner-12.webp">
+<section class="page-title-section overlay bg-cover" data-background="images/banner/banner-12.webp" aria-labelledby="hero-heading">
 
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="text-white font-secondary">Entdecke die Macht der Multipassion!</h1>
-          <h3 class="text-white font-secondary">
+          <h1 id="hero-heading" class="text-white font-secondary">Entdecke die Macht der Multipassion!</h1>
+          <h2 class="text-white font-secondary">
             <!-- <span class="text-primary">durch Perspektivwechsel </span> -->
             Das mentale Fitnessstudio für Multipassionierte - und ihr Umfeld!
-            </h2></br></br>
-          <!-- <h3 class="text-lighten">Ninja Adventures bringt dir Vielseitigkeit in allen Facetten!</h3></br></br> -->
+            </h2>
           <p class="text-white">
-            Für deine persönliche Entwicklung: lerne deine Vielseitigkeit lieben</br>
-            Für Selbstständige: baue dein Business auf deiner Vielseitigkeit auf </br>
-            Für HR Expert/innen: für Talentförderung im Unternehmen </br>
-            <!-- Für Trainer und Teamentwickler: für innovative und kreative Workshopformate  </br> -->
+            Für deine persönliche Entwicklung: lerne deine Vielseitigkeit lieben<br>
+            Für Selbstständige: baue dein Business auf deiner Vielseitigkeit auf <br>
+            Für HR Expert/innen: für Talentförderung im Unternehmen <br>
+            <!-- Für Trainer und Teamentwickler: für innovative und kreative Workshopformate  <br> -->
             Für deine Kinder: Vielseitigkeit stärken und fördern von Anfang an
-            </br>  </br>
-            Wirf 10 Tage einen Blick in deine Vielseitigkeit:</br>
-            <img width="200px" title="10 Tage Challenge" src="images/blog/blog_experience10tage.webp" alt="Ninja Adventures Ninja Challenge Vielseitigkeit">
-            <a href="blog-vielseitigkeit-challenge-fruehling.html" target="_blank" title="frühlings challenge" class="btn btn-sm-xs btn-primary ">Kostenlose 10 Tage Challenge</a>
+            <br><br>
+            Wirf 10 Tage einen Blick in deine Vielseitigkeit:<br>
+            <img width="200px" title="10 Tage Challenge" src="images/blog/blog_experience10tage.webp" alt="Ninja Adventures Ninja Challenge - 10 Tage Frühlings Experience">
+            <a href="blog-vielseitigkeit-challenge-fruehling.html" target="_blank" title="Kostenlose 10 Tage Challenge öffnen" class="btn btn-sm-xs btn-primary " aria-label="Kostenlose 10 Tage Frühlings Challenge starten">Kostenlose 10 Tage Challenge</a>
           </p>       
            <!-- <h3 class="text-white font-secondary">Wecke deine Ninja-Power!</h3></br></br>  -->
           <!-- Wachse über dich hinaus und erwecke den Ninja in dir!</br></br></br> -->
@@ -271,7 +330,7 @@
       <div class="col-12">
        
         <div class="d-flex align-items-center section-title justify-content-between">
-          <h2 class="mb-0  mr-3">Und so findest du deinen Weg: </h2> </br></br>
+          <h2 class="mb-0  mr-3">Und so findest du deinen Weg: </h2> <br><br>
           <!-- <div class="border-top w-100 border-primary d-none d-sm-block"></div> -->
         </div> 
          
@@ -288,23 +347,23 @@
       <!-- course item -->
 <div class="col-lg-4 col-sm-6 mb-5" id="ideenninja">
   <div class="card p-0 border-primary rounded-0 hover-shadow">
-    <img class="card-img-top rounded-0" title="Ideen Ninja" src="images/courses/15.webp" alt="vielseitigkeit leben, klarheit, umsetzen">
+    <img class="card-img-top rounded-0" title="Ideen Ninja" src="images/courses/15.webp" alt="Ideen Ninja Kurs - Lebe deine Vielseitigkeit: Klarheit, Umsetzung und Selbstbewusstsein">
     <div class="card-body">
       <i>Für multipassionierte Menschen       </i></br></br>
-      <h4 class="mb-0  mr-3">Du willst deine Vielseitigkeit nutzen?</h4>
+      <h3 class="mb-0  mr-3">Du willst deine Vielseitigkeit nutzen?</h3>
       
-    </br></br>
-    <i>Du willst deine Vielseitigkeit lieben? </br>
+    <br><br>
+    <i>Du willst deine Vielseitigkeit lieben? <br>
       Du willst dich wohl fühlen, deinen Selbstwert anerkennen?
       Deine Klarheit in deinem Kopf bekommen für deine Projekte (in Hobby oder im Business)?
-      In die Umsetzung kommen und dran bleiben?</br>
-        Du suchst ein Sparring zu DEINEN Projekten? </br>
-        Oder den Austausch mit anderen Vielseitigen? </br>
-        Willst Methoden lernen dich zu organisieren?</i></br></br>
+      In die Umsetzung kommen und dran bleiben?<br>
+        Du suchst ein Sparring zu DEINEN Projekten? <br>
+        Oder den Austausch mit anderen Vielseitigen? <br>
+        Willst Methoden lernen dich zu organisieren?</i><br><br>
         Selbstbewusstsein. Klarheit. Umsetzen.  
-    </br></br>
-      <strong>Lebe jetzt deine Vielseitigkeit! </strong> </br></br>
-      <a href="ideen/" target="_blank" title="Vielseitigkeit nutzen" class="btn btn-sm-xs btn-primary ">Vielseitigkeit nutzen</a>
+    <br><br>
+      <strong>Lebe jetzt deine Vielseitigkeit! </strong> <br><br>
+      <a href="ideen/" target="_blank" title="Vielseitigkeit nutzen und Klarheit finden" class="btn btn-sm-xs btn-primary " aria-label="Zu den Ideen Ninjas - Vielseitigkeit nutzen">Vielseitigkeit nutzen</a>
       
       <!-- <a href="https://outlook.office365.com/owa/calendar/ErweckedenNinjaindir@ninjaadventures.de/bookings/" target="_blank" title="Kennenlernen" class="btn btn-sm-xs btn-primary ">Ja, jetzt kennenlernen!</a> -->
       <!-- <a href="blog-vielseitigkeit_erfolgsstrategie.html" title="Kontakt Adriane Niepel" class="btn btn-third btn-sm">Ein Einblick</a> -->
@@ -332,20 +391,20 @@
  <!-- course item -->
  <div class="col-lg-4 col-sm-6 mb-5" id="businessninja">
   <div class="card p-0 border-primary rounded-0 hover-shadow">
-    <a href="business/" title="multipassionierte Menschen im Unternehmen" ><img class="card-img-top rounded-0" title="Coaching Teamworkshop Perspektivwechsel" src="images/courses/14.webp" alt="Business Ninjas Förderung von multipassionierten im Business"></a>
+    <a href="business/" title="Business Ninjas - Förderung von multipassionierten Mitarbeitenden" ><img class="card-img-top rounded-0" title="Coaching Teamworkshop Perspektivwechsel" src="images/courses/14.webp" alt="Business Ninjas Kurs - Innovation statt Fluktuation: Multipassionierte im Unternehmen fördern"></a>
     <div class="card-body">
-      <i>Für Unternehmen       </i></br></br>
-      <h4 class="mb-0  mr-3">Innovation statt Fluktuation - klingt gut? </h4>
+      <i>Für Unternehmen       </i><br><br>
+      <h3 class="mb-0  mr-3">Innovation statt Fluktuation - klingt gut? </h3>
       
-    </br> </br>
+    <br> <br>
     Steige jetzt in das Thema multipassionierte Mitarbeitende entdecken und fördern ein:</br> </br>
       
-      <a href="business/" title="multipassionierte Menschen im Unternehmen" class="btn btn-sm-xs btn-primary ">Businessbereich</a>
+      <a href="business/" title="Business Ninjas - Multipassionierte Mitarbeitende im Unternehmen fördern" class="btn btn-sm-xs btn-primary " aria-label="Zum Business Bereich - Angebote für Unternehmen">Businessbereich</a>
       
       
     <!-- <hr>  -->
 
-  </br>
+  <br>
       <!-- <strong>Aktuelle News:  </br> </br>
   Jetzt ganz einfach Informationen zum Einstiegsworkshop anfordern:</strong> </br></br>
       
@@ -367,17 +426,17 @@
       <!-- course item -->
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" title="ninja family" src="images/courses/16.webp" alt="vielseitigkeit in der familie leben">
+          <img class="card-img-top rounded-0" title="Family Ninjas - Vielseitigkeit in der Familie" src="images/courses/16.webp" alt="Family Ninjas Kurs - Vielseitigkeit in der Familie leben und fördern: Wertschätzung für Mütter und Kinder">
           <div class="card-body">
-            <i>Für Familien & Mütter       </i></br></br>
-            <h4 class="mb-0  mr-3">Vielseitigkeit und Wertschätzung in der Familie leben und fördern?</h4>
+            <i>Für Familien & Mütter       </i><br><br>
+            <h3 class="mb-0  mr-3">Vielseitigkeit und Wertschätzung in der Familie leben und fördern?</h3>
             
-          </br></br>
+          <br><br>
           <i>Als ein Zukunfts Skill willst du die Vielseitigkeit bei deinen Kindern fördern,
-            aber ohne Druck und mit ganz viel Wertschätzung? Was braucht es dazu?</i></br></br>
+            aber ohne Druck und mit ganz viel Wertschätzung? Was braucht es dazu?</i><br><br>
               Hier findest du ganz besondere Möglichkeiten für Familien und für Mütter!  
-          </br></br>
-            <a href="family/" title="Vielseitigkeit in der Familie fördern Zukunftsfähigkeiten ausbilden" class="btn btn-primary btn-sm">Familienbereich</a>
+          <br><br>
+            <a href="family/" title="Zum Familienbereich für Mütter und Kinder" class="btn btn-primary btn-sm" aria-label="Family Ninjas - Zu den Angeboten für Familien und Mütter">Familienbereich</a>
             <!-- <a href="karten/werteadventurebasis/wertereise-karten.html" title="Kartenset Basis Werte" class="btn btn-third btn-sm">Jetzt bestellen</a> -->
           
           
@@ -397,7 +456,7 @@
   <!-- course item -->
   <!-- <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" title="Coaching Cards Basis Werte Adventure" src="karten/werteadventurebasis/ninja_mission_karten_allInkl.png" alt="Coaching Cards Selbstbewusst und Selbstbestimmt">
+      <img class="card-img-top rounded-0" title="Coaching Cards Basis Werte Adventure" src="karten/werteadventurebasis/ninja_mission_karten_allInkl.png" alt="Coaching Cards Basis Werte Adventure - Kartenset für selbstbestimmtes Leben mit Anleitung und Online-Material">
       <div class="card-body">
         <h3 class="mb-0  mr-3">Du suchst einen leichten Einstieg zu einem Leben, dass zu dir passt? </h3>
         
@@ -416,7 +475,7 @@
 <!-- course item -->
 <!-- <div class="col-lg-4 col-sm-6 mb-5">
   <div class="card p-0 border-primary rounded-0 hover-shadow">
-    <img class="card-img-top rounded-0" title="Neu Orientierung Selbstbestimmt" src="images/courses/onlinekurs_erwecke.png" alt="Online Kurs Energie">
+    <img class="card-img-top rounded-0" title="Online Kurs - Erwecke den Ninja in dir" src="images/courses/onlinekurs_erwecke.png" alt="Online Kurs Erwecke den Ninja in dir - 12 Wochen mit Coaching, Videos und Offline-Material">
     <div class="card-body">
       <h3 class="mb-0  mr-3">Du willst dich neu orientieren und suchst eine Begleitung zu einem selbstbestimmten Leben? </h3>
       
@@ -470,7 +529,7 @@
    <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
     <div class="card border-0 rounded-0 hover-shadow">
       <div class="card-img position-relative">
-        <img class="card-img-top rounded-0" title="Ninja Adventures Basis Werte" src="images/customer/customer4.png" alt="Kundenstimmen Balance">
+        <img class="card-img-top rounded-0" title="Kundenstimme von Hanna H., Sozialpädagogin" src="images/customer/customer4.png" alt="Porträt von Hanna H., Sozialpädagogin - Kundenstimme zu Ninja Adventures">
         <!-- <div class="card-date"><span>18</span><br>December</div> -->
       </div>
       <div class="card-body">
@@ -486,7 +545,7 @@
    <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
     <div class="card border-0 rounded-0 hover-shadow">
       <div class="card-img position-relative">
-        <img class="card-img-top rounded-0" title="Kundenstimmen" src="images/customer/customer1.png" alt="Kundenstimmen">
+        <img class="card-img-top rounded-0" title="Kundenstimme von Melanie B., Coach" src="images/customer/customer1.png" alt="Kundenstimme von Melanie B., Coach zur Ninja Adventures Erfahrung">
         <!-- <div class="card-date"><span>18</span><br>December</div> -->
       </div>
       <div class="card-body">
@@ -502,7 +561,7 @@
    <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
     <div class="card border-0 rounded-0 hover-shadow">
       <div class="card-img position-relative">
-        <img class="card-img-top rounded-0" title="Kundenstimmen" src="images/customer/customer2.png" alt="Kundenstimmen Balance">
+        <img class="card-img-top rounded-0" title="Kundenstimme Michael S." src="images/customer/customer2.png" alt="Porträt von Michael S., Softwareentwickler - Kundenstimme zu Ninja Adventures">
       </div>
       <div class="card-body"> 
         <!-- location -->
@@ -536,7 +595,7 @@
       </div> -->
 
       <div class="col-md-3 order-1 order-md-1 ">
-        <img class="img-fluid w-100" src="images/teachers/adrianeniepel_p.png" alt="Adriane Niepel"> </br></br></br>
+        <img class="img-fluid w-100" src="images/teachers/adrianeniepel_p.png" alt="Adriane Niepel - Gründerin und Agile Coach von Ninja Adventures"> <br><br><br>
 
 
       </div>
@@ -589,7 +648,7 @@
          <!-- sen, die längst überholt und nicht mehr zeitgemäß sind. flexible denkmuster-->
         </p>
                   
-        <a href="about/" class="btn btn-sm btn-dark ml-sm-3 d-sm-block">Mehr über Ninja Adventures</a>
+        <a href="about/" class="btn btn-sm btn-dark ml-sm-3 d-sm-block" aria-label="Mehr über Ninja Adventures und Adriane Niepel erfahren">Mehr über Ninja Adventures</a>
         
       </div>
       
@@ -639,7 +698,7 @@
         </br></br></br>
       </div>
       <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
-        <img class="img-fluid w-50" title="Ninja Adve Werte" src="images/about/ninja-wertestein.png" alt="Ninja Werte">
+        <img class="img-fluid w-50" title="Ninja Werte - Grundlage der Ninja Adventures" src="images/about/ninja-wertestein.png" alt="Ninja Wertestein Illustration - Werte als Grundlage für persönliche Entwicklung und Balance">
       </div>
     </div>
   </div>
@@ -672,7 +731,7 @@
           
           </br>
             Welche fünf? Du willst mehr über die Arbeitsweise wissen?</br>
-            <a href="about/" title="Ninja erwecken" class="btn btn-primary btn-dark">Lies jetzt mehr Details</a>
+            <a href="about/" title="Mehr über die Arbeitsweise und Elemente der Ninja Adventures" class="btn btn-primary btn-dark" aria-label="Lies jetzt mehr Details zu den 5 Elementen der Ninja Adventures">Lies jetzt mehr Details</a>
      
             </p>
           </div>
@@ -715,8 +774,8 @@
 <section class="section bg-secondary" id="challenge">
   <div class="container">
     <h2 class="section-title text-white">Lust auf eine Runde Frühlingsgefühle?</h2>
-    <h4 class="text-white font-secondary mb-0">
-      Lass dich 10 Tage kostenlos (aber nicht umsonst!) begleiten deine Vielseitigkeit zu entdecken und die Frühlingsgefühle in dein Herz zu lassen!</br>
+    <h3 class="text-white font-secondary mb-0">
+      Lass dich 10 Tage kostenlos (aber nicht umsonst!) begleiten deine Vielseitigkeit zu entdecken und die Frühlingsgefühle in dein Herz zu lassen!<br>
       Bereit für deine 10 Mini Missionen?
              <!-- in ein Leben voller innerer Stärke und Gelassenheit,  -->
       </br></br>
@@ -724,7 +783,7 @@
     <div class="row align-items-center">
       <div class="col-md-5 order-1 order-md-1">
        
-        <img class="img-fluid w-100" title="Mentale Ninja Ausbildung starten" src="images/blog/logo_experience10tage.webp" alt="Ninja 10 Tage Frühlings Experience">
+        <img class="img-fluid w-100" title="10 Tage Frühlings Experience - Kostenlose Challenge" src="images/blog/logo_experience10tage.webp" alt="Logo: Ninja 10 Tage Frühlings Experience - Kostenlose Challenge zur Entdeckung deiner Vielseitigkeit">
         <p>
              
           </p>
@@ -1743,7 +1802,7 @@
   
                     
   
-                    <p><span style="font-size: 10px;">Wir werden keinen Spam verschicken und deine Daten gemäß unserer <a href="https://www.ninjaadventures.de/datenschutz.html" target="_blank">Datenschutzerklärung</a> sorgfältig behandeln. Du kannst dich jederzeit über den in jeder E-Mail enthaltenen Link abmelden.</span></p>
+                    <p><span style="font-size: 10px;">Wir werden keinen Spam verschicken und deine Daten gemäß unserer <a href="https://www.ninjaadventures.de/datenschutz.html" target="_blank" aria-label="Datenschutzerklärung öffnen">Datenschutzerklärung</a> sorgfältig behandeln. Du kannst dich jederzeit über den in jeder E-Mail enthaltenen Link abmelden.</span></p>
   
                     
                   </div>
@@ -1815,7 +1874,7 @@
               fetch("https://assets.mailerlite.com/jsonp/46637/forms/150550005619361223/takel")
           </script>
 
-
+ id="footer"
 
 
 
@@ -1872,7 +1931,7 @@
         <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
           <h3 class="text-white">Fragen? Schreib mir!</h3>
           <!-- <div class="col-12 text-center"> -->
-            <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" title="E-Mail Adresse Ninja Adventures" class="btn btn-secondary">E-Mail: adriane@ninjaAdventures.de</a>
+          <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" title="E-Mail-Adresse: adriane@ninjaAdventures.de" class="btn btn-secondary" aria-label="E-Mail schreiben: adriane@ninjaAdventures.de">E-Mail: adriane@ninjaAdventures.de</a>
           <!-- <form action="#">
             <div class="input-wrapper">
               <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
@@ -1889,7 +1948,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" title="NinjaAdventures Logo" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+          <a class="logo-footer" title="Ninja Adventures - Zur Startseite" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="Ninja Adventures Logo - Link zur Startseite"></a>
           <!-- <ul class="list-unstyled">
             <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
             <li class="mb-2">+1 (2) 345 6789</li>
@@ -1951,12 +2010,10 @@
          <h4 class="text-white mb-5"></h4>
         <ul class="list-unstyled">
           
-          <li class="mb-3">
+          <li class="mb-4">
             
             <a class="logo-footer" title="Teamprove Partner" href="https://www.teamprove.de/"><img class="img-fluid mb-4" src="images/partner/teamprove.png" alt="Teamprove Partner"></a></li>
             <a class="logo-footer" title="Jobs for Moms Partner" href="https://jobsformoms.de/de-de/home"><img class="img-fluid mb-4" src="images/partner/jobsformoms.png" alt="Jobs for moms Partner"></a></li>
-            <a class="logo-footer" title="Grün Schaffen Partner" href="https://gruenschaffen.de/"><img class="img-fluid mb-4" src="images/partner/gruenschaffen.png" alt="Grün Schaffen Partner"></a></li>
-            <a class="logo-footer" title="Coach Wave Partner" href="https://www.coach-wave.com/"><img class="img-fluid mb-4" src="images/partner/coachwave.png" alt="Coachwave Partner"></a></li>
         </ul> 
      </div>  
         <!-- support -->
@@ -1972,11 +2029,11 @@
           <!-- logo -->
           <h4 class="text-white mb-5">Rechtliches</h4>
           <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" title="Impressum" href="impressum.html">Impressum</a></li>
-            <li class="mb-3"><a class="text-color" title="Datenschutz" href="datenschutz.html">Datenschutz</a></li>
-            <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="AGB_AdrianeNiepel.pdf">AGB</a></li>
-            <li class="mb-3"><a class="text-color" title="Kontakt" href="kontakt.html">Kontakt</a></li>
-            <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
+            <li class="mb-3"><a class="text-white" title="Impressum" href="impressum.html">Impressum</a></li>
+            <li class="mb-3"><a class="text-white" title="Datenschutz" href="datenschutz.html">Datenschutz</a></li>
+            <li class="mb-3"><a class="text-white" title="AGB" target="_blank" href="AGB_AdrianeNiepel.pdf">AGB</a></li>
+            <li class="mb-3"><a class="text-white" title="Kontakt" href="kontakt.html">Kontakt</a></li>
+            <li class="mb-3"><a class="text-white" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
             
           </ul>
         </div>
@@ -1997,8 +2054,8 @@
         </div>
         <div class="col-sm-5 text-sm-right text-center">
           <ul class="list-inline">
-            <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel"><i class="ti-linkedin text-primary"></i></a></li>
-            <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/"><i class="ti-instagram text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel" aria-label="LinkedIn Profil von Adriane Niepel"><i class="ti-linkedin text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Ninja Adventures" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/" aria-label="Instagram Profil Ninja Adventures"><i class="ti-instagram text-primary"></i></a></li>
           </ul>
         </div>
       </div>
@@ -2006,6 +2063,9 @@
   </div>
 </footer>
 <!-- /footer -->
+
+</main>
+<!-- /main content -->
 
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
