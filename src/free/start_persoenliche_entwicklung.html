@@ -13,24 +13,24 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css">
   <!-- slick slider -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="../plugins/slick/slick.css">
   <!-- themefy-icon -->
-  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="../plugins/themify-icons/themify-icons.css">
   <!-- animation css -->
-  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <link rel="stylesheet" href="../plugins/animate/animate.css">
   <!-- aos -->
-  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <link rel="stylesheet" href="../plugins/aos/aos.css">
   <!-- venobox popup -->
-  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+  <link rel="stylesheet" href="../plugins/venobox/venobox.css">
 
   <!-- Main Stylesheet -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon">
 
   <!--Cookie Banner-->
   <link rel="preconnect" href="//app.eu.usercentrics.eu">
@@ -56,9 +56,18 @@
 </head>
 
 <body>
+  <!-- Skip Links für Barrierefreiheit -->
+  <nav class="sr-only" aria-label="Skiplinks">
+    <ul>
+      <li><a href="#main-content">Zum Hauptinhalt springen</a></li>
+      <li><a href="#footer">Zur Fußzeile springen</a></li>
+      <li><a href="#navigation">Zur Navigation springen</a></li>
+    </ul>
+  </nav>
+
   <!-- preloader start -->
   <!-- <div class="preloader">
-    <img src="images/preloader.gif" alt="preloader">
+    <img src="../images/preloader.gif" alt="Seite wird geladen - Warte-Animation">
   </div> -->
   <!-- preloader end -->
 
@@ -66,77 +75,49 @@
 <header class="fixed-top header">
  
   <!-- navbar -->
-  <div class=" w-100">
+  <div class="navigation w-100">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="index.html"><img width="200px" src="images/logo.png" alt="logo"></a>
-        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <nav id="navigation" class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Hauptnavigation">
+        <a class="navbar-brand" title="Ninja Adventures Vielseitigkeit leben" href="../index.html"><img width="350px" title="Ninja Adventures Potenzialentwicklung" src="../images/logo.png" alt="Ninja Adventures Logo - Startseite" ></a>
+        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigationCollapse"
+          aria-controls="navigationCollapse" aria-expanded="false" aria-label="Navigationsmenü umschalten">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- <div class="collapse navbar-collapse" id="navigation">
+        <div class="collapse navbar-collapse" id="navigationCollapse">
           <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item ">
-              <a class="nav-link" href="index.html">Home</a>
-            </li> 
-            <li class="nav-item dropdown view ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Angebote
-              </a> -->
-              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="karten/werteadventurebasis/wertereise-karten.html">Finde deine Mission</a> -->
-                 <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" rel="noopener" href="kurs_erwecke_den_ninja_in_dir.html">Kurs: Erwecke den Ninja in dir</a> -->
-                 <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" target="_blank" rel="noopener" href="https://www.erwecke-den-ninja-in-dir.de/">Kurs: Erwecke den Ninja in dir</a>
-                 <hr>
-                 <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="teamworkshops.html">Für Geschäftskunden</a>
-                 <hr> 
-                <a class="dropdown-item" rel="noopener" target="_blank" href="https://book.timify.com/services?accountId=61e48b39754c0011652a68eb">Virtueller Kaffee</a> -->
-              
-              <!-- </div>
-            </li>
-            
-            
-            
-            <li class="nav-item @@about">
-              <a class="nav-link" href="about/">Über</a>
-            </li> -->
-           
-           
-            <!-- <li class="nav-item @@events">
-              <a class="nav-link" href="events.html">EVENTS</a>
-            </li> 
-            <li class="nav-item @@blog">
-              <a class="nav-link" href="blog.html">BLOG</a>
+            <li class="nav-item active">
+              <a class="nav-link" title="Ninja Adventures Startseite" href="../index.html">Home</a>
             </li>
             <li class="nav-item dropdown view">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Pages
-              </a>
+                aria-haspopup="true" aria-expanded="false">Angebote</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="teacher.html">Teacher</a>
-                <a class="dropdown-item" href="teacher-single.html">Teacher Single</a>
-                <a class="dropdown-item" href="notice.html">Notice</a>
-                <a class="dropdown-item" href="notice-single.html">Notice Details</a>
-                <a class="dropdown-item" href="research.html">Research</a>
-                <a class="dropdown-item" href="scholarship.html">Scholarship</a>
-                <a class="dropdown-item" href="course-single.html">Course Details</a>
-                <a class="dropdown-item" href="event-single.html">Event Details</a>
-                <a class="dropdown-item" href="blog-single.html">Blog Details</a>
+                <a class="dropdown-item" title="Business Angebote Workshops Vielbegabte Multitalente" rel="noopener" href="../business/">Business Ninjas</a>
+                <hr>
+                <a class="dropdown-item" title="Vielseitig leben Angebote" rel="noopener" href="../ideen/">Ideen Ninjas</a>
+                <hr>
+                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
               </div>
-            </li>-->
-            <!-- <li class="nav-item active">
-              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="Blog für Multipassionierte" href="../blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="Über Ninja Adventures" href="../about/">Über</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="Direkter Kontakt zu Ninja Adventures" href="../kontakt.html">Kontakt</a>
             </li>
           </ul>
-        </div> -->
+        </div>
       </nav>
     </div>
   </div>
 </header>
 <!-- /header -->
+
+<main id="main-content">
 
 <!-- page title -->
 <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
@@ -176,7 +157,7 @@
       </div> -->
 
       <div class="col-md-4 order-1 order-md-1 ">
-        <img class="img-fluid w-100" src="images/courses/7moeglichkeiten_starten.png" alt="persönlichkeitsentwicklung"> </br></br></br>
+        <img class="img-fluid w-100" src="../images/courses/7moeglichkeiten_starten.png" alt="persönlichkeitsentwicklung"> </br></br></br>
 
 
       </div>
@@ -192,7 +173,7 @@
 
          </p>
                   
-        <a href="downloads/7moeglichkeiten_zu_starten.pdf" target="_blank" class="btn btn-sm btn-dark ml-sm-3 ">DOWNLOAD</a>
+        <a href="../downloads/free/7moeglichkeiten_zu_starten.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark ml-sm-3 " role="button" aria-label="Download 7 Möglichkeiten mit deiner persönlichen Entwicklung zu starten als PDF (öffnet neues Fenster)">DOWNLOAD</a>
         
       </div>
       
@@ -204,8 +185,9 @@
 
 
 
+</main>
 <!-- footer -->
-<footer>
+<footer id="footer">
  
     <!-- newsletter -->
     <div class="newsletter">
@@ -231,17 +213,17 @@
         <div class="row">
           <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
             <!-- logo -->
-            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+            <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="logo"></a>
             <!-- <ul class="list-unstyled">
               <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
               <li class="mb-2">+1 (2) 345 6789</li>
               <li class="mb-2">adriane@ninjaadventures.de</li>
             </ul> -->
             <ul class="list-unstyled">
-              <li class="mb-3"><a class="text-color" href="impressum.html">Impressum</a></li>
-              <li class="mb-3"><a class="text-color" href="datenschutz.html">Datenschutz</a></li>
-              <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="AGB_AdrianeNiepel.pdf">AGB</a></li>
-              <li class="mb-3"><a class="text-color" href="kontakt.html">Kontakt</a></li>
+              <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
+              <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
+              <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="../AGB_AdrianeNiepel.pdf">AGB</a></li>
+              <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
               <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
 
             </ul>
@@ -327,23 +309,23 @@
 <!-- /footer -->
 
 <!-- jQuery -->
-<script src="plugins/jQuery/jquery.min.js"></script>
+<script src="../plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap JS -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="../plugins/bootstrap/bootstrap.min.js"></script>
 <!-- slick slider -->
-<script src="plugins/slick/slick.min.js"></script>
+<script src="../plugins/slick/slick.min.js"></script>
 <!-- aos -->
-<script src="plugins/aos/aos.js"></script>
+<script src="../plugins/aos/aos.js"></script>
 <!-- venobox popup -->
-<script src="plugins/venobox/venobox.min.js"></script>
+<script src="../plugins/venobox/venobox.min.js"></script>
 <!-- filter -->
-<script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+<script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
 <!-- google map -->
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-<script src="plugins/google-map/gmap.js"></script> -->
+<script src="../plugins/google-map/gmap.js"></script> -->
 
 <!-- Main Script -->
-<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
 
 </body>
 </html>
