@@ -14,7 +14,6 @@
   <meta property="og:image" content="https://ninjaadventures.de/src/images/courses/beeagilegame_logo2.png" />
   <meta property="og:image:alt" content="Bee Agile Game Logo" />
 
- 
   <!-- Canonical Tag zur Duplicate Content Prävention -->
   <link rel="canonical" href="https://ninjaadventures.de/src/beeagilegame/" />
   <meta name="author" content="Adriane Niepel - Ninja Adventures">
@@ -214,6 +213,62 @@
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="icon" href="../images/favicon.png" type="image/x-icon">
 
+  <!-- A11y: Fokus sichtbar + Reduced Motion (ohne deine style.css zu verändern) -->
+  <style>
+    /* Skip-Link sichtbar, wenn fokussiert */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      z-index: 9999;
+      padding: .75rem 1rem;
+      background: #fff;
+      color: #000;
+      border: 2px solid currentColor;
+    }
+    .skip-link:focus {
+      left: .75rem;
+      top: .75rem;
+    }
+
+    /* Fokus sichtbar lassen (falls Theme ihn entfernt) */
+    :focus {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+    :focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 3px;
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Screenreader-only helper */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+  </style>
+
   <!--Cookie Banner NEU-->
 <!-- <link rel="preconnect" href="//app.eu.usercentrics.eu">
 <link rel="preconnect" href="//api.eu.usercentrics.eu">
@@ -237,6 +292,9 @@
 </head>
 
 <body>
+  <!-- A11y: Skip-Link für Tastatur-Nutzung -->
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
   <!-- preloader start -->
   <!-- <div class="preloader">
     <img src="../../images/preloader.gif" alt="preloader">
@@ -249,11 +307,11 @@
   <!-- navbar -->
   <div class="navigation w-100">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Hauptnavigation">
         <a class="navbar-brand" href="../index.html"><img width="300px" src="../images/logo.png" alt="Ninja Adventures Logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          aria-controls="navigation" aria-expanded="false" aria-label="Navigation umschalten">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navigation">
@@ -287,7 +345,7 @@
                 <a class="dropdown-item" title="Family" rel="noopener" href="../family/index.html#schule">-> Schulformate</a> -->
                 
                 <hr>
-                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
+                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/" aria-label="Ninja Adventures Shop (öffnet in neuem Tab)">Shop</a>
               </div>
             </li>
             
@@ -299,30 +357,6 @@
               <a class="nav-link" href="../about/">Über</a>
             </li>
            
-           
-            <!-- <li class="nav-item @@events">
-              <a class="nav-link" href="events.html">EVENTS</a>
-            </li> 
-            <li class="nav-item @@blog">
-              <a class="nav-link" href="blog/">BLOG</a>
-            </li>
-            <li class="nav-item dropdown view">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Pages
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="teacher.html">Teacher</a>
-                <a class="dropdown-item" href="teacher-single.html">Teacher Single</a>
-                <a class="dropdown-item" href="notice.html">Notice</a>
-                <a class="dropdown-item" href="notice-single.html">Notice Details</a>
-                <a class="dropdown-item" href="research.html">Research</a>
-                <a class="dropdown-item" href="scholarship.html">Scholarship</a>
-                <a class="dropdown-item" href="course-single.html">Course Details</a>
-                <a class="dropdown-item" href="event-single.html">Event Details</a>
-                <a class="dropdown-item" href="blog-single.html">Blog Details</a>
-              </div>
-            </li>-->
             <li class="nav-item @@kontakt">
               <a class="nav-link" href="../kontakt.html">Kontakt</a>
             </li>
@@ -334,441 +368,285 @@
 </header>
 <!-- /header -->
 
+<main id="main-content" tabindex="-1">
+  <!-- page title -->
+  <section class="page-title-section overlay" data-background="images/banner/bannerBeeAgileGame.png" aria-labelledby="page-title">
+    <!-- <section class="page-title-section overlay" data-background="images/banner/bannerBeeAgileGame.png">  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="page-title" class="text-white font-secondary">BeeAgileGame – Trainingsformat für lebendige Wertearbeit</h1>
+          <p class="text-white font-secondary h4">Mit dem BeeAgileGame bekommst du als Trainer:in, Agile Coach oder Scrum Master ein fertiges Trainingsformat, das Wertearbeit erlebbar, nachhaltig und leicht umsetzbar macht.</p>
 
+          <p class="text-white">
+            Agile Werte sind leicht erklärt – aber schwer gelebt.
+            Viele Teams wissen, was Commitment, Offenheit, Respekt oder Mut bedeuten – doch im Alltag gehen diese Prinzipien zwischen Tools, Termindruck und Meetings oft verloren.
+          </p>
 
-<!-- page title -->
-<section class="page-title-section overlay " data-background="images/banner/bannerBeeAgileGame.png">
+          <p class="text-white font-secondary h4">Neugierig? Lies weiter!</p>
 
- <!-- <section class="page-title-section overlay" data-background="images/banner/bannerBeeAgileGame.png">  -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-white font-secondary">BeeAgileGame – Trainingsformat für lebendige Wertearbeit</h1>
-        <h4 class="text-white font-secondary">Mit dem BeeAgileGame bekommst du als Trainer:in, Agile Coach oder Scrum Master ein fertiges Trainingsformat, das Wertearbeit erlebbar, nachhaltig und leicht umsetzbar macht.</h4> </br>
-
-
-        
-
-
-        <p class="text-white">
-          <!-- <strong>Wozu? Für Wen? Wie nutze ich? </strong>
-        </br> -->
-        Agile Werte sind leicht erklärt – aber schwer gelebt.
-Viele Teams wissen, was Commitment, Offenheit, Respekt oder Mut bedeuten – doch im Alltag gehen diese Prinzipien zwischen Tools, Termindruck und Meetings oft verloren.
-</br>
-        
-      </br>
-      <h4 class="text-white font-secondary"> Neugierig? Lies weiter!</h4> </br></br>
-        <img class="img-fluid w-100" src="../images/courses/beeagilegame_row.png" alt="Bee Agile Game Logo"> 
-      </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /page title -->
-
-<!-- <section class="bg-cover" >
-  <div class="container">
-  
-    <img class="cards-img" src="ninja_mission_karten.jpg" alt="Ninja Mission Kartenset">
-   
-     
-      
-    </div>
-  </div>
-</section> -->
-
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex align-items-center section-title justify-content-between">
-          <h2 class="mb-0 mr-3"><span aria-hidden="true">🐝</span> Was ist das BeeAgileGame?</h2> 
-          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          <img class="img-fluid w-100" src="../images/courses/beeagilegame_row.png" alt="Bee Agile Game: Banner mit Logo und grafischen Elementen">
         </div>
       </div>
     </div>
+  </section>
+  <!-- /page title -->
 
-    <div class="row align-items-top">
-      
-      <div class="col-md-6 order-2 order-md-1 ">
-        <img class="img-fluid w-100" src="../images/courses/beeagilegame_logo2.png" alt="Bee Agile Game Logo mit Bienencharakter">
+  <!-- about us -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center section-title justify-content-between">
+            <h2 class="mb-0 mr-3"><span aria-hidden="true">🐝</span> Was ist das BeeAgileGame?</h2>
+            <div class="border-top w-100 border-primary d-none d-sm-block" aria-hidden="true"></div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 order-1 order-md-2 ">
-       
-        <!-- <h3>Wozu ?</h3>
-        <h4>Dein basis Werte Abenteuer - Finde deine Ninja Mission</h4></br></br> -->
-        <p>Das BeeAgileGame ist ein begleitetes Online-Format, mit dem Teams ihre Zusammenarbeit über mehrere Wochen hinweg spielerisch weiterentwickeln und so <b>nachhaltig Werte implementieren</b>.</p>
-        <p>Durch Storytelling, Challenges und Reflexion erleben sie, was agile Werte im Alltag wirklich bedeuten – und wie sie sie gemeinsam leben können.</p>
-        <p>Speziell entwickelt für <b>verteilt sitzende Teams</b>, die online zusammenarbeiten.</p>
-        <p><b>Leicht integrierbar in bestehende Meetings</b>, wie zum Beispiel Retrospektiven.</p>
-                  
 
-        
+      <div class="row align-items-top">
+        <div class="col-md-6 order-2 order-md-1">
+          <img class="img-fluid w-100" src="../images/courses/beeagilegame_logo2.png" alt="Bee Agile Game Logo mit Bienencharakter">
+        </div>
+        <div class="col-md-6 order-1 order-md-2">
+          <p>Das BeeAgileGame ist ein begleitetes Online-Format, mit dem Teams ihre Zusammenarbeit über mehrere Wochen hinweg spielerisch weiterentwickeln und so <b>nachhaltig Werte implementieren</b>.</p>
+          <p>Durch Storytelling, Challenges und Reflexion erleben sie, was agile Werte im Alltag wirklich bedeuten – und wie sie sie gemeinsam leben können.</p>
+          <p>Speziell entwickelt für <b>verteilt sitzende Teams</b>, die online zusammenarbeiten.</p>
+          <p><b>Leicht integrierbar in bestehende Meetings</b>, wie zum Beispiel Retrospektiven.</p>
+        </div>
       </div>
-      
     </div>
-  </div>
-</section>
-<!-- /about us -->
+  </section>
+  <!-- /about us -->
 
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row align-items-top">
-      <div class="col-md-6 order-2 order-md-1 ">
-        <h3><span aria-hidden="true">🐝</span> Für wen ist Bee Agile Game geeignet?</h3>
-        <!-- <h4>Bee Agile Game</h4></br></br> -->
-        <ul class="list-styled">
-          <li class="mb-3"><strong>Teamentwickler, die online / remote arbeiten</strong></li>
-          <li class="mb-3"><strong>Agile Coaches & Scrum Master</strong></li>
-          <li class="mb-3"><strong>Trainer:innen & Organisationsentwickler:innen</strong></li>
-          <li class="mb-3"><strong>HR-Business Partner:innen oder interne Change-Begleiter:innen</strong></li>
-          <li class="mb-3"><strong>Unternehmen, die eigene Trainer:innen für Wertearbeit qualifizieren möchten</strong></li>
-        </ul>
-        <p>
-          <i>Nicht geeignet ist das Format für rein methodische Schulungen oder hierarchische Führungstrainings.</i>
-        </p>
-      </br></br>
-        <!-- <a href="https://www.copecart.com/products/66d4d211/checkout" target="_blank" class="btn btn-sm btn-primary-outline ml-sm-3 d-sm-block">Jetzt bestellen</a> -->
-
-      </div>
-      <div class="col-md-6 order-1 order-md-2 ">
-        <img class="img-fluid w-100" src="../images/courses/onlinetraining.png" alt="Online Training für verteilt sitzende Teams">
-        
-      </div>
-      
-    </div>
-  </div>
-</section>
-<!-- /about us -->
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-   
-    <div class="row align-items-top">
-      
-      <!-- <div class="col-md-6 order-2 order-md-1 "> -->
-        <!-- <img class="img-fluid w-100" src="../images/courses/onlinetraining.png" alt="Ninja Werte"> </br></br></br> -->
-<!-- <a href="https://www.copecart.com/products/66d4d211/checkout" target="_blank" class="btn btn-sm btn-primary-outline ml-sm-3  d-sm-block">Jetzt bestellen</a> -->
-
-      <!-- </div> -->
-      <!-- <div class="col-md-6 order-1 order-md-2 "> -->
-<div class="col-md-12 ">       
-        <h3><span aria-hidden="true">🐝</span> Deine Vorteile als Bee Agile Game Trainer:in</h3>
-        <!-- <h4></h4></br></br> -->
-        <p></br>
-          
+  <!-- about us -->
+  <section class="section bg-gray">
+    <div class="container">
+      <div class="row align-items-top">
+        <div class="col-md-6 order-2 order-md-1">
+          <h2 class="h3"><span aria-hidden="true">🐝</span> Für wen ist Bee Agile Game geeignet?</h2>
+          <!-- <h4>Bee Agile Game</h4></br></br> -->
           <ul class="list-styled">
-            <li class="mb-3">Mit dem BeeAgileGame erweiterst du dein Angebot um ein Format, das <b>begleitet und so nachhaltig wirkt</b> - Werte werden erlebbar, nicht nur erklärt</br>
-          </li>
+            <li class="mb-3"><strong>Teamentwickler, die online / remote arbeiten</strong></li>
+            <li class="mb-3"><strong>Agile Coaches &amp; Scrum Master</strong></li>
+            <li class="mb-3"><strong>Trainer:innen &amp; Organisationsentwickler:innen</strong></li>
+            <li class="mb-3"><strong>HR-Business Partner:innen oder interne Change-Begleiter:innen</strong></li>
+            <li class="mb-3"><strong>Unternehmen, die eigene Trainer:innen für Wertearbeit qualifizieren möchten</strong></li>
+          </ul>
+          <p><i>Nicht geeignet ist das Format für rein methodische Schulungen oder hierarchische Führungstrainings.</i></p>
+
+          </br></br>
+          <!-- <a href="https://www.copecart.com/products/66d4d211/checkout" target="_blank" class="btn btn-sm btn-primary-outline ml-sm-3 d-sm-block">Jetzt bestellen</a> -->
+        </div>
+
+        <div class="col-md-6 order-1 order-md-2">
+          <img class="img-fluid w-100" src="../images/courses/onlinetraining.png" alt="Online Training für verteilt sitzende Teams">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /about us -->
+
+  <!-- about us -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="row align-items-top">
+        <div class="col-md-12">
+          <h2 class="h3"><span aria-hidden="true">🐝</span> Deine Vorteile als Bee Agile Game Trainer:in</h2>
+          <p></br></p>
+
+          <ul class="list-styled">
+            <li class="mb-3">Mit dem BeeAgileGame erweiterst du dein Angebot um ein Format, das <b>begleitet und so nachhaltig wirkt</b> - Werte werden erlebbar, nicht nur erklärt</li>
             <li class="mb-3">Du bekommst ein fertig einsetzbares Konzept – du <b>sparst Zeit in der Vorbereitung</b></li>
             <li class="mb-3"><b>Online durchführbar</b> – ideal für verteilte Teams</li>
             <li class="mb-3">Lizenz zur Nutzung – du wirst <b>zertifiziert und gelistet</b> als BeeAgileGame-Trainer:in</li>
-           <li class="mb-3">Wiederverwendbares</b> Whiteboard Template</li>
-           <li class="mb-3">Leicht anpassbar</b> an zB verschiedene Gruppengrößen, Anzahl an Teams, Art der Challenges </li>
-            <li class="mb-3">Nicht nur für <b>agile Werte</b>, sondern auch für <b>Team- oder Unternehmenswerte</b> nutzbar </li>
+            <li class="mb-3"><b>Wiederverwendbares</b> Whiteboard Template</li>
+            <li class="mb-3"><b>Leicht anpassbar</b> an zB verschiedene Gruppengrößen, Anzahl an Teams, Art der Challenges</li>
+            <li class="mb-3">Nicht nur für <b>agile Werte</b>, sondern auch für <b>Team- oder Unternehmenswerte</b> nutzbar</li>
             <li class="mb-3">Als <b>Bee Agile Game - Trainer:in</b> gelistet</li>
-          
           </ul>
 
-         
           </br></br>
-          <h3>Pilot-Teilnahme-Bonus: Inklusive 2 Stunden 1:1 Sparring für deine erste Nutzung beim Kunden!</h3> </br></br>
-        </p>
-
-                  
-</p>
-        
+          <h3>Pilot-Teilnahme-Bonus: Inklusive 2 Stunden 1:1 Sparring für deine erste Nutzung beim Kunden!</h3>
+          </br></br>
+        </div>
       </div>
-      
     </div>
-  </div>
-</section>
-<!-- /about us -->
+  </section>
+  <!-- /about us -->
 
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row align-items-top">
-       <div class="col-md-6 order-1 order-md-1 ">
-       <img class="img-fluid w-100" src="../images/courses/beeagilegame_inhalttraining.png" alt="Inhaltsübersicht der BeeAgileGame Trainer:innen-Ausbildung">
-        
-      </div>  
-      <div class="col-md-6 order-2 order-md-2 "> 
-        <!-- <div> -->
-        <h3><span aria-hidden="true">🐝</span> Inhalte der Trainer:innen-Ausbildung</h3></br></br>
-        <p>
-          In der Ausbildung erlebst du das BeeAgileGame selbst – und lernst, wie du es in eigenen Trainings sicher und wirkungsvoll einsetzen kannst.</br></br>
+  <!-- about us -->
+  <section class="section bg-gray">
+    <div class="container">
+      <div class="row align-items-top">
+        <div class="col-md-6 order-1 order-md-1">
+          <img class="img-fluid w-100" src="../images/courses/beeagilegame_inhalttraining.png" alt="Inhaltsübersicht der BeeAgileGame Trainer:innen-Ausbildung">
+        </div>
 
-          <strong>Das ist drin:</strong>
+        <div class="col-md-6 order-2 order-md-2">
+          <!-- <div> -->
+          <h2 class="h3"><span aria-hidden="true">🐝</span> Inhalte der Trainer:innen-Ausbildung</h2></br></br>
+          <p>
+            In der Ausbildung erlebst du das BeeAgileGame selbst – und lernst, wie du es in eigenen Trainings sicher und wirkungsvoll einsetzen kannst.
+          </p>
 
-           <ul class="list-styled">
+          <p><strong>Das ist drin:</strong></p>
+
+          <ul class="list-styled">
             <li class="mb-3">Dauer: 1 Online-Workshop (6 Stunden)</li>
-            <li class="mb-3">Den Aufbau & die Story des Spiels</li>
+            <li class="mb-3">Den Aufbau &amp; die Story des Spiels</li>
             <li class="mb-3">Wertearbeit im agilen Kontext</li>
-            <li class="mb-3">Moderation & Reflexionsmethoden</li>
+            <li class="mb-3">Moderation &amp; Reflexionsmethoden</li>
             <li class="mb-3">Einsatz des digitalen Spielfeldes</li>
-            <li class="mb-3">Umgang mit Teamdynamiken & Transfer in den Alltag</li>
+            <li class="mb-3">Umgang mit Teamdynamiken &amp; Transfer in den Alltag</li>
           </ul>
 
-          </br>  </br>
+          </br></br>
 
-        Dazu bekommst du alles an Material, was du brauchst, um das Format direkt selber zu nutzen:
+          <p>Dazu bekommst du alles an Material, was du brauchst, um das Format direkt selber zu nutzen:</p>
 
-<ul class="list-styled">
-            <li class="mb-3">Vollständiger Trainerleitfaden mit Ablauf & Moderationshilfen</li>
+          <ul class="list-styled">
+            <li class="mb-3">Vollständiger Trainerleitfaden mit Ablauf &amp; Moderationshilfen</li>
             <li class="mb-3">Digitales Template für dein Board</li>
             <li class="mb-3">Ebook zu agilen Werten und Challenges</li>
           </ul>
-  </br>  </br>
-           <b>Pilot-Bonus: inklusive 2 Stunden 1:1 Sparring mit mir für deine erste Nutzung beim Kunden!</b>
 
-       </br></br>  </br>
-       <i> Nach Abschluss des Trainings, erhältst du alle Materialien und die Lizenz zur eigenständigen Durchführung und wirst in das BeeAgileGame-Trainer Netzwerk aufgenommen.
-      </i>  
-      </p>
-      </br></br>
-        <!-- <a href="https://www.copecart.com/products/66d4d211/checkout" target="_blank" class="btn btn-sm btn-primary ml-sm-3  d-sm-block">Jetzt bestellen</a> -->
+          </br></br>
+          <p><b>Pilot-Bonus: inklusive 2 Stunden 1:1 Sparring mit mir für deine erste Nutzung beim Kunden!</b></p>
 
-     </div> 
-      
-      
+          </br></br>
+          <p><i>Nach Abschluss des Trainings, erhältst du alle Materialien und die Lizenz zur eigenständigen Durchführung und wirst in das BeeAgileGame-Trainer Netzwerk aufgenommen.</i></p>
+
+          </br></br>
+          <!-- <a href="https://www.copecart.com/products/66d4d211/checkout" target="_blank" class="btn btn-sm btn-primary ml-sm-3  d-sm-block">Jetzt bestellen</a> -->
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-<!-- /about us -->
+  </section>
+  <!-- /about us -->
 
-<!-- about us -->
-<!-- <section class="section bg-white" >
-  <div class="container ">
-    <div class="row align-items-top ">
-      <div class="col-md-6 order-2 order-md-1 ">
-        <img class="img-fluid w-100" src="../images/courses/BeeAgileGame Infoveranstaltung.jpg" alt="Ninja Werte">
-      </div>
-      <div class="col-md-6 order-1 order-md-2 ">
-        <h3 class="section-title">🐝 Infosession BeeAgileGame</h3>
-        <p>
-        
-        <h4>  Wenn du das Format zunächst kennenlernen möchtest, lade ich dich herzlich zur Praxis Session ein.</h4>
-Dort erfährst du, wie das BeeAgileGame funktioniert, für wen es geeignet ist – und bekommst einen ersten Einblick. 
-        </br></br>
-    
-          📅 Nächster Termin: 24.10.2025 · 11:00–11:45 Uhr, online, live</br></br>
+  <!-- about us -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="row align-items-top">
+        <div class="col-md-12">
+          <h2 class="section-title"><span aria-hidden="true">🐝</span> Jetzt anmelden zum Bee Agile Game Training</h2>
+          <h3 class="section-title">mit BONUS!</h3>
 
-         
-        </p>
-        <p>
-         Einfach per E-Mail anmelden:</br></br>
-          
-<a href="mailto:adriane@ninjaAdventures.de?subject=BeeAgileGame%20Infosession" target="_blank" class="btn btn-sm btn-secondary ml-sm-3 d-sm-block">Jetzt anmelden</a>
-                  
-</p>
-        
-      </div>
-      
-    </div>
-  </div>
-</section> -->
-<!-- /about us -->
-
-
-
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container ">
-    <div class="row align-items-top ">
-      <div class="col-md-12 ">
-      <!-- <div class="col-md-6 order-2 order-md-1 "> -->
-        <!-- <img class="img-fluid w-100" src="../images/courses/beeagilegame_logo3.png" alt="Ninja Werte">
-      </div>
-      <div class="col-md-6 order-1 order-md-2 "> -->
-        <h2 class="section-title"><span aria-hidden="true">🐝</span> Jetzt anmelden zum Bee Agile Game Training</h2>
-        <h3 class="section-title">mit BONUS!</h3>
-        <p>
-      
-
-        <b>  Early-Bee-Preis:  870 € zzgl. MwSt. (bei Buchung bis 13.03.2026)</b></br>
-        <b>  Regulärer Preis: 1400 € zzgl. MwSt.</b>
-        </br></br>
-        <!-- 2 Termine zur Auswahl: </br></br> -->
-        <!-- 18.11.2025, 10-16 Uhr, online </br> -->
-         Termin: 17.04.2026, 9-16 Uhr, online </br></br>
-    
-          Achtung: Keine Aufzeichnung und begrenzte Plätze!</br></br>
-
-          <i>Deine Anmeldung ist zunächst eine Reservierung.</br>
-Erst mit Zahlungseingang wird dein Platz verbindlich bestätigt.</br></br>
-
-         Stornierung:
-        Stornierung bis 30 Tage vor Start kostenlos, danach fallen 50 % der Kosten an. Umbuchung auf einen anderen Termin bis 14 Tage vor gewähltem Termin möglich.
-        Durchführung ausschließlich online.
-</i></br></br>
-        </p>
-        <p>
-         Reserviere jetzt deinen Platz für die Piloteinführung und sicher dir den <b>besten Preis</b>
-          UND den <b>BONUS</b>: den 1:1 Support von mir zu deinem ersten Kunden-Durchlauf!</br></br>
-                
-</p>
-        
-      </div>
-       <div class="col-md-6 order-1 order-md-2 ">
-         
-<a href="https://forms.office.com/e/XLfMJmRbzu" target="_blank" class="btn btn-sm btn-primary ml-sm-3 d-sm-block">Jetzt Reservieren</a>
-  
-       </div>
-      
-    </div>
-  </div>
-</section>
-<!-- /about us -->
-
-
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container ">
-    <div class="row align-items-top ">
-     <div class="col-md-12 ">
-      <!-- <div class="col-md-6 order-2 order-md-1 "> -->
-        <!-- <img class="img-fluid w-100" src="../images/courses/beeagilegame_logo3.png" alt="Ninja Werte">
-      </div>
-      <div class="col-md-6 order-1 order-md-2 "> -->
-        <h3 class="section-title"><span aria-hidden="true">🐝</span> Stimmen aus der Begleitung mit dem BeeAgileGame:</h3>
-        <p>
-      
-<i>"It was a cool game to get info about the team and the project."</i></br></br>
-        
-<i>"There are lot of ways to be more productive in the project, our colleagues could need our help as we need theirs, there are someone behind the tasks the we get and they could give us feedback."</i>
-         </br></br>
-
-         <i>"It was great to be part of that, an easy and really good way to bond with everyone, I really enjoyed it."</i>
-         </br></br>
-        <b>Ein Erfahrungsbericht findet sich auch im Buch "Agile Mission Impossible - agile Short Storys 2":</b>
-        </p>
-        
-        
-        
-      </div>
-      <div class="col-md-6 order-1 order-md-2 "> 
-        <img class="img-fluid w-30" src="../images/courses/beeagilegame_missionimpossiblebuch.png" alt="Buchcover: Agile Mission Impossible - agile Short Storys 2">
-        <img class="img-fluid w-30" src="../images/courses/beeagilegame_missionimpossiblebuch_2.png" alt="Weitere Ansicht des Buchcovers mit Erfahrungsbericht">
-
-      </div>
-      
-    </div>
-  </div>
-</section>
-<!-- /about us -->
-
-
-
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container ">
-    <div class="row align-items-top ">
-     <div class="col-md-12 ">
-      <!-- <div class="col-md-6 order-2 order-md-1 "> -->
-        <!-- <img class="img-fluid w-100" src="../images/courses/beeagilegame_logo3.png" alt="Ninja Werte">
-      </div>
-      <div class="col-md-6 order-1 order-md-2 "> -->
-        <h4 class="section-title"> Du willst lieber eine Begleitung für dein Team buchen?</h4>
-        <p>
-      
-          Schick mir eine Anfrage und wir finden einen Trainer:in für deine Begleitung!</br></br>
-          <a href="mailto:adriane@ninjaAdventures.de?subject=Anfrage%20Teambegleitung%20BeeAgileGame" class="btn btn-primary">E-Mail an adriane@ninjaAdventures.de</a>
-        </p>
-        
-        
-      </div>
-      
-    </div>
-  </div>
-</section>
-<!-- /about us -->
-
-
-<!-- about us grau -->
-<section class="bg-gray section">
-  <div class="container-fluid ">
-    <div class="row ">
-   
-      <div class="col-xl-4 col-lg-5 align-self-center text-center">
-        <img class="img-fluid w-50 " src="../images/teachers/adrianeniepel_p.png" alt="Adriane Niepel - Agiler Coach und Gründerin von Ninja Adventures">
-      </div>
-      <div class="col-xl-7 col-lg-7">
-        <div class="row bg-gray justify-content-between">
-          <div class="col-md-8">
-        <h2 class="section-title">Adriane Niepel</h2>
-        
           <p>
-            <h6>Agiler Coach. Systemischer Coach. OKR Master. Mutter. Kinderbuchautorin. Illustratorin.</h6></br></br>
-            <p>
-              Ich bin Expertin für agile Methoden und kreative Denkansätze, um Herausforderungen mit mehr Spaß und Selbstorganisiert zu begegnen. 
-              Seit 2012 unterstütze ich Einzelpersonen, Teams, Abteilungen und Unternehmen dabei sich zu entwickeln und ihre Werte / Unternehmenswerte / agile Werte zu leben.  
-              
-           </br></br>
-           Als Dipl. Informatikerin gestartet habe ich programmiert, anschließend beraten und gecoacht, Prozesse optimiert,
-           Experimente gestartet, Kinderbücher geschrieben, illustriert und vor allem eins - verstanden, dass agile Werte sowohl im privaten, als auch im beruflichen Kontext entscheidend sind, um auch in stürmischen Zeiten gleichzeitig Zufriedenheit auf der einen Seite und Erfolg auf der anderen Seite zu erreichen.</br></br>
-           
-         
-             Kunden schätzen mich für den Fokus und vielseitigen Ideen, um Herausforderungen strukturiert anzugehen und dabei stets Werte im Blick zu halten - persönliche Werte, Teamwerte, Unternehmenswerte und vor allem auch agile Werte.
-           
-            
+            <b>Early-Bee-Preis:  870 € zzgl. MwSt. (bei Buchung bis 13.03.2026)</b></br>
+            <b>Regulärer Preis: 1400 € zzgl. MwSt.</b>
           </p>
-        </br></br>
-       
+
+          <p>
+            Termin: 17.04.2026, 9-16 Uhr, online </br></br>
+            Achtung: Keine Aufzeichnung und begrenzte Plätze!
+          </p>
+
+          <p>
+            <i>Deine Anmeldung ist zunächst eine Reservierung.</br>
+              Erst mit Zahlungseingang wird dein Platz verbindlich bestätigt.</br></br>
+
+              Stornierung:
+              Stornierung bis 30 Tage vor Start kostenlos, danach fallen 50 % der Kosten an. Umbuchung auf einen anderen Termin bis 14 Tage vor gewähltem Termin möglich.
+              Durchführung ausschließlich online.
+            </i>
+          </p>
+
+          <p>
+            Reserviere jetzt deinen Platz für die Piloteinführung und sicher dir den <b>besten Preis</b>
+            UND den <b>BONUS</b>: den 1:1 Support von mir zu deinem ersten Kunden-Durchlauf!
+          </p>
+        </div>
+
+        <div class="col-md-6 order-1 order-md-2">
+          <a href="https://forms.office.com/e/XLfMJmRbzu" target="_blank" rel="noopener" class="btn btn-sm btn-primary ml-sm-3 d-sm-block" aria-label="Jetzt reservieren (öffnet in neuem Tab)">Jetzt Reservieren</a>
         </div>
       </div>
-      </div>
     </div>
-  </div>
-</section>
-<!-- /streifen about -->
+  </section>
+  <!-- /about us -->
 
+  <!-- about us -->
+  <section class="section bg-gray">
+    <div class="container">
+      <div class="row align-items-top">
+        <div class="col-md-12">
+          <h2 class="h3 section-title"><span aria-hidden="true">🐝</span> Stimmen aus der Begleitung mit dem BeeAgileGame:</h2>
+          <p>
+            <i>"It was a cool game to get info about the team and the project."</i>
+          </p>
+          <p>
+            <i>"There are lot of ways to be more productive in the project, our colleagues could need our help as we need theirs, there are someone behind the tasks the we get and they could give us feedback."</i>
+          </p>
+          <p>
+            <i>"It was great to be part of that, an easy and really good way to bond with everyone, I really enjoyed it."</i>
+          </p>
+          <p><b>Ein Erfahrungsbericht findet sich auch im Buch "Agile Mission Impossible - agile Short Storys 2":</b></p>
+        </div>
 
-
-
-<!-- events -->
-<!-- <section class="section bg-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex align-items-center section-title justify-content-between">
-          <h2 class="mb-0 text-nowrap mr-3">Erweitertes Kartenset:</h2> 
-          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+        <div class="col-md-6 order-1 order-md-2">
+          <img class="img-fluid w-30" src="../images/courses/beeagilegame_missionimpossiblebuch.png" alt="Buchcover: Agile Mission Impossible - agile Short Storys 2">
+          <img class="img-fluid w-30" src="../images/courses/beeagilegame_missionimpossiblebuch_2.png" alt="Weitere Ansicht des Buchcovers mit Erfahrungsbericht">
         </div>
       </div>
     </div>
-    <div class="row justify-content-center"> 
-      
+  </section>
+  <!-- /about us -->
 
-   <!-- event -->
-  <!-- <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-    <div class="card border-0 rounded-0 hover-shadow">
-      <div class="card-img position-relative">
-        <img class="card-img-top rounded-0" src="ninja_mission_karten_allInkl.jpg" alt="Ninja Mission Kartenset">
-      </div>
-      <div class="card-body">
-        <p><strong>Ninja Mission All Inklusive Edition</strong> </br></br>
-          Du möchtest jemandem mehr Selbstbewusstsein und Selbstbestimmung schenken?
-          Dann ist das genau das richtige Paket!
-          Hier findest du zusätzlich Block und Stift direkt im Paket dabei, zum sofort loslegen. </p>
-          <p><strong>Inklusive Ninja Mission Kartenset, Block und Stift, um alles dabei zu haben!</strong></p>
-        <p> <strong>47€</strong> </p>
-        <p> Enthält 19% MWST </br>
-         Kostenloser Versand </p>
-        <a href="https://www.copecart.com/products/66d4d211/checkout" target="_blank" class="btn btn-sm btn-primary-outline ml-sm-3  d-sm-block">All Inklusive bestellen</a>
+  <!-- about us -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="row align-items-top">
+        <div class="col-md-12">
+          <h2 class="h4 section-title">Du willst lieber eine Begleitung für dein Team buchen?</h2>
+          <p>
+            Schick mir eine Anfrage und wir finden einen Trainer:in für deine Begleitung!</br></br>
+            <a href="mailto:adriane@ninjaAdventures.de?subject=Anfrage%20Teambegleitung%20BeeAgileGame" class="btn btn-primary">E-Mail an adriane@ninjaAdventures.de</a>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+  <!-- /about us -->
 
-  
-    </div> -->
-  <!-- </section> --> 
+  <!-- about us grau -->
+  <section class="bg-gray section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-4 col-lg-5 align-self-center text-center">
+          <img class="img-fluid w-50" src="../images/teachers/adrianeniepel_p.png" alt="Adriane Niepel - Agiler Coach und Gründerin von Ninja Adventures">
+        </div>
+        <div class="col-xl-7 col-lg-7">
+          <div class="row bg-gray justify-content-between">
+            <div class="col-md-8">
+              <h2 class="section-title">Adriane Niepel</h2>
 
+              <p class="h6">Agiler Coach. Systemischer Coach. OKR Master. Mutter. Kinderbuchautorin. Illustratorin.</p></br></br>
 
+              <p>
+                Ich bin Expertin für agile Methoden und kreative Denkansätze, um Herausforderungen mit mehr Spaß und Selbstorganisiert zu begegnen.
+                Seit 2012 unterstütze ich Einzelpersonen, Teams, Abteilungen und Unternehmen dabei sich zu entwickeln und ihre Werte / Unternehmenswerte / agile Werte zu leben.
+              </p>
 
+              <p>
+                Als Dipl. Informatikerin gestartet habe ich programmiert, anschließend beraten und gecoacht, Prozesse optimiert,
+                Experimente gestartet, Kinderbücher geschrieben, illustriert und vor allem eins - verstanden, dass agile Werte sowohl im privaten, als auch im beruflichen Kontext entscheidend sind, um auch in stürmischen Zeiten gleichzeitig Zufriedenheit auf der einen Seite und Erfolg auf der anderen Seite zu erreichen.
+              </p>
+
+              <p>
+                Kunden schätzen mich für den Fokus und vielseitigen Ideen, um Herausforderungen strukturiert anzugehen und dabei stets Werte im Blick zu halten - persönliche Werte, Teamwerte, Unternehmenswerte und vor allem auch agile Werte.
+              </p>
+
+              </br></br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /streifen about -->
+</main>
 
 <!-- footer -->
 <footer>
@@ -796,76 +674,18 @@ Erst mit Zahlungseingang wird dein Platz verbindlich bestätigt.</br></br>
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="logo"></a>
-          <!-- <ul class="list-unstyled">
-            <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-            <li class="mb-2">+1 (2) 345 6789</li>
-            <li class="mb-2">adriane@ninjaadventures.de</li>
-          </ul> -->
+          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="Ninja Adventures Logo"></a>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
             <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
             <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
             <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
-
           </ul>
         </div>
-        <!-- company -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> -->
-          <!-- <h4 class="text-white mb-5">COMPANY</h4> -->
-          <!-- <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="about/">Impressum</a></li>
-            <li class="mb-3"><a class="text-color" href="teacher.html">Datenschutz</a></li>
-            <li class="mb-3"><a class="text-color" href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </div> -->
-        <!-- links -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">Partnerlinks</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-            <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
-            <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
-            <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
-          </ul>
-        </div> -->
-        <!-- support -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">Ninja Adventures Übersicht</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="../../about/">Entstehung</a></li>
-            <li class="mb-3"><a class="text-color" href="../../index.html#section-course">Adventure 1</a></li>
-            <li class="mb-3"><a class="text-color" href="../../faq.html">FAQ</a></li> -->
-            <!-- <li class="mb-3"><a class="text-color" target="about_blank" href="https://kurse.ninjaadventures.de/">Mitgliederbereich</a></li> -->
-          <!-- </ul>  -->
-          <!-- <h4 class="text-white mb-5">Empfehlungen</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="#">Agile irgendwas</a></li>
-            <li class="mb-3"><a class="text-color" href="#">Coaching tada</a></li>
-            <li class="mb-3"><a class="text-color" href="#">Gamificationzeug</a></li>
-            <li class="mb-3"><a class="text-color" href="#">Wertedings link</a></li>
-          </ul> -->
-        <!-- </div>  -->
-        <!-- support -->
-         <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">  -->
-        <!--   <h4 class="text-white mb-5">RECOMMEND</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="#">WordPress</a></li>
-            <li class="mb-3"><a class="text-color" href="#">LearnPress</a></li>
-            <li class="mb-3"><a class="text-color" href="#">WooCommerce</a></li>
-            <li class="mb-3"><a class="text-color" href="#">bbPress</a></li>
-          </ul> -->
-          <!-- <h4 class="text-white mb-5">Sharing is caring - Empfehlungen von Herzen</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="https://www.leadventure.de/" target="about_blank">Agile: https://www.leadventure.de/</a></li>
-            <li class="mb-3"><a class="text-color" href="https://visuellklar.ch" target="about_blank">Coaching:  https://visuellklar.ch/</a></li>
-            <li class="mb-3"><a class="text-color" href="https://romanrackwitz.de" target="about_blank">Gamification: https://romanrackwitz.de/ </a></li> -->
-            <!-- <li class="mb-3"><a class="text-color" href="https://valuty.de" target="about_blank">Werte: https://valuty.de/ </a></li> -->
-          <!-- </ul>
-        </div> -->
       </div>
     </div>
   </div>
+
   <!-- copyright -->
   <div class="copyright py-4 bg-footer">
     <div class="container">
@@ -880,8 +700,18 @@ Erst mit Zahlungseingang wird dein Platz verbindlich bestätigt.</br></br>
         </div>
         <div class="col-sm-5 text-sm-right text-center">
           <ul class="list-inline">
-            <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel"><i class="ti-linkedin text-primary"></i></a></li>
-            <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/"><i class="ti-instagram text-primary"></i></a></li>
+            <li class="list-inline-item">
+              <a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel" aria-label="LinkedIn Profil von Adriane Niepel (öffnet in neuem Tab)">
+                <i class="ti-linkedin text-primary" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn (öffnet in neuem Tab)</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/" aria-label="Instagram Profil (öffnet in neuem Tab)">
+                <i class="ti-instagram text-primary" aria-hidden="true"></i>
+                <span class="sr-only">Instagram (öffnet in neuem Tab)</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
