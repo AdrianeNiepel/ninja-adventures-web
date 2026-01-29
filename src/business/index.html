@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>Ninja Adventures - Multipassionen im Business leben</title>
   <meta name="description" content="Du willst in deinem Unternehmen weniger Fluktuation von deinen Top-Mitarbeitern? Schon mal überlegt, ob es sich hier um Multi-Talente handelt?"/>
-  
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +31,62 @@
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="icon" href="../images/favicon.png" type="image/x-icon">
 
+  <!-- A11y: Fokus sichtbar + Reduced Motion (ohne deine style.css zu verändern) -->
+  <style>
+    /* Skip-Link sichtbar, wenn fokussiert */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      z-index: 9999;
+      padding: .75rem 1rem;
+      background: #fff;
+      color: #000;
+      border: 2px solid currentColor;
+    }
+    .skip-link:focus {
+      left: .75rem;
+      top: .75rem;
+    }
+
+    /* Fokus sichtbar lassen (falls Theme ihn entfernt) */
+    :focus {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+    :focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 3px;
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Screenreader-only helper */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+  </style>
+
   <!--Cookie Banner-->
   <!-- <link rel="preconnect" href="//app.eu.usercentrics.eu">
 <link rel="preconnect" href="//api.eu.usercentrics.eu">
@@ -42,9 +97,6 @@
   <script type="application/javascript" src="https://sdp.eu.usercentrics.eu/latest/uc-block.bundle.js"></script>
   <!-- <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
 <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script> -->
-
-
-
 
   <!-- Global site tag (gtag.js) - Google    -->
  <script type="text/plain" data-usercentrics="Google Analytics 4" async src="https://www.googletagmanager.com/gtag/js?id=G-GLNHKGE6K6"></script>
@@ -59,6 +111,9 @@
 </head>
 
 <body>
+  <!-- A11y: Skip-Link für Tastatur-Nutzung -->
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
   <!-- preloader start -->
   <!-- <div class="preloader">
     <img src="images/preloader.gif" alt="preloader">
@@ -71,11 +126,13 @@
   <!-- navbar -->
   <div class="navigation w-100">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="../index.html"><img width="300px" src="../images/logo.png" alt="logo"></a>
+      <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Hauptnavigation">
+        <a class="navbar-brand" href="../index.html">
+          <img width="300px" src="../images/logo.png" alt="Ninja Adventures Logo">
+        </a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          aria-controls="navigation" aria-expanded="false" aria-label="Navigation umschalten">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navigation">
@@ -90,8 +147,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" title="Multitalente fördern im Unternehmen" rel="noopener" href="../business/">Business Ninjas</a>
-                <a class="dropdown-item" title="Unternehmen fördern Multitalente" rel="noopener" href="../business/">-> Talentförderung</a> 
-                <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="../teamworkshops.html">-> Teamworkshops</a> 
+                <a class="dropdown-item" title="Unternehmen fördern Multitalente" rel="noopener" href="../business/">-&gt; Talentförderung</a> 
+                <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="teamworkshops.html">-&gt; Teamworkshops</a> 
                 <!-- <a class="dropdown-item" title="Sparring Workshop aufpeppen" rel="noopener" href="../business/index.html#workshop">-> Deinen Workshop aufpeppen</a>  -->
                 <hr> 
                 <a class="dropdown-item" title="Vielseitig leben mit allen Ideen" rel="noopener" href="../index.html#ideenninja">Ideen Ninjas </a>
@@ -108,46 +165,18 @@
                 <a class="dropdown-item" title="Family" rel="noopener" href="../family/index.html#schule">-> Schulformate</a> -->
                 
                 <hr>
-                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
-
-
+                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/" aria-label="Ninja Adventures Shop (öffnet in neuem Tab)">Shop</a>
               </div>
             </li>
             
             <li class="nav-item @@blog">
               <a class="nav-link" title="Blog" href="../blog/">Blog</a>
             </li>
-            
-            
-            
+
             <li class="nav-item ">
               <a class="nav-link" title="Über Ninja Adventures" href="../about/">Über</a>
             </li>
            
-           
-            <!-- <li class="nav-item @@events">
-              <a class="nav-link" href="events.html">EVENTS</a>
-            </li> 
-            <li class="nav-item @@blog">
-              <a class="nav-link" href="blog/">BLOG</a>
-            </li>
-            <li class="nav-item dropdown view">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Pages
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="teacher.html">Teacher</a>
-                <a class="dropdown-item" href="teacher-single.html">Teacher Single</a>
-                <a class="dropdown-item" href="notice.html">Notice</a>
-                <a class="dropdown-item" href="notice-single.html">Notice Details</a>
-                <a class="dropdown-item" href="research.html">Research</a>
-                <a class="dropdown-item" href="scholarship.html">Scholarship</a>
-                <a class="dropdown-item" href="course-single.html">Course Details</a>
-                <a class="dropdown-item" href="event-single.html">Event Details</a>
-                <a class="dropdown-item" href="blog-single.html">Blog Details</a>
-              </div>
-            </li>-->
             <li class="nav-item @@kontakt">
               <a class="nav-link" href="../kontakt.html">Kontakt</a>
             </li>
@@ -159,222 +188,223 @@
 </header>
 <!-- /header -->
 
+<main id="main-content" tabindex="-1">
+  <!-- page title -->
+  <section class="page-title-section bg-cover" data-background="../images/businessninja/businessbanner.png" aria-labelledby="page-title">
+  <!-- <section class="page-title-section overlay" > -->
 
-<!-- page title -->
-<section class="page-title-section  bg-cover" data-background="../images/businessninja/businessbanner.png">
-<!-- <section class="page-title-section overlay" > -->
+  <!-- </section>data-background="../images/backgrounds/ /page-title.jpg"> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 id="page-title" class="text-white font-secondary">Werde Business Ninja!</h1>
+          <h2 class="text-white font-secondary h3">Menschen mit vielen Passionen denken und arbeiten anders.</h2>
 
-<!-- </section>data-background="../images/backgrounds/ /page-title.jpg"> -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h1 class="text-white font-secondary">Werde Business Ninja!</h1>
-        <h3 class="text-white font-secondary"></h3>
-        <p class="text-white h4">
-        </br>
-      
-          Menschen mit vielen Passionen denken und arbeiten anders.</br>
-          Sie sind anders zu motivieren.</br>
-          Sie haben die Top-Fähigkeiten der Zukunft!</br>
-        </br>
-          Richten wir unsere Aufmerksamkeit auf die Wertschätzung und Fähgkeiten des Einzelnen!
-        </p>
+          <p class="text-white h4">
+            </br>
+            Menschen mit vielen Passionen denken und arbeiten anders.</br>
+            Sie sind anders zu motivieren.</br>
+            Sie haben die Top-Fähigkeiten der Zukunft!</br>
+            </br>
+            Richten wir unsere Aufmerksamkeit auf die Wertschätzung und Fähgkeiten des Einzelnen!
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- /page title -->
+  </section>
+  <!-- /page title -->
 
+  <!-- courses -->
+  <section class="section-sm bg-white" id="section-course">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center section-title justify-content-between">
+            <h2 class="mb-0 mr-3 h4">Du willst wissen, warum es wichtig ist Multitalente zu finden und zu fördern?</h2> 
+          </div>
 
-<!-- courses -->
-<section class="section-sm bg-white" id="section-course">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-       
-        <div class="d-flex align-items-center section-title justify-content-between">
-          <h4 class="mb-0  mr-3">Du willst wissen, warum es wichtig ist Multitalente zu finden und zu fördern? </h4> 
-        </div>
-      
-      <p>
-          <!-- <div class="border-top w-100 border-primary d-none d-sm-block"></div> -->
-          Steige jetzt in das Thema ein, bevor andere an dir vorbei ziehen!  </br>
+          <p>
+            <!-- <div class="border-top w-100 border-primary d-none d-sm-block"></div> -->
+            Steige jetzt in das Thema ein, bevor andere an dir vorbei ziehen!  </br>
             Förderung von Multipassionierten führt zu 
             weniger Kündigungen von Top-Mitarbeitenden
             und mehr Motivation und Innovation!</br>
-            <strong>Hier findest du tiefergehende Informationen: Vielseitigkeit als Erfolgsstrategie</strong> 
-          <a href="../blog-vielseitigkeit_erfolgsstrategie.html" title="Vielseitige Menschen im Unternehmen" class="btn btn-sm-xs btn-dark ">Weiterlesen</a>
-          
-        </p>
-    </div>
-    </div>
-  </div></section>
-
-    <section class="section-sm bg-gray" id="section-course">
-      <div class="container">
-    <div class="row">
-      <div class="col-12">
-       
-        <div class="d-flex align-items-center section-title justify-content-between">
-          <h2 class="mb-0  mr-3">So förderst du Multipassion: </h2> </br></br>
-          <!-- <div class="border-top w-100 border-primary d-none d-sm-block"></div> -->
-        </div> 
-         
-        <p>
-      </p>
-      </div>
-    </div>
-    <!-- course list -->
-<div class="row justify-content-center">
-
-
-  <!-- course item -->
-  <div class="col-lg-4 col-sm-6 mb-5" id="unternehmen">
-    <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" title="Coaching Teamworkshop Perspektivwechsel" src="../images/businessninja/businessprogramm2.png" alt="Business ninja finden Multitalente entdecken">
-      <div class="card-body">
-        <i>Für Mitarbeiterentwickler / CEOs / HR / P&C / Führungskräfte    </i></br></br>
-        <h3 class="mb-0  mr-3"> Werde Goldgräber: Multitalente als Erfolgsfaktoren </h3>
-        
-      </br></br>
-      <b>Du willst verstehen was Multitalente/ Scanner-Persönlichkeiten/ Multipassionierte/... Menschen sind?</br></br>
-      Warum du sie fördern solltest? </br></br>
-      Und wie das funktioniert? </b></br></br>
-      <hr>
-      <h6 class="mb-0  mr-3">Einzelformate</h6></br>
-      Eine Mögliche Zusammenarbeit können <b>Einzelformate</b> sein, wie Impuls-Gespräche, Keynotes, 1:1 Coachings, sowie Team-Workshops.</br></br>
-    Schreib mich dazu einfach direkt an und wir besprechen was möglich und vor allem für dein Unternehmen auch nachhaltig in der Umsetzung ist.</br></br>
-      <hr>
-      <h6 class="mb-0  mr-3">Begleitendes Programm</h6></br>
-      Du interessierst dich für ein <b>begleitendes Programm</b>, in dem alle Mitarbeiter mit einbezogen werden? Kein Problem, auch das ist möglich.
-    Hier arbeite ich in Kooperationen für eine optimale Betreuung. In einem modularen System passen wir die Formate genau auf deine Situation an.</br>
-      
-     
-    </br>
-    <hr>
-  </br>
-        <strong>Persönlicher Kontakt:</strong> </br></br>
-        <!-- <a href="https://subscribepage.io/Werde_Goldgraeber" target="_blank" title="Werde Goldgräber Talente im Unternehmen entdecken" class="btn btn-sm-xs btn-primary ">Zum Infotermin</a></br></br> -->
-        <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage%20Unternehmen%20foerdern%20Multitalente" target="_blank" title="Kontakt Multitalente fördern im Unternehmen " class="btn btn-sm-xs btn-primary ">E-Mail Adriane Niepel</a>
-      </br> </br>
-      <strong>Informationen über den Einstiegsworkshop anfordern: </strong> </br></br>
-        <a href="https://subscribepage.io/workshop_werdegoldgraeber" target="_blank" title="Einstiegsworkshop Multitalente" class="btn btn-sm-xs btn-primary ">Hier anmelden</a>
-        
-      </div>
-    </div>
-  </div>
- 
-
-    <!-- course item -->
-<div class="col-lg-4 col-sm-6 mb-5">
-    <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" title="workshop formate innovativ" src="../images/businessninja/workshops2.png" alt="Workshopliste Formate innovativ">
-      <div class="card-body">
-        <i>Für Teamentwickler       </i></br></br>
-        <h3 class="mb-0  mr-3">Du willst die Vielseitigkeit im Team kennenlernen und nutzen? </h3>
-        
-      </br></br>
-      Erleben von unterschiedlichen Formaten führt zu </br><b>weniger</b> Eintönigkeit, Ignoranz, und </br><b>mehr</b> Kreativität, Innovation, nachhaltigem Lernen.</br></br>
-      Hier findest einen Einblick in Teamworkshops zur Förderung von Vielseitigkeit und der Teamtalente.
-       
-  
-      </br></br></br>
-        <strong>Spielerisch zu mehr Miteinander, Motivation und Höchstleistung!</strong> </br></br>
-        <a href="../teamworkshops.html" title="teamworkshops" class="btn btn-primary btn-sm">Teamworkshops</a></br>
-        
-      </div>
-    </div>
-  </div> 
-
-    <!-- course item -->
-<!-- <div class="col-lg-4 col-sm-6 mb-5" id="workshop">
-  <div class="card p-0 border-primary rounded-0 hover-shadow">
-    <img class="card-img-top rounded-0" title="Gamify your workshop" src="../images/businessninja/gamifyyourworkshop.png" alt="Gamify your workshop">
-    <div class="card-body">
-      <i>Für Trainer & Coaches       </i></br></br>
-      <h3 class="mb-0  mr-3">Du möchtest dein Training / Workshop / Kurs aufpeppen?</h3>
-      
-    </br></br>
-    Du willst deine Teilnehmer mehr motivieren, mehr einbeziehen und einen nachhaltigen Eindruck hinterlassen? </br></br>
-    Wie wäre es mit spielerischen Elementen?</br></br>
-    
-    Dann buche dir 2 Stunden individueller Miniworkshop inklusive Workbook! Live, wir beide und viele Ideen!
-  
-    </br></br></br>
-      <strong>Einmal i-Tüpfelchen bitte!</strong> </br></br>
-      <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage%20Gamify%20Your%20Workshop" title="Kontakt Multitalente fördern im Unternehmen " class="btn btn-sm-xs btn-primary ">E-Mail Anfrage</a>
-    </div>
-  </div>
-</div>  -->
- 
-
-
-</div>
-
-</div>
-</section>
-
-
-
-
-
-
-<!-- about us grau -->
-<section class="bg-white section">
-  <div class="container-fluid ">
-    <div class="row ">
-   
-      <div class="col-xl-4 col-lg-5 align-self-center text-center">
-        <img class="img-fluid w-50 " src="../images/family/Adriane_23_2.png" alt="banner-feature">
-      </div>
-      <div class="col-xl-7 col-lg-7">
-        <div class="row bg-white justify-content-between">
-          <div class="col-md-8">
-        <h2 class="section-title">Adriane Niepel</h2>
-        
-          <p>
-            <h6>Agiler Coach. Systemischer Coach. OKR Master. Mutter. Kinderbuchautorin. Illustratorin.</h6></br></br>
-            <p>
-              Ich bin Expertin für agile Methoden und kreative Denkansätze, um Herausforderungen mit mehr Spaß und Eigenständigkeit zu begegnen. 
-              Seit 2012 unterstütze ich Einzelpersonen, Teams und Abteilungen dabei sich zu entwickeln und  Perspektivwechsel einzugehen, <b>frei & selbstbestimmt</b> zu <b>arbeiten & zu leben</b>. 
-              
-           </br></br>
-           Als Dipl. Informatikerin gestartet habe ich programmiert, anschließend beraten und gecoacht, Prozesse optimiert,
-           Experimente gestartet, Kinderbücher geschrieben, illustriert und vor allem eins - Perspektivwechsel gelernt.</br></br>
-           
-         
-             Kunden schätzen mich für den Fokus, die Kraft und vielseitigen Ideen, um Herausforderungen strukturiert anzugehen und den starken, fokussierten und gelassenen Ninja in ihnen zu erwecken.
-           
-            
+            <strong>Hier findest du tiefergehende Informationen: Vielseitigkeit als Erfolgsstrategie</strong>
           </p>
-        </br></br>
-       
+
+          <p>
+            <a href="../blog-vielseitigkeit_erfolgsstrategie.html" title="Vielseitige Menschen im Unternehmen" class="btn btn-sm-xs btn-dark">Weiterlesen</a>
+          </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section-sm bg-gray" id="section-course-foerdern">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center section-title justify-content-between">
+            <h2 class="mb-0 mr-3">So förderst du Multipassion:</h2>
+            <!-- <div class="border-top w-100 border-primary d-none d-sm-block"></div> -->
+          </div> 
+        </div>
+      </div>
+
+      <!-- course list -->
+      <div class="row justify-content-center">
+        <!-- course item -->
+        <div class="col-lg-4 col-sm-6 mb-5" id="unternehmen">
+          <div class="card p-0 border-primary rounded-0 hover-shadow">
+            <img class="card-img-top rounded-0" title="Coaching Teamworkshop Perspektivwechsel" src="../images/businessninja/businessprogramm2.png" alt="Business Ninja: Multitalente entdecken und fördern">
+            <div class="card-body">
+              <p><i>Für Mitarbeiterentwickler / CEOs / HR / P&amp;C / Führungskräfte</i></p>
+
+              <h3 class="mb-0 mr-3">Werde Goldgräber: Multitalente als Erfolgsfaktoren</h3>
+
+              </br></br>
+
+              <p><b>Du willst verstehen was Multitalente/ Scanner-Persönlichkeiten/ Multipassionierte/... Menschen sind?</b></p>
+              <p><b>Warum du sie fördern solltest?</b></p>
+              <p><b>Und wie das funktioniert?</b></p>
+
+              <hr>
+
+              <h4 class="mb-0 mr-3 h6">Einzelformate</h4></br>
+              <p>
+                Eine mögliche Zusammenarbeit können <b>Einzelformate</b> sein, wie Impuls-Gespräche, Keynotes, 1:1 Coachings, sowie Team-Workshops.
+              </p>
+              <p>
+                Schreib mich dazu einfach direkt an und wir besprechen was möglich und vor allem für dein Unternehmen auch nachhaltig in der Umsetzung ist.
+              </p>
+
+              <hr>
+
+              <h4 class="mb-0 mr-3 h6">Begleitendes Programm</h4></br>
+              <p>
+                Du interessierst dich für ein <b>begleitendes Programm</b>, in dem alle Mitarbeiter mit einbezogen werden? Kein Problem, auch das ist möglich.
+                Hier arbeite ich in Kooperationen für eine optimale Betreuung. In einem modularen System passen wir die Formate genau auf deine Situation an.
+              </p>
+
+              </br>
+              <hr>
+              </br>
+
+              <p><strong>Persönlicher Kontakt:</strong></p>
+              <!-- <a href="https://subscribepage.io/Werde_Goldgraeber" target="_blank" title="Werde Goldgräber Talente im Unternehmen entdecken" class="btn btn-sm-xs btn-primary ">Zum Infotermin</a></br></br> -->
+              <p>
+                <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage%20Unternehmen%20foerdern%20Multitalente" target="_blank" rel="noopener" title="Kontakt Multitalente fördern im Unternehmen" class="btn btn-sm-xs btn-primary" aria-label="E-Mail an Adriane Niepel (öffnet in neuem Tab)">E-Mail Adriane Niepel</a>
+              </p>
+
+              <p><strong>Informationen über den Einstiegsworkshop anfordern:</strong></p>
+              <p>
+                <a href="https://subscribepage.io/workshop_werdegoldgraeber" target="_blank" rel="noopener" title="Einstiegsworkshop Multitalente" class="btn btn-sm-xs btn-primary" aria-label="Hier anmelden (öffnet in neuem Tab)">Hier anmelden</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- course item -->
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card p-0 border-primary rounded-0 hover-shadow">
+            <img class="card-img-top rounded-0" title="workshop formate innovativ" src="../images/businessninja/workshops.png" alt="Workshopliste: Formate innovativ">
+            <div class="card-body">
+              <p><i>Für Teamentwickler</i></p>
+
+              <h3 class="mb-0 mr-3">Du willst die Vielseitigkeit im Team kennenlernen und nutzen?</h3>
+
+              </br></br>
+
+              <p>
+                Erleben von unterschiedlichen Formaten führt zu </br><b>weniger</b> Eintönigkeit, Ignoranz, und </br><b>mehr</b> Kreativität, Innovation, nachhaltigem Lernen.
+              </p>
+              <p>
+                Hier findest einen Einblick in Teamworkshops zur Förderung von Vielseitigkeit und der Teamtalente.
+              </p>
+
+              </br></br></br>
+
+              <p><strong>Spielerisch zu mehr Miteinander, Motivation und Höchstleistung!</strong></p>
+              <p>
+                <a href="teamworkshops.html" title="teamworkshops" class="btn btn-primary btn-sm">Teamworkshops</a>
+              </p>
+            </div>
+          </div>
+        </div> 
+
+        <!-- course item -->
+        <!-- <div class="col-lg-4 col-sm-6 mb-5" id="workshop">
+          <div class="card p-0 border-primary rounded-0 hover-shadow">
+            <img class="card-img-top rounded-0" title="Gamify your workshop" src="../images/businessninja/gamifyyourworkshop.png" alt="Gamify your workshop">
+            <div class="card-body">
+              <i>Für Trainer & Coaches       </i></br></br>
+              <h3 class="mb-0  mr-3">Du möchtest dein Training / Workshop / Kurs aufpeppen?</h3>
+              
+            </br></br>
+            Du willst deine Teilnehmer mehr motivieren, mehr einbeziehen und einen nachhaltigen Eindruck hinterlassen? </br></br>
+            Wie wäre es mit spielerischen Elementen?</br></br>
+            
+            Dann buche dir 2 Stunden individueller Miniworkshop inklusive Workbook! Live, wir beide und viele Ideen!
+          
+            </br></br></br>
+              <strong>Einmal i-Tüpfelchen bitte!</strong> </br></br>
+              <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage%20Gamify%20Your%20Workshop" title="Kontakt Multitalente fördern im Unternehmen " class="btn btn-sm-xs btn-primary ">E-Mail Anfrage</a>
+            </div>
+          </div>
+        </div>  -->
       </div>
     </div>
-  </div>
-</section>
-<!-- /streifen about -->
+  </section>
 
+  <!-- about us grau -->
+  <section class="bg-white section">
+    <div class="container-fluid ">
+      <div class="row ">
+        <div class="col-xl-4 col-lg-5 align-self-center text-center">
+          <img class="img-fluid w-50 " src="../images/family/Adriane_23_2.png" alt="Adriane Niepel - Ninja Adventures">
+        </div>
+        <div class="col-xl-7 col-lg-7">
+          <div class="row bg-white justify-content-between">
+            <div class="col-md-8">
+              <h2 class="section-title">Adriane Niepel</h2>
 
+              <p class="h6">Agiler Coach. Systemischer Coach. OKR Master. Mutter. Kinderbuchautorin. Illustratorin.</p></br></br>
 
+              <p>
+                Ich bin Expertin für agile Methoden und kreative Denkansätze, um Herausforderungen mit mehr Spaß und Eigenständigkeit zu begegnen.
+                Seit 2012 unterstütze ich Einzelpersonen, Teams und Abteilungen dabei sich zu entwickeln und Perspektivwechsel einzugehen, <b>frei &amp; selbstbestimmt</b> zu <b>arbeiten &amp; zu leben</b>.
+              </p>
 
+              <p>
+                Als Dipl. Informatikerin gestartet habe ich programmiert, anschließend beraten und gecoacht, Prozesse optimiert,
+                Experimente gestartet, Kinderbücher geschrieben, illustriert und vor allem eins - Perspektivwechsel gelernt.
+              </p>
+
+              <p>
+                Kunden schätzen mich für den Fokus, die Kraft und vielseitigen Ideen, um Herausforderungen strukturiert anzugehen und den starken, fokussierten und gelassenen Ninja in ihnen zu erwecken.
+              </p>
+
+              </br></br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /streifen about -->
+</main>
 
 <!-- footer -->
 <footer>
   <!-- newsletter -->
   <div class="newsletter">
-
     <div class="container">
-    
       <div class="row">
         <div class="col-md-10 ml-auto bg-primary py-5 newsletter-block">
-          <h3 class="text-white"> Du hast Fragen?</h3>
-              <h3 class="text-white"> 
-                Schreib mir unbedingt eine E-Mail!</h3>
+          <h3 class="text-white">Du hast Fragen?</h3>
+          <h3 class="text-white">Schreib mir unbedingt eine E-Mail!</h3>
           <!-- <div class="col-12 text-center"> -->
-            <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">E-Mail an adriane@ninjaAdventures.de</a>
+          <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">E-Mail an adriane@ninjaAdventures.de</a>
           <!-- <form action="#">
             <div class="input-wrapper">
               <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
@@ -391,21 +421,16 @@
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="logo"></a>
-          <!-- <ul class="list-unstyled">
-            <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-            <li class="mb-2">+1 (2) 345 6789</li>
-            <li class="mb-2">adriane@ninjaadventures.de</li>
-          </ul> -->
+          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="Ninja Adventures Logo"></a>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
             <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
             <!-- <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="../AGB_AdrianeNiepel.pdf">AGB</a></li> -->
             <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
             <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
-
           </ul>
         </div>
+
         <!-- company -->
         <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> -->
           <!-- <h4 class="text-white mb-5">COMPANY</h4> -->
@@ -415,6 +440,7 @@
             <li class="mb-3"><a class="text-color" href="kontakt.html">Kontakt</a></li>
           </ul>
         </div> -->
+
         <!-- links -->
         <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
           <h4 class="text-white mb-5">Partnerlinks</h4>
@@ -425,6 +451,7 @@
             <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
           </ul>
         </div> -->
+
         <!-- support -->
         <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
           <h4 class="text-white mb-5">Ninja Adventures Übersicht</h4>
@@ -442,26 +469,22 @@
             <li class="mb-3"><a class="text-color" href="#">Wertedings link</a></li>
           </ul> -->
         <!-- </div>  -->
+
         <!-- support -->
-         <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
+         <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">  -->
         <!--   <h4 class="text-white mb-5">RECOMMEND</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="#">WordPress</a></li>
-            <li class="mb-3"><a class="text-color" href="#">LearnPress</a></li>
-            <li class="mb-3"><a class="text-color" href="#">WooCommerce</a></li>
-            <li class="mb-3"><a class="text-color" href="#">bbPress</a></li>
-          </ul> -->
+         
           <h4 class="text-white mb-5">Sharing is caring - Empfehlungen von Herzen</h4>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="https://www.leadventure.de/" target="about_blank">Agile: https://www.leadventure.de/</a></li>
             <li class="mb-3"><a class="text-color" href="https://visuellklar.ch" target="about_blank">Coaching:  https://visuellklar.ch/</a></li>
             <li class="mb-3"><a class="text-color" href="https://romanrackwitz.de" target="about_blank">Gamification: https://romanrackwitz.de/ </a></li>
-            <!-- <li class="mb-3"><a class="text-color" href="https://valuty.de" target="about_blank">Werte: https://valuty.de/ </a></li> -->
           </ul>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
+
   <!-- copyright -->
   <div class="copyright py-4 bg-footer">
     <div class="container">
@@ -476,9 +499,19 @@
         </div>
         <div class="col-sm-5 text-sm-right text-center">
           <ul class="list-inline">
-            <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel"><i class="ti-linkedin text-primary"></i></a></li>
-              <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/"><i class="ti-instagram text-primary"></i></a></li>
-            </ul>
+            <li class="list-inline-item">
+              <a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel" aria-label="LinkedIn Profil von Adriane Niepel (öffnet in neuem Tab)">
+                <i class="ti-linkedin text-primary" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn (öffnet in neuem Tab)</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/" aria-label="Instagram Profil (öffnet in neuem Tab)">
+                <i class="ti-instagram text-primary" aria-hidden="true"></i>
+                <span class="sr-only">Instagram (öffnet in neuem Tab)</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
