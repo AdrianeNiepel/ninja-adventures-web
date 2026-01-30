@@ -1,940 +1,566 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
   <meta charset="utf-8">
-  <meta name="description" content=" Ninja Adventures Family - Kinderstärken mit diesen tollen Ideen "/>
-  
-  <title>Ninja Adventures Family - Kinder stärken</title>
+  <meta name="description" content="Ninja Adventures Family – Kinder stärken mit ausgewählten Ideen und Empfehlungen.">
 
-  <!-- mobile responsive meta -->
+  <title>Ninja Adventures Family – Kinder stärken</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 
   <!-- ** Plugins Needed for the Project ** -->
-  <!-- Bootstrap -->
   <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css">
-  <!-- slick slider -->
   <link rel="stylesheet" href="../plugins/slick/slick.css">
-  <!-- themefy-icon -->
   <link rel="stylesheet" href="../plugins/themify-icons/themify-icons.css">
-  <!-- animation css -->
   <link rel="stylesheet" href="../plugins/animate/animate.css">
-  <!-- aos -->
   <link rel="stylesheet" href="../plugins/aos/aos.css">
-  <!-- venobox popup -->
   <link rel="stylesheet" href="../plugins/venobox/venobox.css">
 
-  <!-- Main Stylesheet -->
   <link href="../css/style.css" rel="stylesheet">
 
-  <!--Favicon-->
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="icon" href="../images/favicon.png" type="image/x-icon">
 
+  <!-- A11y helpers -->
+  <style>
+    .skip-link{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus{
+      position:fixed; left:12px; top:12px; width:auto; height:auto;
+      padding:10px 14px; z-index:9999; background:#fff; color:#000; border:2px solid currentColor;
+    }
+    a:focus, button:focus{
+      outline:2px solid currentColor;
+      outline-offset:3px;
+    }
+  </style>
+
   <!--Cookie Banner-->
-  <!-- <link rel="preconnect" href="//app.eu.usercentrics.eu">
-<link rel="preconnect" href="//api.eu.usercentrics.eu">
-<link rel="preconnect" href="//sdp.eu.usercentrics.eu">
-<link rel="preload" href="//app.eu.usercentrics.eu/browser-ui/latest/loader.js" as="script">
-<link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script"> -->
   <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="TodeXqsbp" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
   <script type="application/javascript" src="https://sdp.eu.usercentrics.eu/latest/uc-block.bundle.js"></script>
-  <!-- <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
-<script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script> -->
 
-
-
-
-  <!-- Global site tag (gtag.js) - Google    -->
- <script type="text/plain" data-usercentrics="Google Analytics 4" async src="https://www.googletagmanager.com/gtag/js?id=G-GLNHKGE6K6"></script>
-<script type="text/plain" data-usercentrics="Google Analytics 4">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GLNHKGE6K6');
-</script> 
-
+  <!-- Google Analytics -->
+  <script type="text/plain" data-usercentrics="Google Analytics 4" async src="https://www.googletagmanager.com/gtag/js?id=G-GLNHKGE6K6"></script>
+  <script type="text/plain" data-usercentrics="Google Analytics 4">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GLNHKGE6K6');
+  </script>
 </head>
 
 <body>
-  <!-- preloader start -->
-  <!-- <div class="preloader">
-    <img src="images/preloader.gif" alt="preloader">
-  </div> -->
-  <!-- preloader end -->
-
-<!-- header -->
-<header class="fixed-top header">
- 
-  <!-- navbar -->
-  <div class="navigation w-100">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="../index.html"><img width="300px" src="../images/logo.png" alt="logo"></a>
-        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item ">
-              <a class="nav-link" href="../index.html">Home</a>
-            </li> 
-            <li class="nav-item dropdown view active">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                 Projekte
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" title="Multitalente fördern im Unternehmen" rel="noopener" href="../business/">Business Ninjas</a>
-                <!-- <a class="dropdown-item" title="Unternehmen fördern Multitalente" rel="noopener" href="../business/index.html#unternehmen">-> Unternehmen fördern</a> 
-                <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="../teamworkshops.html">-> Workshopliste</a> 
-                <a class="dropdown-item" title="Sparring Workshop aufpeppen" rel="noopener" href="../business/index.html#workshop">-> Deinen Workshop aufpeppen</a>  -->
-                <hr> 
-                <a class="dropdown-item" title="Vielseitig leben mit allen Ideen" rel="noopener" href="../index.html#ideenninja">Ideen Ninjas </a>
-                <!-- <a class="dropdown-item" href="../karten/werteadventurebasis/wertereise-karten.html">-> Kurs - Finde deine Mission</a> -->
-                 <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" rel="noopener" href="kurs_erwecke_den_ninja_in_dir.html">Kurs: Erwecke den Ninja in dir</a> -->
-                 <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" target="_blank" rel="noopener" href="https://www.erwecke-den-ninja-in-dir.de/">Kurs: Erwecke den Ninja in dir</a> -->
-                 <hr>
-               
-                <a class="dropdown-item" title="Multipassion in der Familie leben" rel="noopener"  href="../family/">Family Ninjas </a>
-                  <a class="dropdown-item" title="Kinder stärken Eltern stärken Geschenke" rel="noopener" href="../family/empfehlungen-kinder-staerken.html">-> Kinder stärken Produkte</a>
-                  <a class="dropdown-item" title="Kinder stärken Eltern stärken Kurse" rel="noopener" href="../family/kurse.html">-> Kurse</a>
-                <!-- <a class="dropdown-item" title="Aktuelle Events Multipassion leben gemeinsam" rel="noopener" href="../family/aktuelle-events.html">-> Aktuelle Events</a> -->
-                <a class="dropdown-item" title="Kindergeburtstage Mottoparty" rel="noopener" href="../family/kindergeburtstage.html">-> Kindergeburtstage</a>
-                <!-- <a class="dropdown-item" title="Mom Load Mama-ME-TIME Auszeit für Mütter" rel="noopener" href="../family/mom-load.html">-> Mom Load</a> -->
-                <!-- <a class="dropdown-item" title="Family" rel="noopener" href="../family/index.html#schule">-> Schulformate</a> -->
-                <!-- <a class="dropdown-item" title="Digitale Schnitzeljagd" rel="noopener" href="../schnitzeljagd/">-> Digitale Schnitzeljagd</a> -->
-                
-                <hr>
-                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
-
-
-              </div>
-            </li>
-            
-            <li class="nav-item @@blog">
-              <a class="nav-link" title="Blog" href="../blog/">Blog</a>
-            </li>
-            
-            
-            
-            <li class="nav-item ">
-              <a class="nav-link" href="../about/">Über</a>
-            </li>
-           
-           
-            <!-- <li class="nav-item @@events">
-              <a class="nav-link" href="events.html">EVENTS</a>
-            </li> 
-            <li class="nav-item @@blog">
-              <a class="nav-link" href="blog/">BLOG</a>
-            </li>
-            <li class="nav-item dropdown view">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Pages
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="teacher.html">Teacher</a>
-                <a class="dropdown-item" href="teacher-single.html">Teacher Single</a>
-                <a class="dropdown-item" href="notice.html">Notice</a>
-                <a class="dropdown-item" href="notice-single.html">Notice Details</a>
-                <a class="dropdown-item" href="research.html">Research</a>
-                <a class="dropdown-item" href="scholarship.html">Scholarship</a>
-                <a class="dropdown-item" href="course-single.html">Course Details</a>
-                <a class="dropdown-item" href="event-single.html">Event Details</a>
-                <a class="dropdown-item" href="blog-single.html">Blog Details</a>
-              </div>
-            </li>-->
-            <li class="nav-item @@kontakt">
-              <a class="nav-link" href="../kontakt.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-<!-- /header -->
-
-
-
-
-      
-
-
-<!-- page title -->
-<section class="page-title-section overlay bg-cover" data-background="../images/family/starke-kinder.png">
-
-  <!-- <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg"> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-white font-secondary">Kinder zukunftsfit machen!  </h1> </br>
-
-          <h3 class="text-white font-secondary">Für deine eigenen Kinder, Eltern oder auch toll als Geschenk </h3>
-        <p class="text-lighten h3">
-        </br>
-           </br>
-          Du willst deine Kinder fit machen für die Zukunft?</br>
-          Ihnen Dinge beibringen, die sie sonst nicht lernen?</br>
-          Mehr auf sie eingehen? Sie stärken? </br></br>
-          Dann habe ich hier ein paar Ideen für dich!</br>
-        </p>
-        <p class="text-lighten ">
-        </br></br></br></br>
-        Rechtlicher Hinweis:</br>
-        Die mit (WERBUNG) gekennzeichneten Links sind Provisions-Links, auch Affiliate-Links genannt.</br> 
-        Sollte ein Kauf nach dem Klicken getätigt werden, bekommen wir vom betreffenden Anbieter oder Online-Shop eine Vermittlerprovision. </br>
-        Es entstehen für dich keine Nachteile beim Kauf oder Preis. </br>
-        Wir empfehlen nur, wovon wir überzeugt sind, dennoch kann es nicht immer für jeden gleichermaßen passen.</br>
-      </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /page title -->
-  
-  <!-- <section class="bg-cover" >
-    <div class="container">
-    
-      <img class="cards-img" src="ninja_mission_karten.jpg" alt="Ninja Mission Kartenset">
-     
-       
-        
-      </div>
-    </div>
-
-    
-
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-8 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Kinder stärken</h2> 
-          </br></br>
-           
-            
-          <p>
-            <b>Kinder stärken bedeutet nicht mit Muckis und Kampfkunst alles alleine regeln. </b></br>
-            Kinder stärken bedeutet sowohl zu wissen, wo ich Hilfe bekommen kann, als auch resilient zu werden - eine innere Stärke zu entwickeln.</br>
-          </br>
-            Wie könnten wir Kindern das besser beibringen, als es ihnen vorzuleben?
-          </br>
-         Natürlich ist das nicht immer so einfach, aber wie wäre es, wenn wir anfangen gemeinsam Geschichten über das Mutigsein - Mutigwerden und das Miteinander zu teilen?
-        </br></br>
-        Hier sind einige Anregungen:
-
-
-          
-       
-        </p>
-        </div>
-      </div>
-    </div>
-
-
-   <!-- course list -->
-   <div class="row justify-content-center">
-
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Stark wie wir Buch" src="../images/affiliate/family_stark_wie_wir.png" alt="Stark wie wir Buch">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Erwecke den Ritter in Dir!: Wie Finn und Du gemeinsam zum Ritter werden.  </h3>
-           <p> Das Kindersicherheits-Lernbuch für Ihr Kind! Für Kinder ab 5 Jahren</p>
-        
-      </br>
-        
-          <a href="https://amzn.to/3KKssmj" target="_blank" title="Stark wie wir Buch" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-     <!-- course item -->
-     <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Piratenkapitän Schlappohr und seine Mannschaft" src="../images/affiliate/family_piraten_Schlappohr.png" alt="Piratenkapitän Schlappohr und seine Mannschaft">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Piratenkapitän Schlappohr und seine Mannschaft </h3>
-          <p>Wenn Freunde plötzlich von Bord gehen und andere Prioritäten setzen und vom Mut weiter zu machen, bis sich neue Freunde finden.</p>
-        </br> 
-      </br>
-        
-    
-          <a href="https://amzn.to/3XqqOhg" target="_blank" title="Emotionen Übungsbuch Kinder" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-
-      <!-- course item -->
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <div class="card p-0 border-primary rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0 w-100" title="Ritter Schlappohr: Im Tal der rosa Kuschelschafet" src="../images/affiliate/family_ritter_schlappohr.png" alt="Ritter Schlappohr: Im Tal der rosa Kuschelschafe">
-          <div class="card-body">
-            <h3 class="mb-0  mr-3">Ritter Schlappohr: Im Tal der rosa Kuschelschafe </h3>
-          <p>Wenn Herausforderungen so groß wirken, dass nur der Mut und der Glaube "Es gibt immer einen Weg" zur Lösung führen.</p>
-            
-          </br> 
-        </br>
-          
-      
-            <a href="https://amzn.to/3Ry5fHN" target="_blank" title="Ritter Schlappohr: Im Tal der rosa Kuschelschafe" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-          <p class="text-lighten">WERBUNG</p>
-          </div>
-        </div>
-      </div>
-
-
-
-    
-  
-  
-  </div>
-
- 
-
-
-
-    </div>
-
-   
-  </div>
-</section>
-
-
-
-
-
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-8 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Neugier wecken, Durchhaltevermögen steigern</h2> 
-          </br></br>
-           
-            
-          <p>
-            <b>Kinder erleben sehr viel Umbruch, neue Umfelder, durch Kita, Schule, weiterführende Schulen, Umzüge und co. Dazu kommt die Pupertät, das Lernen in sozialen Gefügen usw.
-              Sie brauchen also sehr viele gute Nerven und ihr Umfeld ebenso.
-              Sie lernen ständig Neues, ob sie wollen oder nicht.  </b></br>
-              Wollen wir spielerisch diese Neugier positiv aufladen und ihnen Durchhaltevermögen beibringen, eignen sich generell Spiele.          </br>
-              Hier gibt es Regeln als Eckpfeiler, Kooperative Spiele, oder Challenges gegeneinander.          </br>
-              Aber es gibt auch für "Mir ist langweilig!" Spiele, die spannend sind und sie alleine oder gemeinsam spielen können.          </br>
-              Großartiges Beispiel hierfür sind Escape Games.          </br>
-              Diese können als Bücher, Spiele zuhause gespielt, oder klassisch als ganze Escape Rooms - Räume besucht werden. Hier findet ihr verschiedene Beispiele, es gibt inzwischen unzählige Varianten für verschiedene Alter / Schwierigkeitsstufen.
-                      </br>          </br>
-
-          
-          </br>
-          Mein Tipp, ab der 1./2. Klasse (je nach Entwicklung des Kindes, es sollte auf jeden Fall etwas lesen können), Escape Spiele nutzen, hier lesen die Kinder freiwillig Rätsel, lernen um die Ecke zu denken und logische Verknüpfungen.
-        Nicht nur das, es macht unheimlich viel Spaß und ist ein Rätsel gelöst ist die Freude so groß, dass regelrecht gefeiert wird mit einem lauten "ICH habs!" </br></br>
-        <b>Persönliche Erfahrung:</b></br>
-       Gemeinsam vor dem Schlafen noch die Geschichte weiterlesen, dabei 1-2 Rätsel lösen hilft zu einem positiven Ende des Tages und einer ganz tollen Quality Time.
-
-
-          
-       
-        </p>
-        </div>
-      </div>
-    </div>
-
-
-   <!-- course list -->
-   <div class="row justify-content-center">
-
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Escape Game Buch Kinder" src="../images/affiliate/escapebookstories.jpg" alt="Escape Game Buch Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Escape Quiz </h3>
-       <p> Geheimtipp: Hier handelt es sich gar nicht um ein Quiz wie vermuten lässt, sondern und mehrere Kurzgeschichten, in denen zb das Grab des Pharaos gesucht, aber am Ende doch jemand anderes in der Pyramide zu finden ist.
-        Viele kurzweilige Rätsel, kleine Geschichten. Der perfekte Einstieg. </p>
-      </br>
-        
-          <!-- <a href="https://bookbot.de/g/3570131" target="_blank" title="Escape Game Buch Kinder" class="btn btn-sm-xs btn-primary ">Zum Buch</a> -->
-        <p class="text-lighten">Ich habe es nur noch gebraucht gefunden. Momox, Ebay Kleinanzeigen usw. eignen sich zur Suche</p>
-        </div>
-      </div>
-    </div>
-  
-     <!-- course item -->
-     <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Escape Game Buch Kinder" src="../images/affiliate/escapebookstory.jpg" alt="Escape Game Buch Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">EXIT - die Spur im Spiegel</h3>
-          <p>Eine lange, ausgetüftelte Geschichte findet sich in diesem Buch. Die Rätsel sind aufwendiger, dafür gibt es auch Hilfsmittel im Buch und es muss gebastelt werden. Uns hat das Ganze sehr viel Spaß gemacht und eignet sich in jedem Fall zusammen zu denken. 
-          Von EXIT gibt es inzwischen zahlreiche Bücher und auch Spiele. Für verschiedene Altersklassen und auch Erwachsene. </p>
-        </br> 
-      </br>
-        
-    
-          <a href="https://amzn.to/4mGKmYD" target="_blank" title="Escape Game Buch Kinder" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-
-  <!-- course item -->
-     <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Escape Game Kinder" src="../images/affiliate/escapegame.jpg" alt="Escape Game Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Escape Game, die verlassene Schule</h3>
-          <p>Ganz anders ist dieses Spiel. Hier gibt es natürlich Spielmaterial zum Rätseln. </p>
-        </br> 
-      </br>
-        
-    
-          <a href="https://amzn.to/4fWODEy" target="_blank" title="Escape Game Kinder" class="btn btn-sm-xs btn-primary ">Zum Spiel</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-
-
-
-    
-  
-  
-  </div>
-
- 
-
-
-
-    </div>
-
-   
-  </div>
-</section>
-
-
-
-
-
-
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-8 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Emotionen verstehen</h2> 
-          </br></br>
-           
-            
-          <p>
-            <b>Da ist es wieder passiert, alles lief nicht so nach Plan. </b></br>
-            Aber was bedeutet schon Plan? Normal?</br>
-          </br>
-            Kinder müssen ihre Emotionen erst lernen einzuordnen.</br>
-            Ist es schlimm, wenn mein Freund auf einmal mit jemand anderem spielen möchte?</br>
-             Ich bin traurig, wie darf ich das zeigen?
-          </br>
-          Gerade im ersten Schuljahr verändert sich einiges, zusätzlich lernen die Kinder aber auch lesen und schreiben,
-        hier also ein Tipp ab Klasse 1.</br></br>
-        <b>Persönliche Erfahrung:</b></br>
-        Uns hat es ebenso geholfen, dass nicht nur ein 
-        "Wie war es in der Schule?" - "Gut" Gespräch stattfand, sondern wir abends den Tag noch einmal gemeinsam erlebt haben.
-
-
-          
-       
-        </p>
-        </div>
-      </div>
-    </div>
-
-
-   <!-- course list -->
-   <div class="row justify-content-center">
-
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Emotionstagebuch Kinder" src="../images/affiliate/family_gutes_gefuehl.png" alt="Emotionstagebuch Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Ein gutes Gefühl – Gefühlstagebuch  </h3>
-        
-      </br>
-        
-          <a href="https://amzn.to/3Sd7WOq" target="_blank" title="Emotionentagebuch Kinder" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-     <!-- course item -->
-     <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Emotionstagebuch Kinder" src="../images/affiliate/family_wut_mitmachbuch.png" alt="Emotionstagebuch Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Ich muss nicht wütend sein: Das Mitmachbuch für Kinder. 50 unterhaltsame Übungen, um in jeder Situation ruhig und freundlich zu bleiben </h3>
-          
-        </br> 
-      </br>
-        
-    
-          <a href="https://amzn.to/3tWu4Vt" target="_blank" title="Emotionen Übungsbuch Kinder" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-
-
-    
-  
-  
-  </div>
-
- 
-
-
-
-    </div>
-
-   
-  </div>
-</section>
-
-
-
-
-
-
-
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-8 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Mütter ihr Superheldinnen & starke Vorbilder</h2> 
-          </br></br>
-        <p>
-          <p>
-            <b>Mama ist doof! Nein, ganz und gar nicht! </b></br>
-            Mama hat Superkräfte! Wieso und wie Kinderaugen das erleben seht ihr hier.</br>
-          </br>
-            Kinder brauchen Vorbilder. Vor allem auch starke Mütter.</br>
-            Dieses Buch zeigt einmal mehr, wie toll Kinderaugen sehen können!</br>
-          </br>
-        <b>Persönliche Erfahrung:</b></br>
-        Mich hat das Buch nicht nur beim ersten Mal zu Tränen gerührt. Was für wundervolle Bilder und eine Hommage an die Mütter. 
-      </br>
-      Wir müssen unseren Kindern zeigen, dass es auch weibliche Vorbilder gibt, nicht nur Einstein und DaVinci. 
-      Inzwischen gibt es einige Bücher, die starke Frauen durch die Jahrhunderte zeigen und was sie erreicht haben. 
-      Hier können wir tolle weibliche Vorbilder für unsere Kinder kreieren!
-
-          
-       
-        </p>
-        </div>
-      </div>
-    </div>
-
-
-   <!-- course list -->
-   <div class="row justify-content-center">
-
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Superhelden Mama Superkraft" src="../images/affiliate/family_mama_superheld.png" alt="Buch Mutter Superkraft">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Max und die Superhelden  </h3>
-      </br>
-        
-          <a href="https://amzn.to/4bb8Bsk" target="_blank" title="Superhelden Mama Superkraft Buch kaufen" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-     <!-- course item -->
-     <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Starke Frauen Vorbilder" src="../images/affiliate/family_maedchen_koennen_alles_sein.png" alt="Buch Mädchen können alles sein">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Von Marie Curie bis Greta Thunberg- Mädchen können alles sein.</h3>
-         
-      </br>
-      
-          <a href="https://amzn.to/492NNl9" target="_blank" title="Starke Frauen Vorbilder Buch kaufen" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-
-      <!-- course item -->
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <div class="card p-0 border-primary rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0 w-100" title="Starke Frauen und Männer Vorbilder" src="../images/affiliate/family_starke_persoenlichkeiten.png" alt="Buch Mädchen können alles sein">
-          <div class="card-body">
-            <h3 class="mb-0  mr-3">Starke Persönlichkeiten für starke Kinder - Mitmachbuch</h3>
-           
-        </br>
-        
-            <a href="https://amzn.to/3Sv0JuI" target="_blank" title="Starke Frauen und Männder Vorbilder Buch kaufen" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-          <p class="text-lighten">WERBUNG</p>
-          </div>
-        </div>
-      </div>
-
-    
-  
-  
-  </div>
-
- 
-
-
-
-    </div>
-
-   
-  </div>
-</section>
-
-
-
-
-
-
-<!-- about us grau -->
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row ">
-      <div class="align-items-center section-title justify-content-between">
-      <div class="col-md-8 order-2 order-md-2 ">
-        <h2 class="mb-0 text-nowrap mr-3">Freundebücher</h2> 
-          </br></br>
-          <p>
-            <p>
-              <b>Kannst du dich noch an deine Kindergartenzeit erinnern? An deine Grundschule? </b></br>
-              Freundebücher sind die Bücher, in die im Kindergarten immer die Eltern reinschreiben mussten, weil die 
-              Kinder noch gar nicht schreiben konnten. Und wieso so viele Fragen beantworten, die man als Kind nicht mal verstanden hatte.</br>
-              Am Wichtigsten waren natürlich die Bilder, auch damals schon. 
-              Umso merkwürdiger, dass es heutzutage Bücher gibt, die keinen Platzhalter im Buch für ein Foto haben.</br>
-            </br>
-              
-            </br>
-          <b>Persönliche Erfahrung:</b></br>
-          Als ich klein war, waren die Bücher noch extrem geprägt von Jungen- und Mädchenfarben.</br>
-              Darauf reagiere ich wirklich allergisch! </br>
-              Umso schöner, dass es sogar jetzt auf vermeintlichen "Jungs-Themen" Büchern (Dinos) auch Pailletten gibt!</br>
-              Diese Förderung der Individualität und Vielfalt muss ich gleich unterstützen.</br></br>
-  
-              Außerdem ein etwas anderes Freundebuch für die großen unter uns - hab ich selber noch nicht getestet, klingt aber nach viel Spaß!
-        </br>
-        
-         
-          </p>
-
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-   <!-- course list -->
-   <div class="row justify-content-center">
-
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Freundebuch Dino Pailletten" src="../images/affiliate/family_freundebuch.png" alt="Buch Mutter Superkraft">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Meine Freunde – Dinos (mit Wendepailletten) </h3>
-      </br>
-        
-          <a href="https://amzn.to/3ueN6WW" target="_blank" title="Freundebuch Dino Pailletten kaufen" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-     <!-- course item -->
-     <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Mama Freunde Buch" src="../images/affiliate/family_mama_friends.png" alt="Buch Mutter Frauen Freunde ">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Memories2Make® Challenge Buch für beste Freundinnen mit 32 Abenteuer hinter Rubbelfeldern, Fotoalbum zum Selbstgestalten, DIY Scrapbook</h3>
-         
-      </br>
-      
-          <a href="https://amzn.to/426IQ8J" target="_blank" title="Buch Mutter Frauen Freunde kaufen" class="btn btn-sm-xs btn-primary ">Zum Buch</a>
-        <p class="text-lighten">WERBUNG</p>
-        </div>
-      </div>
-    </div>
-  
-  
-  </div>
-
- 
-
-    </div>
-
-   
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-<!-- about us grau -->
-<!-- about us -->
-<section class="section-sm bg-white" >
-  <div class="container">
-    <div class="row align-items-top">
-      <div class="col-md-4 order-1 order-md-1 ">
-        <img class="img-fluid w-100" src="../images/family/Adriane_23_2.png" alt="Adriane Niepel">
-      </div>
-      <div class="col-md-8 order-2 order-md-2 ">
-        <h3>Mutter und Wertschätzungsliebhaberin: Adriane Niepel</h3></br></br>
-        <p>
-          <strong>Mutter, Kinderbuchautorin, Illustratorin, system. Coach, Dipl. Informatikerin (Multipassioniert)  </strong></br></br>
-          
-          Ich liebe schöne Bilder, gute Geschichte, durchdachte Konzepte und kleine Details.
-          Darauf achte ich auch, wenn ich euch etwas empfehle, daher kommt hier nicht alles rein, sondern ausgewählte Schätze!      
-         </br></br>
-
-                <h3 class="section-title">Und so mache ich mich auf mit euch mehr Quality Time in der Familie zu generieren und mehr Wertschätzung in die Welt zu tragen - lebenslang lernend!</h3>
-                
-              </br></br>
-                
-          
-        </p>
-
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /about us -->
-
-
-
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row align-items-top">
-      <div class="col-md-6 order-2 order-md-1 ">
-        <h3>Das Konzept:</h3></br></br>
-        <p>
-          Mit den richtigen Methoden und Unterstützungsmaterialien üben & lehren & erleben.</br>
-          Besondere Momente auch besonders im Miteinander gestalten.</br>
-          Sich Wertschätzung schenken, nicht nur Geschenke.</br>
-          Miteinander Lachen und Spaß haben.</br>
-          Einzigartige Zeiten kreieren.</br>
-          Einfachheit und Unterstützung genießen.  </br>
-        </br>
-
-          
-          <strong>Viel Freude beim shoppen! </strong>
-        </p>
-      </br></br>
-
-      </div>
-      <div class="col-md-6 order-1 order-md-2 ">
-        <img class="img-fluid w-50" src="../images/family/NinjaWert_transp.png" alt="Ninja Werte">
-        
-      </div>
-      
-    </div>
-  </div>
-</section>
-<!-- /about us -->
-
-
-
-
-<!-- footer -->
-<footer>
-  <!-- newsletter -->
-  <div class="newsletter">
-
-    <div class="container">
-    
-      <div class="row">
-        <div class="col-md-10 ml-auto bg-primary py-5 newsletter-block">
-          <h4 class="text-white"> Du brauchst ein paar Empfehlungen zu einer ganz anderen Kategorie?</h4>
-              </br>
-              <h4 class="text-white"> 
-                Schreib mir unbedingt eine E-Mail, ich freue mich!</h4>
-          <!-- <div class="col-12 text-center"> -->
-            <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">E-Mail an adriane@ninjaAdventures.de</a>
-          <!-- <form action="#">
-            <div class="input-wrapper">
-              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
-              <button type="submit" value="send" class="btn btn-primary">Join</button>
-            </div>
-          </form> -->
-        </div>
-      </div>
-    </div>
-  </div> 
-  <!-- footer content -->
-  <div class="footer bg-footer section border-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
-          <!-- logo -->
-          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="logo"></a>
-          <!-- <ul class="list-unstyled">
-            <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-            <li class="mb-2">+1 (2) 345 6789</li>
-            <li class="mb-2">adriane@ninjaadventures.de</li>
-          </ul> -->
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
-            <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
-            <!-- <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="../AGB_AdrianeNiepel.pdf">AGB</a></li> -->
-            <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
-            <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
-
-          </ul>
-        </div>
-        <!-- company -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> -->
-          <!-- <h4 class="text-white mb-5">COMPANY</h4> -->
-          <!-- <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="about/">Impressum</a></li>
-            <li class="mb-3"><a class="text-color" href="teacher.html">Datenschutz</a></li>
-            <li class="mb-3"><a class="text-color" href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </div> -->
-        <!-- links -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">Partnerlinks</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-            <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
-            <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
-            <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
-          </ul>
-        </div> -->
-        <!-- support -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">Ninja Adventures Übersicht</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="about/">Entstehung</a></li>
-            <li class="mb-3"><a class="text-color" href="index.html#section-course">Adventure 1</a></li>
-            <li class="mb-3"><a class="text-color" href="faq.html">FAQ</a></li> -->
-            <!-- <li class="mb-3"><a class="text-color" target="about_blank" href="https://kurse.ninjaadventures.de/">Mitgliederbereich</a></li> -->
-          <!-- </ul>  -->
-          <!-- <h4 class="text-white mb-5">Empfehlungen</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="#">Agile irgendwas</a></li>
-            <li class="mb-3"><a class="text-color" href="#">Coaching tada</a></li>
-            <li class="mb-3"><a class="text-color" href="#">Gamificationzeug</a></li>
-            <li class="mb-3"><a class="text-color" href="#">Wertedings link</a></li>
-          </ul> -->
-        <!-- </div>  -->
-        <!-- support -->
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
-          <ul class="list-unstyled">
-            <!-- <li class="mb-3"><a class="text-color" href="aktuelle-events.html" target="about_blank">Aktuelle Events</a></li> -->
-            <!-- <li class="mb-3"><a class="text-color" href="mom-load.html" target="about_blank">Mama-Me Time</a></li> -->
-            <li class="mb-3"><a class="text-color" href="kindergeburtstage.html" target="about_blank">Mottoparty </a></li>
-            <li class="mb-3"><a class="text-color" href="empfehlungen-kinder-staerken.html" target="about_blank">Starke Kinder Empfehlungen</a></li> 
-            <li class="mb-3"><a class="text-color" href="kurse.html" target="about_blank">Besondere Kurse</a></li> 
-          </ul>
-         </div>
-          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">  -->
-          <!-- <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="https://ninjaadventures.myspreadshop.de/collections" target="about_blank">Shop</a></li>
-            <li class="mb-3"><a class="text-color" href="../index.html#ideenninja" target="about_blank">Vielseitige Projekte umsetzen</a></li>
-            <li class="mb-3"><a class="text-color" href="../teamworkshops.html" target="about_blank">Besondere Teamworkshops erleben</a></li>
-          </ul> -->
-         <!--  <h4 class="text-white mb-5">Sharing is caring - Empfehlungen von Herzen</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="https://www.leadventure.de/" target="about_blank">Agile: https://www.leadventure.de/</a></li>
-            <li class="mb-3"><a class="text-color" href="https://visuellklar.ch" target="about_blank">Coaching:  https://visuellklar.ch/</a></li>
-            <li class="mb-3"><a class="text-color" href="https://romanrackwitz.de" target="about_blank">Gamification: https://romanrackwitz.de/ </a></li>
-            <li class="mb-3"><a class="text-color" href="https://valuty.de" target="about_blank">Werte: https://valuty.de/ </a></li> 
-          </ul>-->
-          <!-- </div> -->
-      </div>
-    </div>
-  </div>
-  <!-- copyright -->
-  <div class="copyright py-4 bg-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-7 text-sm-left text-center">
-          <p class="mb-0">Copyright
-            <script>
-              var CurrentYear = new Date().getFullYear()
-              document.write(CurrentYear)
-            </script> 
-            © Adriane Niepel, also thanks to themefisher</p>
-        </div>
-        <div class="col-sm-5 text-sm-right text-center">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel"><i class="ti-linkedin text-primary"></i></a></li>
-              <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/"><i class="ti-instagram text-primary"></i></a></li>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <!-- header -->
+  <header class="fixed-top header">
+    <div class="navigation w-100">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Hauptnavigation">
+          <a class="navbar-brand" href="../index.html">
+            <img width="300" src="../images/logo.png" alt="Ninja Adventures">
+          </a>
+
+          <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-controls="navigation" aria-expanded="false" aria-label="Navigation ein- oder ausklappen">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+
+              <li class="nav-item dropdown view active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Projekte
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" title="Multitalente fördern im Unternehmen" rel="noopener" href="../business/">Business Ninjas</a>
+                  <hr>
+                  <a class="dropdown-item" title="Vielseitig leben mit allen Ideen" rel="noopener" href="../index.html#ideenninja">Ideen Ninjas</a>
+                  <hr>
+
+                  <a class="dropdown-item" title="Multipassion in der Familie leben" rel="noopener" href="../family/">Family Ninjas</a>
+                  <a class="dropdown-item" title="Kinder stärken: Empfehlungen & Produkte" rel="noopener" href="../family/empfehlungen-kinder-staerken.html">→ Kinder stärken Produkte</a>
+                  <a class="dropdown-item" title="Kurse für Familien" rel="noopener" href="../family/kurse.html">→ Kurse</a>
+                  <a class="dropdown-item" title="Kindergeburtstage als Mottoparty" rel="noopener" href="../family/kindergeburtstage.html">→ Kindergeburtstage</a>
+
+                  <hr>
+                  <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
+                </div>
+              </li>
+
+              <li class="nav-item @@blog">
+                <a class="nav-link" title="Blog" href="../blog/">Blog</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../about/">Über</a>
+              </li>
+
+              <li class="nav-item @@kontakt">
+                <a class="nav-link" href="../kontakt.html">Kontakt</a>
+              </li>
             </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- /header -->
+
+  <main id="main-content" tabindex="-1">
+    <!-- page title -->
+    <section class="page-title-section overlay bg-cover" data-background="../images/family/starke-kinder.png" aria-labelledby="page-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="page-title" class="text-white font-secondary">Kinder zukunftsfit machen!</h1>
+
+            <h2 class="text-white font-secondary h3">Für deine eigenen Kinder, Eltern oder auch toll als Geschenk</h2>
+
+            <p class="text-lighten h3">
+              Du willst deine Kinder fit machen für die Zukunft?<br>
+              Ihnen Dinge beibringen, die sie sonst nicht lernen?<br>
+              Mehr auf sie eingehen? Sie stärken?
+            </p>
+
+            <p class="text-lighten h3">
+              Dann habe ich hier ein paar Ideen für dich!
+            </p>
+            <br><br>
+
+            <aside class="text-lighten" aria-label="Rechtlicher Hinweis zu Affiliate-Links">
+              <h2 class="h4 text-white font-secondary">Rechtlicher Hinweis</h2>
+              <p class="text-lighten" >
+                Die mit <strong>(WERBUNG)</strong> gekennzeichneten Links sind Provisions-Links (Affiliate-Links).
+                Wenn du nach dem Klicken etwas kaufst, erhalten wir vom Anbieter oder Online-Shop eine Vermittlerprovision.
+                Für dich entstehen keine Nachteile beim Kauf oder Preis. Wir empfehlen nur, wovon wir überzeugt sind –
+                dennoch kann es nicht für jede Person gleichermaßen passen.
+              </p>
+            </aside>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /page title -->
+
+    <!-- section: Kinder stärken -->
+    <section class="section bg-gray" aria-labelledby="kinder-staerken">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 id="kinder-staerken" class="mb-0 mr-3">Kinder stärken</h2>
+
+            <p>
+              <strong>Kinder stärken bedeutet nicht, mit Muckis und Kampfkunst alles alleine regeln.</strong><br>
+              Kinder stärken bedeutet, zu wissen, wo ich Hilfe bekommen kann – und resilient zu werden: eine innere Stärke zu entwickeln.
+            </p>
+
+            <p>
+              Wie könnten wir Kindern das besser beibringen, als es ihnen vorzuleben?
+              Natürlich ist das nicht immer so einfach – aber wie wäre es, wenn wir gemeinsam Geschichten über Mut und Miteinander teilen?
+            </p>
+
+            <p>Hier sind einige Anregungen:</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_stark_wie_wir.png" alt="Buchcover: Erwecke den Ritter in Dir">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Erwecke den Ritter in Dir!</h3>
+                <p>Wie Finn und du gemeinsam zum Ritter werden. Kindersicherheits-Lernbuch (ab 5 Jahren).</p>
+                <a href="https://amzn.to/3KKssmj" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_piraten_Schlappohr.png" alt="Buchcover: Piratenkapitän Schlappohr und seine Mannschaft">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Piratenkapitän Schlappohr und seine Mannschaft</h3>
+                <p>Über Freundschaft, Veränderungen und den Mut, weiterzumachen, bis sich neue Freunde finden.</p>
+                <a href="https://amzn.to/3XqqOhg" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_ritter_schlappohr.png" alt="Buchcover: Ritter Schlappohr – Im Tal der rosa Kuschelschafe">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Ritter Schlappohr: Im Tal der rosa Kuschelschafe</h3>
+                <p>Wenn Herausforderungen riesig wirken – und „Es gibt immer einen Weg“ plötzlich der Schlüssel wird.</p>
+                <a href="https://amzn.to/3Ry5fHN" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section: Neugier wecken -->
+    <section class="section bg-white" aria-labelledby="neugier">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 id="neugier" class="mb-0 mr-3">Neugier wecken, Durchhaltevermögen steigern</h2>
+
+            <p>
+              <strong>Kinder erleben viel Umbruch</strong> – neue Umfelder durch Kita, Schule, Umzüge – dazu kommen soziale Gefüge, Lernen und später Pubertät.
+              Umso wichtiger sind gute Nerven – bei Kindern und im Umfeld.
+            </p>
+
+            <p>
+              Spiele können Neugier positiv „aufladen“ und Durchhaltevermögen trainieren:
+              kooperative Spiele, Challenges oder Ideen gegen „Mir ist langweilig!“
+              Ein großartiges Beispiel sind Escape Games – als Bücher, Spiele zuhause oder als Escape Rooms.
+            </p>
+
+            <p>
+              <strong>Mein Tipp:</strong> Ab der 1./2. Klasse (je nach Entwicklung – etwas Lesen können hilft) Escape-Spiele nutzen.
+              Kinder lesen freiwillig Rätsel, denken um die Ecke, verknüpfen logisch – und haben richtig Spaß.
+            </p>
+
+            <p>
+              <strong>Persönliche Erfahrung:</strong> Abends gemeinsam weiterlesen und 1–2 Rätsel lösen sorgt für ein gutes Tagesende und Quality Time.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/escapebookstories.jpg" alt="Buchcover: Escape Quiz – Kurzgeschichten mit Rätseln">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Escape Quiz</h3>
+                <p>
+                  Geheimtipp: Es sind Kurzgeschichten mit vielen Rätseln – perfekter Einstieg.
+                  (Ich habe es nur noch gebraucht gefunden – Momox, Kleinanzeigen etc.)
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/escapebookstory.jpg" alt="Buchcover: EXIT – Die Spur im Spiegel">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">EXIT – Die Spur im Spiegel</h3>
+                <p>Längere Geschichte, aufwendigere Rätsel, mit Hilfsmitteln im Buch und Basteln. Macht zusammen viel Spaß.</p>
+                <a href="https://amzn.to/4mGKmYD" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/escapegame.jpg" alt="Produktbild: Escape Game – Die verlassene Schule">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Escape Game: Die verlassene Schule</h3>
+                <p>Spielmaterial zum Rätseln – ganz anders als die Bücher.</p>
+                <a href="https://amzn.to/4fWODEy" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Spiel</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section: Emotionen verstehen -->
+    <section class="section bg-gray" aria-labelledby="emotionen">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 id="emotionen" class="mb-0 mr-3">Emotionen verstehen</h2>
+
+            <p><strong>Da ist es wieder passiert: Alles lief nicht nach Plan.</strong> Aber was ist schon „normal“?</p>
+
+            <p>
+              Kinder lernen erst, Emotionen einzuordnen:
+              Ist es schlimm, wenn mein Freund mit jemand anderem spielt?
+              Ich bin traurig – wie darf ich das zeigen?
+            </p>
+
+            <p>
+              <strong>Persönliche Erfahrung:</strong> Uns hat es geholfen, den Tag abends noch einmal gemeinsam zu „durchleben“ –
+              statt nur „Wie war’s?“ – „Gut.“.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_gutes_gefuehl.png" alt="Buchcover: Ein gutes Gefühl – Gefühlstagebuch">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Ein gutes Gefühl – Gefühlstagebuch</h3>
+                <a href="https://amzn.to/3Sd7WOq" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_wut_mitmachbuch.png" alt="Buchcover: Ich muss nicht wütend sein – Mitmachbuch">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Ich muss nicht wütend sein – Mitmachbuch</h3>
+                <p>50 Übungen, um in jeder Situation ruhiger und freundlicher zu bleiben.</p>
+                <a href="https://amzn.to/3tWu4Vt" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section: Vorbilder -->
+    <section class="section bg-white" aria-labelledby="vorbilder">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 id="vorbilder" class="mb-0 mr-3">Mütter: Superheldinnen & starke Vorbilder</h2>
+
+            <p><strong>„Mama ist doof!“ – Nein, ganz und gar nicht.</strong> Mama hat Superkräfte.</p>
+
+            <p>
+              Kinder brauchen Vorbilder – auch starke Mütter. Und wir dürfen zeigen:
+              Es gibt weibliche Vorbilder, nicht nur Einstein und Da Vinci.
+            </p>
+
+            <p><strong>Persönliche Erfahrung:</strong> Dieses Buch hat mich nicht nur beim ersten Mal zu Tränen gerührt.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_mama_superheld.png" alt="Buchcover: Max und die Superhelden">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Max und die Superhelden</h3>
+                <a href="https://amzn.to/4bb8Bsk" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_maedchen_koennen_alles_sein.png" alt="Buchcover: Mädchen können alles sein">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Mädchen können alles sein</h3>
+                <p>Von Marie Curie bis Greta Thunberg.</p>
+                <a href="https://amzn.to/492NNl9" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_starke_persoenlichkeiten.png" alt="Buchcover: Starke Persönlichkeiten für starke Kinder">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Starke Persönlichkeiten für starke Kinder</h3>
+                <p>Mitmachbuch.</p>
+                <a href="https://amzn.to/3Sv0JuI" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section: Freundebücher -->
+    <section class="section bg-gray" aria-labelledby="freundebuecher">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 id="freundebuecher" class="mb-0 text-nowrap mr-3">Freundebücher</h2>
+
+            <p>
+              <strong>Kannst du dich noch an Kindergarten und Grundschule erinnern?</strong>
+              Freundebücher: früher mussten oft die Eltern schreiben, heute sind vor allem die Bilder wichtig.
+            </p>
+
+            <p><strong>Persönliche Erfahrung:</strong> Ich reagiere allergisch auf „Jungs-/Mädchenfarben“-Klischees – umso schöner, wenn Vielfalt sichtbar wird.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_freundebuch.png" alt="Buchcover: Meine Freunde – Dinos (mit Wendepailletten)">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Meine Freunde – Dinos (mit Wendepailletten)</h3>
+                <a href="https://amzn.to/3ueN6WW" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <article class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" src="../images/affiliate/family_mama_friends.png" alt="Buchcover: Challenge Buch für beste Freundinnen (Memories2Make)">
+              <div class="card-body">
+                <h3 class="mb-0 mr-3">Challenge Buch für beste Freundinnen</h3>
+                <p>32 Abenteuer hinter Rubbelfeldern, Fotoalbum zum Selbstgestalten.</p>
+                <a href="https://amzn.to/426IQ8J" target="_blank" rel="noopener noreferrer" class="btn btn-sm-xs btn-primary">Zum Buch</a>
+                <p class="text-lighten">(WERBUNG)</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="section-sm bg-white" aria-labelledby="about-adriane">
+      <div class="container">
+        <div class="row align-items-top">
+          <div class="col-md-4">
+            <img class="img-fluid w-100" src="../images/family/Adriane_23_2.png" alt="Adriane Niepel">
+          </div>
+          <div class="col-md-8">
+            <h2 id="about-adriane" class="h3">Mutter und Wertschätzungsliebhaberin: Adriane Niepel</h2>
+            <p><strong>Mutter, Kinderbuchautorin, Illustratorin, systemischer Coach, Dipl.-Informatikerin (multipassioniert)</strong></p>
+            <p>
+              Ich liebe schöne Bilder, gute Geschichten, durchdachte Konzepte und kleine Details.
+              Darauf achte ich auch, wenn ich etwas empfehle – daher sind es ausgewählte Schätze.
+            </p>
+            <p class="h4 section-title">
+              Und so mache ich mich auf, mit euch mehr Quality Time zu generieren und mehr Wertschätzung in die Welt zu tragen – lebenslang lernend!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-gray" aria-labelledby="konzept">
+      <div class="container">
+        <div class="row align-items-top">
+          <div class="col-md-6">
+            <h2 id="konzept" class="h3">Das Konzept</h2>
+            <p>
+              Mit den richtigen Methoden und Unterstützungsmaterialien üben, lehren und erleben.<br>
+              Besondere Momente gemeinsam gestalten.<br>
+              Sich Wertschätzung schenken – nicht nur Geschenke.<br>
+              Miteinander lachen und Spaß haben.<br>
+              Einzigartige Zeiten kreieren.<br>
+              Einfachheit und Unterstützung genießen.
+            </p>
+            <p><strong>Viel Freude beim Stöbern!</strong></p>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid w-50" src="../images/family/NinjaWert_transp.png" alt="Illustration: Ninja Werte">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 ml-auto bg-primary py-5 newsletter-block">
+            <h2 class="h4 text-white">Du brauchst Empfehlungen zu einer anderen Kategorie?</h2>
+            <p class="text-white">Schreib mir eine E-Mail – ich freue mich!</p>
+            <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">
+              E-Mail an adriane@ninjaadventures.de
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-<!-- /footer -->
 
-<!-- jQuery -->
-<script src="../plugins/jQuery/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="../plugins/bootstrap/bootstrap.min.js"></script>
-<!-- slick slider -->
-<script src="../plugins/slick/slick.min.js"></script>
-<!-- aos -->
-<script src="../plugins/aos/aos.js"></script>
-<!-- venobox popup -->
-<script src="../plugins/venobox/venobox.min.js"></script>
-<!-- filter -->
-<script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
-<!-- google map -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-<script src="plugins/google-map/gmap.js"></script> -->
+    <div class="footer bg-footer section border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+            <a class="logo-footer" href="../index.html">
+              <img class="img-fluid mb-4" src="../images/logo.png" alt="Ninja Adventures">
+            </a>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
+              <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
+              <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
+              <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
+            </ul>
+          </div>
 
-<!-- Main Script -->
-<script src="../js/script.js"></script>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h2 class="h5 text-white mb-3">Family-Projekte</h2>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="kindergeburtstage.html" target="_blank" rel="noopener">Mottoparty</a></li>
+              <li class="mb-3"><a class="text-color" href="empfehlungen-kinder-staerken.html" target="_blank" rel="noopener">Starke Kinder Empfehlungen</a></li>
+              <li class="mb-3"><a class="text-color" href="kurse.html" target="_blank" rel="noopener">Besondere Kurse</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center">
+            <p class="mb-0">
+              Copyright
+              <script>
+                var CurrentYear = new Date().getFullYear();
+                document.write(CurrentYear);
+              </script>
+              © Adriane Niepel, also thanks to themefisher
+            </p>
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel">
+                  <i class="ti-linkedin text-primary" aria-hidden="true"></i>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/">
+                  <i class="ti-instagram text-primary" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <!-- jQuery -->
+  <script src="../plugins/jQuery/jquery.min.js"></script>
+  <script src="../plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="../plugins/slick/slick.min.js"></script>
+  <script src="../plugins/aos/aos.js"></script>
+  <script src="../plugins/venobox/venobox.min.js"></script>
+  <script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>
