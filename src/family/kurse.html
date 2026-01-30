@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content=" Kinder auf die Zukunft vorbereiten. Ninja Adventures Family - Kinder stärken durch diese besonderen Kurse.  "/>
-  
+  <meta name="description" content="Kinder auf die Zukunft vorbereiten. Ninja Adventures Family - Kinder stärken durch diese besonderen Kurse.">
   <title>Ninja Adventures Family - Kurse für Eltern und Kinder</title>
 
   <!-- mobile responsive meta -->
@@ -38,7 +37,8 @@
 <link rel="preconnect" href="//sdp.eu.usercentrics.eu">
 <link rel="preload" href="//app.eu.usercentrics.eu/browser-ui/latest/loader.js" as="script">
 <link rel="preload" href="//sdp.eu.usercentrics.eu/latest/uc-block.bundle.js" as="script"> -->
-  <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="TodeXqsbp" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
+  <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="TodeXqsbp"
+    src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
   <script type="application/javascript" src="https://sdp.eu.usercentrics.eu/latest/uc-block.bundle.js"></script>
   <!-- <meta data-privacy-proxy-server="https://privacy-proxy-server.usercentrics.eu">
 <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script> -->
@@ -47,14 +47,39 @@
 
 
   <!-- Global site tag (gtag.js) - Google    -->
- <script type="text/plain" data-usercentrics="Google Analytics 4" async src="https://www.googletagmanager.com/gtag/js?id=G-GLNHKGE6K6"></script>
-<script type="text/plain" data-usercentrics="Google Analytics 4">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script type="text/plain" data-usercentrics="Google Analytics 4" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-GLNHKGE6K6"></script>
+  <script type="text/plain" data-usercentrics="Google Analytics 4">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-GLNHKGE6K6');
-</script> 
+    gtag('config', 'G-GLNHKGE6K6');
+  </script>
+
+  <!-- A11y helpers -->
+  <style>
+    /* Skip link sichtbar bei Tastatur */
+    .skip-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-120%);
+      padding: .75rem 1rem;
+      z-index: 9999;
+    }
+
+    .skip-link:focus,
+    .skip-link:focus-visible {
+      transform: translateY(0);
+    }
+
+    /* Klarer Fokus für Tastatur-Navigation */
+    :focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 3px;
+    }
+  </style>
 
 </head>
 
@@ -65,69 +90,81 @@
   </div> -->
   <!-- preloader end -->
 
-<!-- header -->
-<header class="fixed-top header">
- 
-  <!-- navbar -->
-  <div class="navigation w-100">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="../index.html"><img width="300px" src="../images/logo.png" alt="logo"></a>
-        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Skip link für Screenreader/Tastatur -->
+  <a class="skip-link bg-white text-dark" href="#main-content">Zum Inhalt springen</a>
 
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item ">
-              <a class="nav-link" href="../index.html">Home</a>
-            </li> 
-            <li class="nav-item dropdown view active">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                 Projekte
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" title="Multitalente fördern im Unternehmen" rel="noopener" href="../business/">Business Ninjas</a>
-                <!-- <a class="dropdown-item" title="Unternehmen fördern Multitalente" rel="noopener" href="../business/index.html#unternehmen">-> Unternehmen fördern</a> 
+  <!-- header -->
+  <header class="fixed-top header">
+
+    <!-- navbar -->
+    <div class="navigation w-100">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Hauptnavigation">
+          <a class="navbar-brand" href="../index.html">
+            <img width="300px" src="../images/logo.png" alt="Ninja Adventures Logo">
+          </a>
+          <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-controls="navigation" aria-expanded="false" aria-label="Navigation ein- oder ausklappen">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item ">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown view active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" aria-current="page">
+                  Projekte
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" title="Multitalente fördern im Unternehmen" rel="noopener"
+                    href="../business/">Business Ninjas</a>
+                  <!-- <a class="dropdown-item" title="Unternehmen fördern Multitalente" rel="noopener" href="../business/index.html#unternehmen">-> Unternehmen fördern</a> 
                 <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="../teamworkshops.html">-> Workshopliste</a> 
                 <a class="dropdown-item" title="Sparring Workshop aufpeppen" rel="noopener" href="../business/index.html#workshop">-> Deinen Workshop aufpeppen</a>  -->
-                <hr> 
-                <a class="dropdown-item" title="Vielseitig leben mit allen Ideen" rel="noopener" href="../index.html#ideenninja">Ideen Ninjas </a>
-                <!-- <a class="dropdown-item" href="../karten/werteadventurebasis/wertereise-karten.html">-> Kurs - Finde deine Mission</a> -->
-                 <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" rel="noopener" href="kurs_erwecke_den_ninja_in_dir.html">Kurs: Erwecke den Ninja in dir</a> -->
-                 <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" target="_blank" rel="noopener" href="https://www.erwecke-den-ninja-in-dir.de/">Kurs: Erwecke den Ninja in dir</a> -->
-                 <hr>
-               
-                <a class="dropdown-item" title="Multipassion in der Familie leben" rel="noopener"  href="../family/">Family Ninjas </a>
-                  <a class="dropdown-item" title="Kinder stärken Eltern stärken Geschenke" rel="noopener" href="../family/empfehlungen-kinder-staerken.html">-> Kinder stärken Produkte</a>
-                  <a class="dropdown-item" title="Kinder stärken Eltern stärken Kurse" rel="noopener" href="../family/kurse.html">-> Kurse</a>
-                <!-- <a class="dropdown-item" title="Aktuelle Events Multipassion leben gemeinsam" rel="noopener" href="../family/aktuelle-events.html">-> Aktuelle Events</a> -->
-                <a class="dropdown-item" title="Kindergeburtstage Mottoparty" rel="noopener" href="../family/kindergeburtstage.html">-> Kindergeburtstage</a>
-                <!-- <a class="dropdown-item" title="Mom Load Mama-ME-TIME Auszeit für Mütter" rel="noopener" href="../family/mom-load.html">-> Mom Load</a> -->
-                <!-- <a class="dropdown-item" title="Family" rel="noopener" href="../family/index.html#schule">-> Schulformate</a> -->
-                <!-- <a class="dropdown-item" title="Digitale Schnitzeljagd" rel="noopener" href="../schnitzeljagd/">-> Digitale Schnitzeljagd</a> -->
-                
-                <hr>
-                <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
+                  <hr>
+                  <a class="dropdown-item" title="Vielseitig leben mit allen Ideen" rel="noopener"
+                    href="../index.html#ideenninja">Ideen Ninjas </a>
+                  <!-- <a class="dropdown-item" href="../karten/werteadventurebasis/wertereise-karten.html">-> Kurs - Finde deine Mission</a> -->
+                  <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" rel="noopener" href="kurs_erwecke_den_ninja_in_dir.html">Kurs: Erwecke den Ninja in dir</a> -->
+                  <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" target="_blank" rel="noopener" href="https://www.erwecke-den-ninja-in-dir.de/">Kurs: Erwecke den Ninja in dir</a> -->
+                  <hr>
+
+                  <a class="dropdown-item" title="Multipassion in der Familie leben" rel="noopener"
+                    href="../family/">Family Ninjas </a>
+                  <a class="dropdown-item" title="Kinder stärken Eltern stärken Geschenke" rel="noopener"
+                    href="../family/empfehlungen-kinder-staerken.html">-> Kinder stärken Produkte</a>
+                  <a class="dropdown-item" title="Kinder stärken Eltern stärken Kurse" rel="noopener"
+                    href="../family/kurse.html" aria-current="page">-> Kurse</a>
+                  <!-- <a class="dropdown-item" title="Aktuelle Events Multipassion leben gemeinsam" rel="noopener" href="../family/aktuelle-events.html">-> Aktuelle Events</a> -->
+                  <a class="dropdown-item" title="Kindergeburtstage Mottoparty" rel="noopener"
+                    href="../family/kindergeburtstage.html">-> Kindergeburtstage</a>
+                  <!-- <a class="dropdown-item" title="Mom Load Mama-ME-TIME Auszeit für Mütter" rel="noopener" href="../family/mom-load.html">-> Mom Load</a> -->
+                  <!-- <a class="dropdown-item" title="Family" rel="noopener" href="../family/index.html#schule">-> Schulformate</a> -->
+                  <!-- <a class="dropdown-item" title="Digitale Schnitzeljagd" rel="noopener" href="../schnitzeljagd/">-> Digitale Schnitzeljagd</a> -->
+
+                  <hr>
+                  <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank"
+                    href="https://ninjaadventures.myspreadshop.de/">Shop</a>
 
 
-              </div>
-            </li>
-            
-            <li class="nav-item @@blog">
-              <a class="nav-link" title="Blog" href="../blog/">Blog</a>
-            </li>
-            
-            
-            
-            <li class="nav-item ">
-              <a class="nav-link" href="../about/">Über</a>
-            </li>
-           
-           
-            <!-- <li class="nav-item @@events">
+                </div>
+              </li>
+
+              <li class="nav-item @@blog">
+                <a class="nav-link" title="Blog" href="../blog/">Blog</a>
+              </li>
+
+
+
+              <li class="nav-item ">
+                <a class="nav-link" href="../about/">Über</a>
+              </li>
+
+
+              <!-- <li class="nav-item @@events">
               <a class="nav-link" href="events.html">EVENTS</a>
             </li> 
             <li class="nav-item @@blog">
@@ -150,50 +187,53 @@
                 <a class="dropdown-item" href="blog-single.html">Blog Details</a>
               </div>
             </li>-->
-            <li class="nav-item @@kontakt">
-              <a class="nav-link" href="../kontakt.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-<!-- /header -->
-
-
-
-
-      
-
-
-<!-- page title -->
-<section class="page-title-section overlay bg-cover" data-background="../images/family/kurse.webp">
-
-  <!-- <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg"> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-white font-secondary">Kurssammlung, um Kinder zu stärken und auf die Zukunft vorzubereiten und uns Eltern auf ein Leben mit Kindern     </h1> </br>
-
-          <h3 class="text-white font-secondary">Für dich und deine Kinder</h3>
-        <p class="text-lighten h3">
-        </br>
-           </br>
-          Du willst deine Kinder unterstützen?</br>
-          Bei allen Themen, die sie in Zukunft und heute haben werden? </br></br>
-          Dann sollten wir uns zunehmend auch mit Themen beschäftigen, die wir selber nie gelernt haben. Und zwar offen und vorurteilsfrei.</br>
-
-         
-        </p>
-       
-        </div>
+              <li class="nav-item @@kontakt">
+                <a class="nav-link" href="../kontakt.html">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
-  </section>
-  <!-- /page title -->
-  
-  <!-- <section class="bg-cover" >
+  </header>
+  <!-- /header -->
+
+
+
+
+
+
+
+  <!-- main content -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- page title -->
+    <section class="page-title-section overlay bg-cover" data-background="../images/family/kurse.webp">
+
+      <!-- <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg"> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-white font-secondary">
+              Kurssammlung, um Kinder zu stärken und auf die Zukunft vorzubereiten – und uns Eltern in einem Leben mit
+              Kindern zu begleiten
+            </h1>
+            <p class="text-white font-secondary h3">Für dich und deine Kinder</p>
+
+            <p class="text-lighten h3">
+              Du willst deine Kinder unterstützen?<br>
+              Bei allen Themen, die sie in Zukunft und heute haben werden?<br><br>
+              Dann sollten wir uns zunehmend auch mit Themen beschäftigen, die wir selber nie gelernt haben. Und zwar
+              offen und vorurteilsfrei.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /page title -->
+
+    <!-- <section class="bg-cover" >
     <div class="container">
     
       <img class="cards-img" src="ninja_mission_karten.jpg" alt="Ninja Mission Kartenset">
@@ -202,80 +242,79 @@
         
       </div>
     </div>
+    </section> -->
+    <!-- about us -->
 
+    <!-- about us -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="align-items-center section-title justify-content-between">
+            <div class="col-md-12 order-2 order-md-2 ">
+              <h2 class="mb-0 mr-3">Kursinformation:</h2>
+              <br><br>
 
+              <p>
+                Da ich nicht alle Themen selber bedienen kann, empfehle ich hier auch Kurse anderer Menschen.<br>
+                Ich empfehlen nur, wovon ich überzeugt bin und was ich getestet haben, daher verändert sich diese Liste
+                auch immer wieder.<br>
+                Auch bei bester Prüfung, bin ich für die Inhalte nicht verantwortlich und natürlich kann es nicht immer
+                für jeden gleichermaßen passen.<br><br>
+                Der Kauf geschieht direkt beim Anbieter, nicht auf NinjaAdventures.de .<br>
+                Wenn ihr Feedback habt, schreibt direkt an den Anbieter, sie sind alle offen und freuen sich, wenn ihr
+                ihnen helft noch besser zu werden!<br><br>
+                Von Mutter zu Mutter: viel Spaß beim Stöbern!<br><br>
+                Adriane
+                <br>
+              </p>
 
-
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-12 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Kursinformation:</h2> 
-          </br></br>
-           
-            
-          <p>
-            Da ich nicht alle Themen selber bedienen kann, empfehle ich hier auch Kurse anderer Menschen.</br>
-          Ich empfehlen nur, wovon ich überzeugt bin und was ich getestet haben, daher verändert sich diese Liste auch immer wieder.</br>
-        Auch bei bester Prüfung, bin ich für die Inhalte nicht verantwortlich und natürlich kann es nicht immer für jeden gleichermaßen passen.</br></br>
-        Der Kauf geschieht direkt beim Anbieter, nicht auf NinjaAdventures.de .</br>
-      Wenn ihr Feedback habt, schreibt direkt an den Anbieter, sie sind alle offen und freuen sich, wenn ihr ihnen helft noch besser zu werden!</br></br>
-      Von Mutter zu Mutter: viel Spaß beim Stöbern! </br></br>
-      Adriane
-          
-       
-       
-        </br>
-      </p>
-        <p class="text-lighten">Rechtlicher Hinweis:</br>
-        Die mit (WERBUNG) gekennzeichneten Links sind Provisions-Links, auch Affiliate-Links genannt.</br> 
-        Sollte ein Kauf nach dem Klicken getätigt werden, bekomme ich vom betreffenden Anbieter oder Online-Shop eine Vermittlerprovision. </br>
-        Es entstehen für dich keine Nachteile beim Kauf oder Preis. 
-        
-      </p>
+              <p class="text-lighten">
+                Rechtlicher Hinweis:<br>
+                Die mit (WERBUNG) gekennzeichneten Links sind Provisions-Links, auch Affiliate-Links genannt.<br>
+                Sollte ein Kauf nach dem Klicken getätigt werden, bekomme ich vom betreffenden Anbieter oder Online-Shop
+                eine Vermittlerprovision.<br>
+                Es entstehen für dich keine Nachteile beim Kauf oder Preis.
+              </p>
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
-  
-  </div>
-    </div>
-  </div>
-</section>
+      </div>
+      </div>
+    </section>
 
 
 
 
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-12 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Starke Eltern - starke Kinder!</h2> 
-          </br></br>
-        <p>
-          <p>
-            <b>Wie lernen wir eigentlich starke Eltern zu sein?</b></br>
-          </br>
-            Eltern sein ist der 24/7 Beruf, der die größte Verantwortung, die wenigste Monetarisierung und die zukunftsweiseste Aufgabe trägt. </br>
-            Wer sich näher damit beschäftigen will, wie wir Kinder Sicherheit und ein gutes Umfeld kreieren, kann zum Beispiel hier hineinschauen:</br>
-          </br>
-                 
-       
-        </p>
+    <!-- about us -->
+    <section class="section bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="align-items-center section-title justify-content-between">
+            <div class="col-md-12 order-2 order-md-2 ">
+              <h2 class="mb-0 mr-3">Starke Eltern - starke Kinder!</h2>
+              <br><br>
+
+              <p>
+                <strong>Wie lernen wir eigentlich starke Eltern zu sein?</strong><br><br>
+                Eltern sein ist der 24/7 Beruf, der die größte Verantwortung, die wenigste Monetarisierung und die
+                zukunftsweiseste Aufgabe trägt.<br>
+                Wer sich näher damit beschäftigen will, wie wir Kinder Sicherheit und ein gutes Umfeld kreieren, kann
+                zum Beispiel hier hineinschauen:
+              </p>
+
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
 
-   <!-- course list -->
-   <div class="row justify-content-center">
+        <!-- course list -->
+        <div class="row justify-content-center">
 
 
-    <!-- course item -->
-    <!-- <div class="col-lg-4 col-sm-6 mb-5">
+          <!-- course item -->
+          <!-- <div class="col-lg-4 col-sm-6 mb-5">
       <div class="card p-0 border-primary rounded-0 hover-shadow">
         <img class="card-img-top rounded-0 w-100" title="Stark wie wir Ganzheitliches Online-Programm für Eltern" src="../images/affiliate/stark_wie_wir_academy.png" alt="Stark wie wir Ganzheitliches Online-Programm für Eltern">
         <div class="card-body">
@@ -294,8 +333,8 @@
       </div>
     </div> -->
 
-     <!-- course item -->
-      <!-- <div class="col-lg-4 col-sm-6 mb-5">
+          <!-- course item -->
+          <!-- <div class="col-lg-4 col-sm-6 mb-5">
       <div class="card p-0 border-primary rounded-0 hover-shadow">
         <img class="card-img-top rounded-0 w-100" title="Eltern & Kind in Balance - für eine starke Familie" src="../images/affiliate/eltern_kind_balance.png" alt="Eltern & Kind in Balance - für eine starke Familie">
         <div class="card-body">
@@ -318,69 +357,70 @@
         </div>
       </div>
     </div>  -->
-   <!-- course item -->
-  
-
-    
-  
-  
-  </div>
-    </div>
-  </div>
-</section>
+          <!-- course item -->
 
 
 
 
-
-
-
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-12 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Geld - wir müssen reden</h2> 
-          </br></br>
-        <p>
-          <p>
-            <b>Wie gut wurdet ihr in eurer Kindheit auf Geld vorbereitet? </b></br>
-          </br>
-            Geld ist unsere Tauschwährung und wichtig als positiv wahrzunehmen. </br>
-            Wer mit deinem Kind üben möchte bereits früh einen Grundstein zu legen und in die Welt einzutauchen, kann zum Beispiel hier starten: </br>
-          </br>
-                 
-       
-        </p>
         </div>
       </div>
-    </div>
-
-
-   <!-- course list -->
-   <div class="row justify-content-center">
-
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Geldkurs für Kinder" src="../images/affiliate/kleine_schatzmeister.png" alt="Geldkurs für Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Kleine Schatzmeister  </h3>
-      </br>
-        <p>
-Kleiner Kurs für kleines Geld. Schaut unbedingt vorbei!</br></br>
- Meine Empfehlung: Der perfekte Einstieg!
-        </p>
-          <a href="https://www.copecart.com/products/4dd3739b/checkout?affiliate_id=NinjaAdventures" target="_blank" title="Superhelden Mama Superkraft Buch kaufen" class="btn btn-sm-xs btn-primary ">Zum Kurs</a>
-        <p class="text-lighten">WERBUNG  </br> (getestet Juni 2024)  </br>Buchung erfolgt über den Zahlungsanbieter Copecart </p>
-        </div>
       </div>
-    </div>
-  
-     <!-- course item -->
-     <!-- <div class="col-lg-4 col-sm-6 mb-5">
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- about us -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="align-items-center section-title justify-content-between">
+            <div class="col-md-12 order-2 order-md-2 ">
+              <h2 class="mb-0 mr-3">Geld - wir müssen reden</h2>
+              <br><br>
+
+              <p>
+                <strong>Wie gut wurdet ihr in eurer Kindheit auf Geld vorbereitet?</strong><br><br>
+                Geld ist unsere Tauschwährung und wichtig als positiv wahrzunehmen.<br>
+                Wer mit deinem Kind üben möchte bereits früh einen Grundstein zu legen und in die Welt einzutauchen, kann
+                zum Beispiel hier starten:
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- course list -->
+        <div class="row justify-content-center">
+
+
+          <!-- course item -->
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <div class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" title="Geldkurs für Kinder"
+                src="../images/affiliate/kleine_schatzmeister.png" alt="Geldkurs für Kinder">
+              <div class="card-body">
+                <h3 class="mb-0  mr-3">Kleine Schatzmeister</h3>
+                <br>
+                <p>
+                  Kleiner Kurs für kleines Geld. Schaut unbedingt vorbei!<br><br>
+                  Meine Empfehlung: Der perfekte Einstieg!
+                </p>
+                <a href="https://www.copecart.com/products/4dd3739b/checkout?affiliate_id=NinjaAdventures" target="_blank"
+                  rel="noopener" title="Kleine Schatzmeister Kurs kaufen" class="btn btn-sm-xs btn-primary ">Zum Kurs</a>
+                <p class="text-lighten">WERBUNG<br> (getestet Juni 2024)<br>Buchung erfolgt über den Zahlungsanbieter
+                  Copecart </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- course item -->
+          <!-- <div class="col-lg-4 col-sm-6 mb-5">
       <div class="card p-0 border-primary rounded-0 hover-shadow">
         <img class="card-img-top rounded-0 w-100" title="Starke Frauen Vorbilder" src="../images/affiliate/family_maedchen_koennen_alles_sein.png" alt="Buch Mädchen können alles sein">
         <div class="card-body">
@@ -393,10 +433,10 @@ Kleiner Kurs für kleines Geld. Schaut unbedingt vorbei!</br></br>
         </div>
       </div>
     </div> -->
-  
 
-      <!-- course item -->
-      <!-- <div class="col-lg-4 col-sm-6 mb-5">
+
+          <!-- course item -->
+          <!-- <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0 w-100" title="Starke Frauen und Männer Vorbilder" src="../images/affiliate/family_starke_persoenlichkeiten.png" alt="Buch Mädchen können alles sein">
           <div class="card-body">
@@ -410,82 +450,88 @@ Kleiner Kurs für kleines Geld. Schaut unbedingt vorbei!</br></br>
         </div>
       </div> -->
 
-    
-  
-  
-  </div>
-    </div>
-  </div>
-</section>
 
 
 
-
-
-<!-- about us -->
-<section class="section bg-gray" >
-  <div class="container">
-    <div class="row">
-        <div class="align-items-center section-title justify-content-between">
-          <div class="col-md-12 order-2 order-md-2 ">
-          <h2 class="mb-0 mr-3">Im Notfall - was tue ich?</h2> 
-          </br></br>
-        <p>
-          <p>
-            <b>Rund um Gesundheit und Vorsorge gibt es hier Infos </b></br>
-          </br>
-            Was mache ich in einem Notfall? Dann soll es schnell gehen. Gut, wenn ich vorbereitet bin, auch die Dinge, die bei Kindern einfach üblicherweise in ihrem Leben auftreten können. </br>
-            Zur Vorbereitung als Kurs und zum Nachschlagen, das Handbuch. </br>
-          </br>
-                 
-       
-        </p>
         </div>
       </div>
-    </div>
-
-
-   <!-- course list -->
-   <div class="row justify-content-center">
-
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Kinder Notfallkurs" src="../images/affiliate/notfallkurs_kinder.png" alt="Notfallkurs Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Online Kinder Notfallkurs  </h3>
-      </br>
-        <p>
-Leicht zu konsumieren und bereitet auf sehr viele Eventualitäten vor. Schaut unbedingt vorbei!</br></br>
- Meine Empfehlung: Ein umfangreicher Inhalt und lebenslanger Zugriff, bei Erweiterung bekommt ihr also neue Infos. Außerdem sind die Informationen aus erster Hand von einem Notfallsanitäter!
-        </p>
-          <a href="https://copecart.com/products/2773c317/p/NinjaAdventures" target="_blank" title="Kinder notfall kurs" class="btn btn-sm-xs btn-primary ">Zum Kurs</a>
-        <p class="text-lighten">WERBUNG  </br> (getestet Juni 2024)  </br>Buchung erfolgt über den Zahlungsanbieter Copecart </p>
-        </div>
       </div>
-    </div>
-
-    <!-- course item -->
-    <div class="col-lg-4 col-sm-6 mb-5">
-      <div class="card p-0 border-primary rounded-0 hover-shadow">
-        <img class="card-img-top rounded-0 w-100" title="Kinder Notfallkurs" src="../images/affiliate/notfall_handbuch.png" alt="Notfallkurs Kinder">
-        <div class="card-body">
-          <h3 class="mb-0  mr-3">Online Kinder Notfall Nachschlagewerk  </h3>
-      </br>
-        <p>
-Passend zum Kurs das Handbuch. </br></br>
- Meine Empfehlung: Schnell zum Nachschlagen, wenn etwas passiert, oder zwischendurch reinstöbern und auffrischen. Denn im Notfall ist es gut etwas schnell an der Hand zu haben.
-        </p>
-          <a href="https://copecart.com/products/1aee5c7f/p/NinjaAdventures" target="_blank" title="Kinder notfall kurs Handbuch" class="btn btn-sm-xs btn-primary ">Zum Handbuch</a>
-        <p class="text-lighten">WERBUNG  </br>  </br>Buchung erfolgt über den Zahlungsanbieter Copecart </p>
-        </div>
       </div>
-    </div>
-  
-  
-     <!-- course item -->
-     <!-- <div class="col-lg-4 col-sm-6 mb-5">
+    </section>
+
+
+
+
+
+    <!-- about us -->
+    <section class="section bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="align-items-center section-title justify-content-between">
+            <div class="col-md-12 order-2 order-md-2 ">
+              <h2 class="mb-0 mr-3">Im Notfall - was tue ich?</h2>
+              <br><br>
+
+              <p>
+                <strong>Rund um Gesundheit und Vorsorge gibt es hier Infos</strong><br><br>
+                Was mache ich in einem Notfall? Dann soll es schnell gehen. Gut, wenn ich vorbereitet bin, auch die
+                Dinge, die bei Kindern einfach üblicherweise in ihrem Leben auftreten können.<br>
+                Zur Vorbereitung als Kurs und zum Nachschlagen, das Handbuch.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- course list -->
+        <div class="row justify-content-center">
+
+
+          <!-- course item -->
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <div class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" title="Kinder Notfallkurs"
+                src="../images/affiliate/notfallkurs_kinder.png" alt="Online Kinder-Notfallkurs">
+              <div class="card-body">
+                <h3 class="mb-0  mr-3">Online Kinder Notfallkurs</h3>
+                <br>
+                <p>
+                  Leicht zu konsumieren und bereitet auf sehr viele Eventualitäten vor. Schaut unbedingt vorbei!<br><br>
+                  Meine Empfehlung: Ein umfangreicher Inhalt und lebenslanger Zugriff, bei Erweiterung bekommt ihr also
+                  neue Infos. Außerdem sind die Informationen aus erster Hand von einem Notfallsanitäter!
+                </p>
+                <a href="https://copecart.com/products/2773c317/p/NinjaAdventures" target="_blank" rel="noopener"
+                  title="Kinder Notfallkurs kaufen" class="btn btn-sm-xs btn-primary ">Zum Kurs</a>
+                <p class="text-lighten">WERBUNG<br> (getestet Juni 2024)<br>Buchung erfolgt über den Zahlungsanbieter
+                  Copecart </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- course item -->
+          <div class="col-lg-4 col-sm-6 mb-5">
+            <div class="card p-0 border-primary rounded-0 hover-shadow">
+              <img class="card-img-top rounded-0 w-100" title="Kinder Notfallkurs"
+                src="../images/affiliate/notfall_handbuch.png" alt="Online Kinder-Notfall Nachschlagewerk">
+              <div class="card-body">
+                <h3 class="mb-0  mr-3">Online Kinder Notfall Nachschlagewerk</h3>
+                <br>
+                <p>
+                  Passend zum Kurs das Handbuch.<br><br>
+                  Meine Empfehlung: Schnell zum Nachschlagen, wenn etwas passiert, oder zwischendurch reinstöbern und
+                  auffrischen. Denn im Notfall ist es gut etwas schnell an der Hand zu haben.
+                </p>
+                <a href="https://copecart.com/products/1aee5c7f/p/NinjaAdventures" target="_blank" rel="noopener"
+                  title="Kinder Notfall Handbuch kaufen" class="btn btn-sm-xs btn-primary ">Zum Handbuch</a>
+                <p class="text-lighten">WERBUNG<br><br>Buchung erfolgt über den Zahlungsanbieter Copecart </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- course item -->
+          <!-- <div class="col-lg-4 col-sm-6 mb-5">
       <div class="card p-0 border-primary rounded-0 hover-shadow">
         <img class="card-img-top rounded-0 w-100" title="Starke Frauen Vorbilder" src="../images/affiliate/family_maedchen_koennen_alles_sein.png" alt="Buch Mädchen können alles sein">
         <div class="card-body">
@@ -498,10 +544,10 @@ Passend zum Kurs das Handbuch. </br></br>
         </div>
       </div>
     </div> -->
-  
 
-      <!-- course item -->
-      <!-- <div class="col-lg-4 col-sm-6 mb-5">
+
+          <!-- course item -->
+          <!-- <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0 w-100" title="Starke Frauen und Männer Vorbilder" src="../images/affiliate/family_starke_persoenlichkeiten.png" alt="Buch Mädchen können alles sein">
           <div class="card-body">
@@ -515,20 +561,21 @@ Passend zum Kurs das Handbuch. </br></br>
         </div>
       </div> -->
 
-    
-  
-  
-  </div>
-    </div>
-  </div>
-</section>
+
+
+
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
 
 
 
 
-<!-- about us grau -->
-<!-- about us -->
-<!-- <section class="section bg-white" >
+    <!-- about us grau -->
+    <!-- about us -->
+    <!-- <section class="section bg-white" >
   <div class="container">
     <div class="row ">
       <div class="align-items-center section-title justify-content-between">
@@ -566,10 +613,8 @@ Passend zum Kurs das Handbuch. </br></br>
 
 
 
-
-
-   <!-- course list -->
-   <!-- <div class="row justify-content-center"> -->
+    <!-- course list -->
+    <!-- <div class="row justify-content-center"> -->
 
 
     <!-- course item -->
@@ -585,9 +630,9 @@ Passend zum Kurs das Handbuch. </br></br>
         </div>
       </div>
     </div> -->
-  
-     <!-- course item -->
-     <!-- <div class="col-lg-4 col-sm-6 mb-5">
+
+    <!-- course item -->
+    <!-- <div class="col-lg-4 col-sm-6 mb-5">
       <div class="card p-0 border-primary rounded-0 hover-shadow">
         <img class="card-img-top rounded-0 w-100" title="Mama Freunde Buch" src="../images/affiliate/family_mama_friends.png" alt="Buch Mutter Frauen Freunde ">
         <div class="card-body">
@@ -620,120 +665,123 @@ Passend zum Kurs das Handbuch. </br></br>
 
 
 
-<!-- about us grau -->
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-    <div class="row align-items-top">
-      <div class="col-md-4 order-1 order-md-1 ">
-        <img class="img-fluid w-100" src="../images/family/Adriane_23_2.png" alt="Adriane Niepel">
+    <!-- about us grau -->
+    <!-- about us -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row align-items-top">
+          <div class="col-md-4 order-1 order-md-1 ">
+            <img class="img-fluid w-100" src="../images/family/Adriane_23_2.png" alt="Adriane Niepel">
+          </div>
+          <div class="col-md-8 order-2 order-md-2 ">
+            <h2>Mutter und Wertschätzungsliebhaberin: Adriane Niepel</h2><br><br>
+            <p>
+              <strong>Mutter, Kinderbuchautorin, Illustratorin, system. Coach, Dipl. Informatikerin
+                (Multipassioniert)</strong><br><br>
+
+              Ich liebe schöne Bilder, gute Geschichte, durchdachte Konzepte und kleine Details.
+              Darauf achte ich auch, wenn ich euch etwas empfehle, daher kommt hier nicht alles rein, sondern
+              ausgewählte Schätze!
+            </p>
+
+            <h3 class="section-title">
+              Und so mache ich mich auf mit euch mehr Quality Time in der Familie zu generieren und mehr Wertschätzung
+              in die Welt zu tragen - lebenslang lernend!
+            </h3>
+
+          </div>
+        </div>
       </div>
-      <div class="col-md-8 order-2 order-md-2 ">
-        <h3>Mutter und Wertschätzungsliebhaberin: Adriane Niepel</h3></br></br>
-        <p>
-          <strong>Mutter, Kinderbuchautorin, Illustratorin, system. Coach, Dipl. Informatikerin (Multipassioniert)  </strong></br></br>
-          
-          Ich liebe schöne Bilder, gute Geschichte, durchdachte Konzepte und kleine Details.
-          Darauf achte ich auch, wenn ich euch etwas empfehle, daher kommt hier nicht alles rein, sondern ausgewählte Schätze!      
-         </br></br>
+    </section>
+    <!-- /about us -->
 
-                <h3 class="section-title">Und so mache ich mich auf mit euch mehr Quality Time in der Familie zu generieren und mehr Wertschätzung in die Welt zu tragen - lebenslang lernend!</h3>
-                
-              </br></br>
-                
-          
-        </p>
 
+
+    <!-- about us -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row align-items-top">
+          <div class="col-md-6 order-2 order-md-1 ">
+            <h2>Das Konzept:</h2><br><br>
+            <p>
+              Mit den richtigen Methoden und Unterstützungsmaterialien üben &amp; lehren &amp; erleben.<br>
+              Besondere Momente auch besonders im Miteinander gestalten.<br>
+              Sich Wertschätzung schenken, nicht nur Geschenke.<br>
+              Miteinander Lachen und Spaß haben.<br>
+              Einzigartige Zeiten kreieren.<br>
+              Einfachheit und Unterstützung genießen.
+              <br><br>
+
+              <strong>Viel Freude beim shoppen!</strong>
+            </p>
+            <br><br>
+
+          </div>
+          <div class="col-md-6 order-1 order-md-2 ">
+            <img class="img-fluid w-50" src="../images/family/NinjaWert_transp.png" alt="Ninja Werte">
+          </div>
+
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- /about us -->
+    </section>
+    <!-- /about us -->
+
+  </main>
+  <!-- /main content -->
 
 
 
-<!-- about us -->
-<section class="section bg-white" >
-  <div class="container">
-    <div class="row align-items-top">
-      <div class="col-md-6 order-2 order-md-1 ">
-        <h3>Das Konzept:</h3></br></br>
-        <p>
-          Mit den richtigen Methoden und Unterstützungsmaterialien üben & lehren & erleben.</br>
-          Besondere Momente auch besonders im Miteinander gestalten.</br>
-          Sich Wertschätzung schenken, nicht nur Geschenke.</br>
-          Miteinander Lachen und Spaß haben.</br>
-          Einzigartige Zeiten kreieren.</br>
-          Einfachheit und Unterstützung genießen.  </br>
-        </br>
+  <!-- footer -->
+  <footer>
+    <!-- newsletter -->
+    <div class="newsletter">
 
-          
-          <strong>Viel Freude beim shoppen! </strong>
-        </p>
-      </br></br>
+      <div class="container">
 
-      </div>
-      <div class="col-md-6 order-1 order-md-2 ">
-        <img class="img-fluid w-50" src="../images/family/NinjaWert_transp.png" alt="Ninja Werte">
-        
-      </div>
-      
-    </div>
-  </div>
-</section>
-<!-- /about us -->
-
-
-
-
-<!-- footer -->
-<footer>
-  <!-- newsletter -->
-  <div class="newsletter">
-
-    <div class="container">
-    
-      <div class="row">
-        <div class="col-md-10 ml-auto bg-primary py-5 newsletter-block">
-          <h4 class="text-white"> Du brauchst ein paar Empfehlungen zu einer ganz anderen Kategorie?</h4>
-              </br>
-              <h4 class="text-white"> 
-                Schreib mir unbedingt eine E-Mail, ich freue mich!</h4>
-          <!-- <div class="col-12 text-center"> -->
-            <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">E-Mail an adriane@ninjaAdventures.de</a>
-          <!-- <form action="#">
+        <div class="row">
+          <div class="col-md-10 ml-auto bg-primary py-5 newsletter-block">
+            <h4 class="text-white"> Du brauchst ein paar Empfehlungen zu einer ganz anderen Kategorie?</h4>
+            <br>
+            <h4 class="text-white">
+              Schreib mir unbedingt eine E-Mail, ich freue mich!</h4>
+            <!-- <div class="col-12 text-center"> -->
+            <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">E-Mail an
+              adriane@ninjaAdventures.de</a>
+            <!-- <form action="#">
             <div class="input-wrapper">
               <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
               <button type="submit" value="send" class="btn btn-primary">Join</button>
             </div>
           </form> -->
+          </div>
         </div>
       </div>
     </div>
-  </div> 
-  <!-- footer content -->
-  <div class="footer bg-footer section border-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
-          <!-- logo -->
-          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="logo"></a>
-          <!-- <ul class="list-unstyled">
+    <!-- footer content -->
+    <div class="footer bg-footer section border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+            <!-- logo -->
+            <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png"
+                alt="Ninja Adventures Logo"></a>
+            <!-- <ul class="list-unstyled">
             <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
             <li class="mb-2">+1 (2) 345 6789</li>
             <li class="mb-2">adriane@ninjaadventures.de</li>
           </ul> -->
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
-            <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
-            <!-- <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="../AGB_AdrianeNiepel.pdf">AGB</a></li> -->
-            <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
-            <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="../impressum.html">Impressum</a></li>
+              <li class="mb-3"><a class="text-color" href="../datenschutz.html">Datenschutz</a></li>
+              <!-- <li class="mb-3"><a class="text-color" title="AGB" target="_blank" href="../AGB_AdrianeNiepel.pdf">AGB</a></li> -->
+              <li class="mb-3"><a class="text-color" href="../kontakt.html">Kontakt</a></li>
+              <li class="mb-3"><a class="text-color" href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a>
+              </li>
 
-          </ul>
-        </div>
-        <!-- company -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> -->
+            </ul>
+          </div>
+          <!-- company -->
+          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> -->
           <!-- <h4 class="text-white mb-5">COMPANY</h4> -->
           <!-- <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="about/">Impressum</a></li>
@@ -741,8 +789,8 @@ Passend zum Kurs das Handbuch. </br></br>
             <li class="mb-3"><a class="text-color" href="kontakt.html">Kontakt</a></li>
           </ul>
         </div> -->
-        <!-- links -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <!-- links -->
+          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
           <h4 class="text-white mb-5">Partnerlinks</h4>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
@@ -751,14 +799,14 @@ Passend zum Kurs das Handbuch. </br></br>
             <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
           </ul>
         </div> -->
-        <!-- support -->
-        <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <!-- support -->
+          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
           <h4 class="text-white mb-5">Ninja Adventures Übersicht</h4>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="about/">Entstehung</a></li>
             <li class="mb-3"><a class="text-color" href="index.html#section-course">Adventure 1</a></li>
             <li class="mb-3"><a class="text-color" href="faq.html">FAQ</a></li> -->
-            <!-- <li class="mb-3"><a class="text-color" target="about_blank" href="https://kurse.ninjaadventures.de/">Mitgliederbereich</a></li> -->
+          <!-- <li class="mb-3"><a class="text-color" target="about_blank" href="https://kurse.ninjaadventures.de/">Mitgliederbereich</a></li> -->
           <!-- </ul>  -->
           <!-- <h4 class="text-white mb-5">Empfehlungen</h4>
           <ul class="list-unstyled">
@@ -767,24 +815,26 @@ Passend zum Kurs das Handbuch. </br></br>
             <li class="mb-3"><a class="text-color" href="#">Gamificationzeug</a></li>
             <li class="mb-3"><a class="text-color" href="#">Wertedings link</a></li>
           </ul> -->
-        <!-- </div>  -->
-        <!-- support -->
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
-          <ul class="list-unstyled">
-            <!-- <li class="mb-3"><a class="text-color" href="aktuelle-events.html" target="about_blank">Aktuelle Events</a></li>
+          <!-- </div>  -->
+          <!-- support -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <ul class="list-unstyled">
+              <!-- <li class="mb-3"><a class="text-color" href="aktuelle-events.html" target="about_blank">Aktuelle Events</a></li>
             <li class="mb-3"><a class="text-color" href="mom-load.html" target="about_blank">Mama-Me Time</a></li> -->
-             <li class="mb-3"><a class="text-color" href="kindergeburtstage.html" target="about_blank">Mottoparty </a></li>
-            <li class="mb-3"><a class="text-color" href="empfehlungen-kinder-staerken.html" target="about_blank">Starke Kinder Empfehlungen</a></li> 
-            <li class="mb-3"><a class="text-color" href="kurse.html" target="about_blank">Besondere Kurse</a></li>  
-          </ul>
-         </div>
+              <li class="mb-3"><a class="text-color" href="kindergeburtstage.html" target="about_blank">Mottoparty </a>
+              </li>
+              <li class="mb-3"><a class="text-color" href="empfehlungen-kinder-staerken.html" target="about_blank">Starke
+                  Kinder Empfehlungen</a></li>
+              <li class="mb-3"><a class="text-color" href="kurse.html" target="about_blank">Besondere Kurse</a></li>
+            </ul>
+          </div>
           <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="https://ninjaadventures.myspreadshop.de/collections" target="about_blank">Shop</a></li>
             <li class="mb-3"><a class="text-color" href="../index.html#ideenninja" target="about_blank">Vielseitige Projekte umsetzen</a></li>
             <li class="mb-3"><a class="text-color" href="../teamworkshops.html" target="about_blank">Besondere Teamworkshops erleben</a></li>
           </ul> -->
-         <!--  <h4 class="text-white mb-5">Sharing is caring - Empfehlungen von Herzen</h4>
+          <!--  <h4 class="text-white mb-5">Sharing is caring - Empfehlungen von Herzen</h4>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="https://www.leadventure.de/" target="about_blank">Agile: https://www.leadventure.de/</a></li>
             <li class="mb-3"><a class="text-color" href="https://visuellklar.ch" target="about_blank">Coaching:  https://visuellklar.ch/</a></li>
@@ -792,51 +842,58 @@ Passend zum Kurs das Handbuch. </br></br>
             <li class="mb-3"><a class="text-color" href="https://valuty.de" target="about_blank">Werte: https://valuty.de/ </a></li> 
           </ul>-->
           <!-- </div> -->
+        </div>
       </div>
     </div>
-  </div>
-  <!-- copyright -->
-  <div class="copyright py-4 bg-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-7 text-sm-left text-center">
-          <p class="mb-0">Copyright
-            <script>
-              var CurrentYear = new Date().getFullYear()
-              document.write(CurrentYear)
-            </script> 
-            © Adriane Niepel, also thanks to themefisher</p>
-        </div>
-        <div class="col-sm-5 text-sm-right text-center">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener" target="_blank" href="https://de.linkedin.com/in/adriane-niepel"><i class="ti-linkedin text-primary"></i></a></li>
-              <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir" rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/"><i class="ti-instagram text-primary"></i></a></li>
+    <!-- copyright -->
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center">
+            <p class="mb-0">Copyright
+              <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+              </script>
+              © Adriane Niepel, also thanks to themefisher</p>
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="d-inline-block p-2" title="LinkedIn Adriane Niepel" rel="noopener"
+                  target="_blank" href="https://de.linkedin.com/in/adriane-niepel"><i
+                    class="ti-linkedin text-primary" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+              </li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" title="Instagram Erwecke den Ninja in dir"
+                  rel="noopener" target="_blank" href="https://www.instagram.com/erwecke.den.ninja.in.dir/"><i
+                    class="ti-instagram text-primary" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+              </li>
             </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-<!-- /footer -->
+  </footer>
+  <!-- /footer -->
 
-<!-- jQuery -->
-<script src="../plugins/jQuery/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="../plugins/bootstrap/bootstrap.min.js"></script>
-<!-- slick slider -->
-<script src="../plugins/slick/slick.min.js"></script>
-<!-- aos -->
-<script src="../plugins/aos/aos.js"></script>
-<!-- venobox popup -->
-<script src="../plugins/venobox/venobox.min.js"></script>
-<!-- filter -->
-<script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
-<!-- google map -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+  <!-- jQuery -->
+  <script src="../plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="../plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- slick slider -->
+  <script src="../plugins/slick/slick.min.js"></script>
+  <!-- aos -->
+  <script src="../plugins/aos/aos.js"></script>
+  <!-- venobox popup -->
+  <script src="../plugins/venobox/venobox.min.js"></script>
+  <!-- filter -->
+  <script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
+  <!-- google map -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
 <script src="plugins/google-map/gmap.js"></script> -->
 
-<!-- Main Script -->
-<script src="../js/script.js"></script>
+  <!-- Main Script -->
+  <script src="../js/script.js"></script>
 
 </body>
+
 </html>
