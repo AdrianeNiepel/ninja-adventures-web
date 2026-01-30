@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Ninja Adventures - Familybereich</title>
   <meta name="description" content="Hier findest du tolle  Projekte, für mehr Vielseitigkeit und Wertschätzung in der Familie! Da wo alles startet. Damit Kinder erst gar nicht verlernen, was sie in Zukunft brauchen!"/>
-  
+
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,31 +54,61 @@
   gtag('js', new Date());
 
   gtag('config', 'G-GLNHKGE6K6');
-</script> 
+</script>
+
+  <style>
+    /* Barrierefreiheit: Skip-Link sichtbar bei Fokus */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: #fff;
+      color: #000;
+      padding: .5rem 1rem;
+      z-index: 9999;
+      border: 2px solid #000;
+    }
+
+    .skip-link:focus {
+      left: .5rem;
+      top: .5rem;
+    }
+
+    /* Barrierefreiheit: Fokus sichtbar lassen (Bootstrap kann das teils "weich" machen) */
+    a:focus,
+    button:focus {
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
+    }
+  </style>
 
 </head>
 
 <body>
- 
+
+  <!-- Barrierefreiheit: Skip-Link direkt nach <body> -->
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
 <!-- header -->
 <header class="fixed-top header">
- 
+
   <!-- navbar -->
   <div class="navigation w-100">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="../index.html"><img width="300px" src="../images/logo.png" alt="logo"></a>
+      <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Hauptnavigation">
+        <a class="navbar-brand" href="../index.html">
+          <img width="300px" src="../images/logo.png" alt="Ninja Adventures">
+        </a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          aria-controls="navigation" aria-expanded="false" aria-label="Navigation ein- oder ausklappen">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navigation">
           <ul class="navbar-nav ml-auto text-center">
             <li class="nav-item ">
               <a class="nav-link" href="../index.html">Home</a>
-            </li> 
+            </li>
             <li class="nav-item dropdown view active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -86,16 +116,16 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" title="Multitalente fördern im Unternehmen" rel="noopener" href="../business/">Business Ninjas</a>
-                <!-- <a class="dropdown-item" title="Unternehmen fördern Multitalente" rel="noopener" href="../business/index.html#unternehmen">-> Unternehmen fördern</a> 
-                <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="../teamworkshops.html">-> Workshopliste</a> 
+                <!-- <a class="dropdown-item" title="Unternehmen fördern Multitalente" rel="noopener" href="../business/index.html#unternehmen">-> Unternehmen fördern</a>
+                <a class="dropdown-item" title="Teamworkshops" rel="noopener" href="../teamworkshops.html">-> Workshopliste</a>
                 <a class="dropdown-item" title="Sparring Workshop aufpeppen" rel="noopener" href="../business/index.html#workshop">-> Deinen Workshop aufpeppen</a>  -->
-                <hr> 
+                <hr>
                 <a class="dropdown-item" title="Vielseitig leben mit allen Ideen" rel="noopener" href="../index.html#ideenninja">Ideen Ninjas </a>
                 <!-- <a class="dropdown-item" href="../karten/werteadventurebasis/wertereise-karten.html">-> Kurs - Finde deine Mission</a> -->
                  <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" rel="noopener" href="kurs_erwecke_den_ninja_in_dir.html">Kurs: Erwecke den Ninja in dir</a> -->
                  <!-- <a class="dropdown-item" title="Kurs Erwecke den Ninja in dir" target="_blank" rel="noopener" href="https://www.erwecke-den-ninja-in-dir.de/">Kurs: Erwecke den Ninja in dir</a> -->
                  <hr>
-               
+
                 <a class="dropdown-item" title="Multipassion in der Familie leben" rel="noopener"  href="../family/">Family Ninjas </a>
                 <!-- <a class="dropdown-item" title="Aktuelle Events Multipassion leben gemeinsam" rel="noopener" href="../family/aktuelle-events.html">-> Aktuelle Events</a> -->
                 <!-- <a class="dropdown-item" title="Mom Load Mama-ME-TIME Auszeit für Mütter" rel="noopener" href="../family/mom-load.html">-> Mom Load</a> -->
@@ -103,30 +133,30 @@
                 <a class="dropdown-item" title="Kinder stärken Eltern stärken Kurse" rel="noopener" href="../family/kurse.html">-> Kurse</a>
                 <a class="dropdown-item" title="Kindergeburtstage Mottoparty" rel="noopener" href="../family/kindergeburtstage.html">-> Kindergeburtstage</a>
                 <!-- <a class="dropdown-item" title="Digitale Schnitzeljagd" rel="noopener" href="../schnitzeljagd/">-> Digitale Schnitzeljagd</a> -->
-                
+
                 <!-- <a class="dropdown-item" title="Family" rel="noopener" href="../family/index.html#schule">-> Schulformate</a> -->
-                
-             
+
+
                 <hr>
                 <a class="dropdown-item" rel="noopener" title="Ninja Adventures Shop" target="_blank" href="https://ninjaadventures.myspreadshop.de/">Shop</a>
 
               </div>
             </li>
-            
+
             <li class="nav-item @@blog">
               <a class="nav-link" title="Blog" href="../blog/">Blog</a>
             </li>
-            
-            
-            
+
+
+
             <li class="nav-item ">
               <a class="nav-link" title="Über Ninja Adventurs" href="../about/">Über</a>
             </li>
-           
-           
+
+
             <!-- <li class="nav-item @@events">
               <a class="nav-link" href="events.html">EVENTS</a>
-            </li> 
+            </li>
             <li class="nav-item @@blog">
               <a class="nav-link" href="blog/">BLOG</a>
             </li>
@@ -158,30 +188,27 @@
 </header>
 <!-- /header -->
 
+<!-- Barrierefreiheit: Hauptinhalt in <main> -->
+<main id="main-content" tabindex="-1">
 
 <!-- page title -->
-<section class="page-title-section overlay bg-cover" data-background="../images/family/banner-familie6.webp">
+<section class="page-title-section overlay bg-cover" data-background="../images/family/banner-familie6.webp" aria-labelledby="page-title">
 <!-- <section class="page-title-section overlay" > -->
 
 <!-- </section>data-background="../images/backgrounds/ /page-title.jpg"> -->
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <h1 class="text-white font-secondary">Familien Zeit wieder zur Quality Time machen!</h1>
-        <h3 class="text-white font-secondary">Tauche ein in eine Wertschätzung der Familienzeit!</h3>
-        <p class="text-white h4">
-        </br>
-           </br>
-          Kinder lernen mehr durch Vorleben, als durch Erziehung! </br></br>
-          Fördern wir die Kinder in dem was sie ausmacht und helfen ihre Vielseitigkeit zu leben, bilden sie wie nebenbei genau die Fähigkeiten aus, die sie in Zukunft brauchen.</br>
-        </br>
-          Egal ob gemeinsame Aktionen, Ausflüge, oder einfach bunte Kostüme basteln, malen,... 
-          es muss nicht schwer sein - es darf sich leicht anfühlen Zeit mit deiner Familie zu verbringen!
-        </br></br>
-          Richten wir unsere Aufmerksamkeit auf die Wertschätzung in jedem Moment, kleine Dinge mit großer Wirkung! 
-        </br></br>
-         
-        </p>
+        <h1 id="page-title" class="text-white font-secondary">Familien Zeit wieder zur Quality Time machen!</h1>
+        <h2 class="text-white font-secondary h3">Tauche ein in eine Wertschätzung der Familienzeit!</h2>
+        <div class="text-white">
+          <br>
+          <br>
+          <p class="text-lighten ">Kinder lernen mehr durch Vorleben, als durch Erziehung!</p>
+          <p class="text-lighten ">Fördern wir die Kinder in dem was sie ausmacht und helfen ihre Vielseitigkeit zu leben, bilden sie wie nebenbei genau die Fähigkeiten aus, die sie in Zukunft brauchen.</p>
+          <p class="text-lighten ">Egal ob gemeinsame Aktionen, Ausflüge, oder einfach bunte Kostüme basteln, malen,... es muss nicht schwer sein - es darf sich leicht anfühlen Zeit mit deiner Familie zu verbringen!</p>
+          <p class="text-lighten ">Richten wir unsere Aufmerksamkeit auf die Wertschätzung in jedem Moment, kleine Dinge mit großer Wirkung!</p>
+        </div>
       </div>
     </div>
   </div>
@@ -189,25 +216,22 @@
 <!-- /page title -->
 
 <!-- courses -->
-<section class="section-sm bg-gray" id="section-course">
+<section class="section-sm bg-gray" id="section-course" aria-labelledby="einfach-loslegen">
   <div class="container">
     <div class="row">
       <div class="col-12">
-       
+
         <div class="d-flex align-items-center section-title justify-content-between">
-          <h2 class="mb-0  mr-3">Einfach loslegen: </h2> </br></br>
+          <h2 id="einfach-loslegen" class="mb-0  mr-3">Einfach loslegen:</h2>
           <!-- <div class="border-top w-100 border-primary d-none d-sm-block"></div> -->
-        </div> 
-         
-        <p>
-      </p>
+        </div>
+
+        <p></p>
       </div>
     </div>
     <!-- course list -->
 <div class="row justify-content-center">
 
-
-  
    <!-- course item -->
    <!-- <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
@@ -215,16 +239,16 @@
       <div class="card-body">
         <i>Spielerisch digital erleben       </i></br></br>
         <h3 class="mb-0  mr-3">Digitale Schnitzeljagd</h3>
-        
+
       </br></br>
       Eine spielerische Verknüpfung von digital und analog. </br></br>
       Eine interaktive Schnitzeljagd.</br></br>
       Fertig oder individuell angefertigt.</br></br>
 
-       
+
       </br>  </br>
       <i>
-       
+
       Lernen. Spaß. Digital.
         </i>
       </br></br></br>
@@ -235,59 +259,51 @@
   </div>  -->
 
 
- 
 
    <!-- course item -->
    <div class="col-lg-4 col-sm-6 mb-5">
-    <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" title="Was uns keiner beibringt" src="../images/family/kurse_q.jpg" alt="Eltern Kurse für Themen, die einem keiner beibringt">
+    <article class="card p-0 border-primary rounded-0 hover-shadow">
+      <img class="card-img-top rounded-0" title="Was uns keiner beibringt" src="../images/family/kurse_q.jpg" alt="Kurse für Eltern und Kinder: Themen, die einem keiner beibringt">
       <div class="card-body">
-        <i>Kind - Das erklärt dir niemand       </i></br></br>
+        <p><i>Kind - Das erklärt dir niemand</i></p>
         <!-- <h3 class="mb-0  mr-3 text-primary">Karneval-Angebot!  </h3></br></br> -->
         <h3 class="mb-0  mr-3">Besondere Kurse</h3>
-        
-      </br></br>
-      Es gibt Themen, die uns niemand beibringt. </br></br>
-      Dabei sind sie für unser Leben essentiell. </br></br>
-      Wollen wir das ändern, dürfen wir uns selber mit den Kindern an den Tisch setzen und lernen.
 
-       
-      </br>  </br>
-      <i>
-        <!-- Einfach reden und gesehen werden!
-      </br></br>
-          -->
-      Lernen. Gemeinsam. Zukunft.
-        </i>
-      </br></br></br>
-        <strong>Hand geprüft für gut befunden!</strong> </br></br>
-        <a href="../family/kurse.html" title="Eltern Kurse, zu Themen, die einem keiner beibringt" class="btn btn-primary btn-sm">Zu den  Projekten</a>
+      <br><br>
+      <p>Es gibt Themen, die uns niemand beibringt.</p>
+      <p>Dabei sind sie für unser Leben essentiell.</p>
+      <p>Wollen wir das ändern, dürfen wir uns selber mit den Kindern an den Tisch setzen und lernen.</p>
+
+      <br><br>
+      <p><i>Lernen. Gemeinsam. Zukunft.</i></p>
+      <br><br>
+        <p><strong>Hand geprüft für gut befunden!</strong></p>
+        <a href="../family/kurse.html" title="Eltern Kurse, zu Themen, die einem keiner beibringt" class="btn btn-primary btn-sm">Zu den Kursen</a>
       </div>
-    </div>
-  </div> 
+    </article>
+  </div>
 
      <!-- course item -->
 <div class="col-lg-4 col-sm-6 mb-5">
-  <div class="card p-0 border-primary rounded-0 hover-shadow">
-    <img class="card-img-top rounded-0" title="starke Kinder" src="../images/family/starke-kinder-qd.webp" alt="Kinder stärken">
+  <article class="card p-0 border-primary rounded-0 hover-shadow">
+    <img class="card-img-top rounded-0" title="starke Kinder" src="../images/family/starke-kinder-qd.webp" alt="Empfehlungen: Kinder stärken und Eltern stärken">
     <div class="card-body">
-      <i>Kinder & Eltern stärken      </i></br></br>
+      <p><i>Kinder & Eltern stärken</i></p>
       <h3 class="mb-0  mr-3">Geschenke</h3>
-      
-    </br></br>
-    Du willst deine Kinder stärken? Dann wähle wertvolle Geschenke aus. Jedes mal, wenn du etwas an deine Kinder weitergibst lernen sie etwas daraus - was dir wichtig ist!
-     
-    
-    </br></br>
-       
-    <i>Nutz die Gelegenheit und schenke nicht einfach irgendetwas.</i>
-  </br></br></br></br>
-  <strong>Geben ist sooo viel mehr als Geschenke bezahlen! </strong> </br></br>
-</br>
+
+    <br><br>
+    <p>Du willst deine Kinder stärken? Dann wähle wertvolle Geschenke aus. Jedes mal, wenn du etwas an deine Kinder weitergibst lernen sie etwas daraus - was dir wichtig ist!</p>
+
+    <br><br>
+
+    <p><i>Nutz die Gelegenheit und schenke nicht einfach irgendetwas.</i></p>
+  <br><br><br>
+  <p><strong>Geben ist sooo viel mehr als Geschenke bezahlen!</strong></p>
+  <br>
       <a href="../family/empfehlungen-kinder-staerken.html" title="starke Kinder Geschenke Empfehlungen" class="btn btn-primary btn-sm">Empfehlungen</a>
     </div>
-  </div>
-</div> 
+  </article>
+</div>
 
    <!-- course item -->
    <!-- <div class="col-lg-4 col-sm-6 mb-5">
@@ -295,17 +311,17 @@
       <img class="card-img-top rounded-0" title="Mutter Coaching" src="../images/family/mutter_metime_zuhoeren.webp" alt="Mama Coaching Stress Metime">
       <div class="card-body">
         <i>ME-TIME Mütter       </i></br></br>
-       
+
         <h3 class="mb-0  mr-3">Ohne Mama ist alles doof!</h3>
-        
+
       </br></br>
-      Kann die Mama nicht ihre eigenen Energie aufladen, hat sie auch keine um abzuzapfen. Tun die lieben Kleinen aber trotzdem, 
+      Kann die Mama nicht ihre eigenen Energie aufladen, hat sie auch keine um abzuzapfen. Tun die lieben Kleinen aber trotzdem,
       denn ihr Kabel ist feste verdrahtet. Es wird Zeit den Mama Stecker anzudocken und zwar an eine riesige Energiequelle.
-       
+
       </br>  </br>
       <i>
-    
-      JETZT. Gesehen werden. Me-Time! 
+
+      JETZT. Gesehen werden. Me-Time!
         </i>
       </br></br></br>
         <strong>Einmal Batterie aufladen bitte!</strong> </br></br>
@@ -322,14 +338,14 @@
       <div class="card-body">
         <i>Vielseitige Kinder       </i></br></br>
         <h3 class="mb-0  mr-3">Vielseitigkeit bei Kindern fördern </h3>
-        
+
       </br></br>
       Du willst die Vielseitigkeit bei deinen Kindern fördern? Damit sie vorbereitet sind auf eine komplexe Welt voller Abenteuer?
-       
+
       </br>  </br>
       <i>Lass uns persönlich sprechen!
       </br></br>
-         
+
       Individuell. Vielseitig. Wertschätzen.
         </i>
       </br></br></br>
@@ -342,28 +358,25 @@
 
    <!-- course item -->
 <div class="col-lg-4 col-sm-6 mb-5">
-  <div class="card p-0 border-primary rounded-0 hover-shadow">
-    <img class="card-img-top rounded-0" title="kindergeburtstag mottoparty" src="../images/family/kinder_geburtstag_mottoparty.webp" alt="Kindergeburtstag Superhelden Schwein">
+  <article class="card p-0 border-primary rounded-0 hover-shadow">
+    <img class="card-img-top rounded-0" title="kindergeburtstag mottoparty" src="../images/family/kinder_geburtstag_mottoparty.webp" alt="Kindergeburtstag: Mottoparty (Superhelden oder Schweine)">
     <div class="card-body">
-      <i>Kindergeburtstage       </i></br></br>
-      <h3 class="mb-0  mr-3">Mottoparty statt Indoorspielplatz? </h3>
-      
-    </br></br>
-    Indoorspielplätze sind toll! Du magst es individueller und weniger anstrengend für die kleinen Kinderohren und hast keine Zeit für all die Vorbereitung?
-     
-    </br>  </br>
-    <i>Egal ob Superhelden oder Schweine...
-    Auf geht's zur Mottoparty!
-    </br></br>
-       
-    EINFACH. Rätsel. Spaß. Kein0815. 
-      </i>
-    </br></br></br>
-      <strong>Erschafft euch eine eigene Welt!</strong> </br></br>
+      <p><i>Kindergeburtstage</i></p>
+      <h3 class="mb-0  mr-3">Mottoparty statt Indoorspielplatz?</h3>
+
+    <br><br>
+    <p>Indoorspielplätze sind toll! Du magst es individueller und weniger anstrengend für die kleinen Kinderohren und hast keine Zeit für all die Vorbereitung?</p>
+
+    <br><br>
+    <p><i>Egal ob Superhelden oder Schweine... Auf geht's zur Mottoparty!</i></p>
+    <p><i>EINFACH. Rätsel. Spaß. Kein0815.</i></p>
+
+    <br><br>
+      <p><strong>Erschafft euch eine eigene Welt!</strong></p>
       <a href="../family/kindergeburtstage.html" title="Mottopartys für Kinder Ausflüge Geburtstag" class="btn btn-primary btn-sm">Zu den Paketen</a>
     </div>
-  </div>
-</div> 
+  </article>
+</div>
 
     <!-- course item -->
     <!-- <div class="col-lg-4 col-sm-6 mb-5">
@@ -372,12 +385,12 @@
         <div class="card-body">
           <i>Malen und Basteln     </i></br></br>
           <h3 class="mb-0  mr-3"> Malen im Doppelpack </h3>
-          
+
         </br></br>
-        Du willst deine Kinder zum Malen/Basteln/Schreiben/Lesen motivieren oder ihre Passion hier einfach unterstützen? 
-        <i>  
+        Du willst deine Kinder zum Malen/Basteln/Schreiben/Lesen motivieren oder ihre Passion hier einfach unterstützen?
+        <i>
       </br></br>Dann kommt im Doppelpack!   </br>
-            
+
         Kreativ. Gemeinsam. Spaß. MACHEN.
       </i>
         </br></br></br>
@@ -386,7 +399,7 @@
         </div>
       </div>
     </div> -->
- 
+
       <!-- course item -->
 <!-- <div class="col-lg-4 col-sm-6 mb-5" id="schule">
   <div class="card p-0 border-primary rounded-0 hover-shadow">
@@ -394,7 +407,7 @@
     <div class="card-body">
       <i>Selbstverantwortung und Engagement      </i></br></br>
       <h3 class="mb-0  mr-3">New Work macht Schule?</h3>
-      
+
     </br></br>
     Unsere Kinder sollen Selbstverantwortung und Engagement lernen? </br>
       Im Büro geht die Reise zu "SeriousPlay" und spielerischen Formaten, um diesen Zweck zu erfüllen.</br></br>
@@ -413,10 +426,7 @@
 </div>
 </section>
 
-
-
-
-
+</main>
 
 <!-- <section class="bg-white ">
   <div class="container-fluid ">
@@ -457,7 +467,7 @@
           <h5 class="text-white">JAHRE agiles Coaching und Beratung</h5>
         </div>
       </div> -->
-      
+
       <!-- funfacts item -->
        <!-- <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="text-center">
@@ -467,8 +477,8 @@
           </div>
           <h5 class="text-white">Spiele im Schrank</h5>
         </div>
-      </div> 
-      
+      </div>
+
       
     </div>
   </div>
@@ -486,31 +496,31 @@
         <h3>Deine Veranstalterin: Adriane Niepel</h3></br></br>
         <p>
           <strong>Mutter, Multipassioniert, Coach, Informatik  </strong></br></br>
-            
+
           Als Mutter von 2 Kindern (5,7) kenne ich die Herausforderungen nur zu gut.</br>
           Die Erwartungen von außen und die eigenen. </br>
           Alles unter einen Hut bekommen und dabei nicht selber verschwinden.</br>
           Weil so wenig Zeit für sich selber bleibt, wird die gemeinsame Zeit mit der Familie
-          zunehmend stressig, denn in Gedanken woanders was man jetzt auch mal tun wollte, 
+          zunehmend stressig, denn in Gedanken woanders was man jetzt auch mal tun wollte,
           oder einfach nur müde den Tag durchstehen. </br>
           Müde auch der Tätigkeiten, der nicht vorhandenen Erwachsenen Gespräche.
-          Und wenn es denn welche gibt, wäre es schön, wenn sie auch mal nicht über 
+          Und wenn es denn welche gibt, wäre es schön, wenn sie auch mal nicht über
           Kinder gehen.</br>
           Keiner hört mehr so richtig zu, jeder steckt in seinem Problem, in seinem Kopf.</br></br>
           Eigentlich gibt es auch nicht viel zu erzählen, wenn da nicht dieser Wunsch wäre:</br>
           Das muss doch auch besser funktionieren.
           Wertschätzender miteinander, aber auch selber SEIN dürfen. Wer bin ich überhaupt und mit wem kann ich genau darüber mal sprechen?</br></br>
-          
+
           Ninja Adventures Family möchte sich genau darum kümmern:</br>
           Wertschätzung in der Familie durch Vorleben.</br>
-          Das bedeutet Quality Time mit den Kindern, egal wie viele Stunden 
+          Das bedeutet Quality Time mit den Kindern, egal wie viele Stunden
           es sind, diese wertvoll gestalten. </br></br>
-          Nicht den vermeintlich einfachen Weg wählen müssen (Geburtstag im Indoorspielplatz, zu viel fernsehen,...), auch wenn man weiß für das eigene Kind ist das zu 
+          Nicht den vermeintlich einfachen Weg wählen müssen (Geburtstag im Indoorspielplatz, zu viel fernsehen,...), auch wenn man weiß für das eigene Kind ist das zu
           anstrengend und trotzdem eine wenig-zeitaufwendige Lösung parat haben (z.B.: fertige Geburtstagsfeierkonzepte).</br></br>
           Und einfach mal jemanden zum Zuhören haben in einer Mama-ME-TIME.</br>
           Jemand der nicht wie Freunde in ein allgemeines Jammern verfällt, oder dir Weisheiten predigt, wieso du selber schuld bist
           an deiner Situation, sondern für dich da ist und es nur um DICH geht.</br></br>
-          
+
           Angeblich will die aktuelle Generation junger Menschen keine Verantwortung mehr übernehmen
           und ist nicht engagiert. Statt zu jammern sollten wir ihnen helfen und der nächsten Generation
           auch...und der nächste und... sie uns!</br>
@@ -524,12 +534,12 @@
           Systemischer und agiler Coach mit nach Hause genommen. </br></br>
 
           <h3 class="section-title">Und so mache ich mich auf mit euch mehr Quality Time in der Familie zu generieren und mehr Wertschätzung in die Welt zu tragen - lebenslang lernend!</h3>
-          
+
         </br></br>
         </p> -->
 
 
-<!-- 
+<!--
     <h4>Ehrenamtliche Unterstützung für:</h2></br>
     <div class="row">
        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
@@ -547,8 +557,8 @@
         </div>
       </div>
 
-      
-      
+
+
     </div>
   </div>
 </section> -->
@@ -562,13 +572,13 @@
   <div class="newsletter">
 
     <div class="container">
-    
+
       <div class="row">
         <div class="col-md-10 ml-auto bg-primary py-5 newsletter-block">
           <h3 class="text-white"> Du hast einen Kurs oder etwas, was unbedingt geteilt werden muss und hierher gehört?</h3>
-            <h3 class="text-white"> 
-              </h3> </br>
-              <h3 class="text-white"> 
+            <h3 class="text-white">
+              </h3> <br>
+              <h3 class="text-white">
                 Schreib mir unbedingt eine E-Mail!</h3>
           <!-- <div class="col-12 text-center"> -->
             <a href="mailto:adriane@ninjaAdventures.de?subject=Kontakt%20Homepage" class="btn btn-secondary">E-Mail an adriane@ninjaAdventures.de</a>
@@ -581,14 +591,14 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
   <!-- footer content -->
   <div class="footer bg-footer section border-bottom">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="logo"></a>
+          <a class="logo-footer" href="../index.html"><img class="img-fluid mb-4" src="../images/logo.png" alt="Ninja Adventures"></a>
           <!-- <ul class="list-unstyled">
             <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
             <li class="mb-2">+1 (2) 345 6789</li>
@@ -640,23 +650,23 @@
           </ul> -->
         <!-- </div>  -->
         <!-- support -->
-         <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
+         <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
         <!--   <h4 class="text-white mb-5">RECOMMEND</h4>
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="#">WordPress</a></li>
             <li class="mb-3"><a class="text-color" href="#">LearnPress</a></li>
             <li class="mb-3"><a class="text-color" href="#">WooCommerce</a></li>
             <li class="mb-3"><a class="text-color" href="#">bbPress</a></li>
-          </ul> --> 
+          </ul> -->
           <!-- <h4 class="text-white mb-5"> Projekte</h4> -->
           <ul class="list-unstyled">
             <!-- <li class="mb-3"><a class="text-color" href="aktuelle-events.html" target="about_blank">Aktuelle Events</a></li> -->
             <li class="mb-3"><a class="text-color" href="kindergeburtstage.html" target="about_blank">Mottoparty </a></li>
-            <li class="mb-3"><a class="text-color" href="empfehlungen-kinder-staerken.html" target="about_blank">Starke Kinder Empfehlungen</a></li> 
-            <li class="mb-3"><a class="text-color" href="kurse.html" target="about_blank">Besondere Kurse</a></li> 
+            <li class="mb-3"><a class="text-color" href="empfehlungen-kinder-staerken.html" target="about_blank">Starke Kinder Empfehlungen</a></li>
+            <li class="mb-3"><a class="text-color" href="kurse.html" target="about_blank">Besondere Kurse</a></li>
           </ul>
          </div>
-          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0"> 
+          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
           <ul class="list-unstyled">
             <li class="mb-3"><a class="text-color" href="https://ninjaadventures.myspreadshop.de/collections" target="about_blank">Shop</a></li>
             <li class="mb-3"><a class="text-color" href="../index.html#ideenninja" target="about_blank">Vielseitige Projekte umsetzen</a></li>
@@ -667,7 +677,7 @@
             <li class="mb-3"><a class="text-color" href="https://www.leadventure.de/" target="about_blank">Agile: https://www.leadventure.de/</a></li>
             <li class="mb-3"><a class="text-color" href="https://visuellklar.ch" target="about_blank">Coaching:  https://visuellklar.ch/</a></li>
             <li class="mb-3"><a class="text-color" href="https://romanrackwitz.de" target="about_blank">Gamification: https://romanrackwitz.de/ </a></li>
-            <li class="mb-3"><a class="text-color" href="https://valuty.de" target="about_blank">Werte: https://valuty.de/ </a></li> 
+            <li class="mb-3"><a class="text-color" href="https://valuty.de" target="about_blank">Werte: https://valuty.de/ </a></li>
           </ul>-->
         <!-- </div> -->
       </div>
@@ -682,7 +692,7 @@
             <script>
               var CurrentYear = new Date().getFullYear()
               document.write(CurrentYear)
-            </script> 
+            </script>
             © Adriane Niepel, also thanks to themefisher</p>
         </div>
         <div class="col-sm-5 text-sm-right text-center">
