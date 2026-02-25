@@ -27,6 +27,60 @@
 
   <!-- Main Stylesheet -->
   <link href="../css/style.css" rel="stylesheet">
+  <style>
+    /* Skip-Link sichtbar, wenn fokussiert */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      z-index: 9999;
+      padding: .75rem 1rem;
+      background: #fff;
+      color: #000;
+      border: 2px solid currentColor;
+    }
+    .skip-link:focus {
+      left: .75rem;
+      top: .75rem;
+    }
+
+    /* Fokus sichtbar lassen (falls Theme ihn entfernt) */
+    :focus {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+    :focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 3px;
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Screenreader-only helper */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+  </style>
 
   <!--Favicon-->
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
@@ -59,6 +113,7 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
   <!-- preloader start -->
   <!-- <div class="preloader">
     <img src="images/preloader.gif" alt="preloader">
@@ -158,6 +213,7 @@
     </div>
   </div>
 </header>
+<main id="main-content">
 <!-- /header -->
 
 
@@ -170,17 +226,11 @@
     <div class="row">
       <div class="col-md-8">
         <h1 class="text-white font-secondary">Werde Ideen Ninja!</h1>
-        <h3 class="text-white font-secondary"></h3>
-        <p class="text-white h4">
-        </br>
-      
-          Menschen mit vielen Passionen denken und arbeiten anders.</br>
-          
-        </br>
-          Aus dem Grund brauchen wir auch andere Tools und Ansätze für ganz "alltägliche" Herausforderungen!
-        Hier findest du ein paar Möglichkeiten, die dich in deiner Vielseitigkeit unterstützen!      </br></br>
-          <!-- Mehr Informationen rund um das "Erwecke den Ninja in dir Programm bald hier!" -->
-        </p>
+        
+        <div >
+          <p class="text-white ">Menschen mit vielen Passionen denken und arbeiten anders.</p>
+          <p class="text-white ">Aus dem Grund brauchen wir auch andere Tools und Ansätze für ganz "alltägliche" Herausforderungen! Hier findest du ein paar Möglichkeiten, die dich in deiner Vielseitigkeit unterstützen!</p>
+        </div>
       </div>
     </div>
   </div>
@@ -404,66 +454,26 @@ Der Projektgarten ist kein Tool, das dich auf eine Sache reduziert, sondern ein 
 
       </div>
       <div class="col-md-9 order-2 order-md-2 ">
-       <p>
-        <h3>Nimm an der Studie teil und bring eine vielfältige Arbeitskultur voran!</h3><br>
-         <h4>Multipassion Studie – was ist das?</h4><br>
-         Die Multipassion-Studie 2025 untersucht, wie Menschen im Arbeitsalltag lernen, Probleme lösen und ihr Potenzial einbringen – und wie gut Unternehmen dieses Potenzial tatsächlich nutzen.<br><br>
-Im Fokus stehen Future Skills, Transferkompetenzen, Teamkultur, Karrierewege und die Frage, wo Fähigkeiten ungenutzt bleiben.<br><br>
-
-Die Studie macht sichtbar, wie vielfältig heutige Arbeits- und Entwicklungsprofile wirklich sind – jenseits von klassischen Rollenbildern oder linearen Karrierewegen.<br><br>
-Ziel ist es, eine fundierte Grundlage für Arbeitsumfelder zu schaffen, in denen Menschen wirksam arbeiten können und Unternehmen zukunftsfähig bleiben.<br><br>
-
-Die Teilnahme ist anonym und dauert ca. 5–7 Minuten.</br></br>
-        <a href="https://forms.office.com/e/LSJ6KZauRk" title="Multipassion Studie 2025/26" class="btn btn-sm-xs btn-dark ">An Studie teilnehmen</a>
-          </br></br>
-        <h4>Das Besondere für Multipassionierte:</h4> <br>
-        Multipassionierte Menschen – also Menschen mit vielen Interessen, hoher Lernfähigkeit und vernetztem Denken – tauchen in klassischen Studien oft nur am Rand auf oder gelten als „nicht eindeutig“.</br>
-Diese Studie nimmt genau diese Vielseitigkeit ernst, ohne sie zu bewerten oder zu pathologisieren.</br></br>
-
-Sie zeigt:</br></br>
-
-wo multipassionierte Stärken echten Mehrwert schaffen,</br>
-
-wo sie im Arbeitskontext ausgebremst werden,</br>
-
-und welche Rahmenbedingungen es braucht, damit Vielfalt nicht zur Überforderung, sondern zur Ressource wird.</br></br>
-
-Wichtig: Du musst dich nicht selbst als multipassioniert sehen, um teilzunehmen. Die Vergleichbarkeit unterschiedlicher Profile ist ausdrücklich Teil des Konzepts.</br></br>
-
-<h4>Wer sollte mitmachen?</h4>
-
-Die Studie richtet sich an alle Angestellten – unabhängig davon,</br>
-
-ob du dich als vielseitig oder spezialisiert empfindest,</br>
-
-ob du Führungskraft bist oder nicht,</br>
-
-oder in welcher Branche du arbeitest.</br></br>
-
-Mitmachen sollten alle, die daran interessiert sind,
-
-dass Talente besser erkannt werden,
-
-dass Arbeit weniger einengt und mehr ermöglicht,
-
-und dass Unternehmen lernen, Vielfalt auch innerhalb einer Person produktiv zu nutzen und nicht nur als Spezialisten innerhalb von Teams.</br></br>
-
-Je breiter die Perspektiven, desto aussagekräftiger die Ergebnisse.
-        <!-- Vielseitigkeit ist ein Zukunftsskill und wenn du weißt, wie du ihn nutzen kannst, hat das für dich viele Vorteile in Zukunft.
-        Sowohl auf dem Arbeitsmarkt, als auch in deiner persönlichen Zufriedenheit!
-            </br></br>
-          <a href="https://kurse.ninjaadventures.de/ng/SUcufcdoCIDBKGOLQK6W7D" target="_blank" title="Vielseitige Menschen " class="btn btn-sm-xs btn-dark ">kostenlos einsteigen</a>
-          </br></br>
-          Der Kurs ist Teil des "Fitnessstudios für Multipassionierte"! </br>
-          Du kannst kostenlos teilnehmen und stöbern!</br></br>
-          Hier findest du demnächst mehr Kurse, Austausch und mehr rund um Selbstwert, Klarheit über deine Talente, Umsetzen und dran bleiben! Alles ganz speziell für Multipassionierte!</br> -->
-</br></br>
-         <!-- <h4>Du willst nicht in den Kurs, sondern durch die Vordertür ins Fitnessstudio eintreten?</h4></br>
-         Kein Problem, dann hier entlang. Einfach registrieren und loslegen! </br></br>
-         Offizielle Eröffnung ist Anfang August und dann wachsen wir gemeinsam, du kannst aber jetzt schon eintreten!  </br></br>
-       <a href="https://kurse.ninjaadventures.de/" target="_blank" title="Multipassionierte Menschen " class="btn btn-sm-xs btn-dark ">Fitnessstudio für Multipassionierte</a> -->
-        </p>
-      </div>
+        <h3>Nimm an der Studie teil und bring eine vielfältige Arbeitskultur voran!</h3>
+        <h4>Multipassion Studie – was ist das?</h4>
+        <p>Die Multipassion-Studie 2025 untersucht, wie Menschen im Arbeitsalltag lernen, Probleme lösen und ihr Potenzial einbringen – und wie gut Unternehmen dieses Potenzial tatsächlich nutzen.</p>
+        <p>Im Fokus stehen Future Skills, Transferkompetenzen, Teamkultur, Karrierewege und die Frage, wo Fähigkeiten ungenutzt bleiben.</p>
+        <p>Die Studie macht sichtbar, wie vielfältig heutige Arbeits- und Entwicklungsprofile wirklich sind – jenseits von klassischen Rollenbildern oder linearen Karrierewegen.</p>
+        <p>Ziel ist es, eine fundierte Grundlage für Arbeitsumfelder zu schaffen, in denen Menschen wirksam arbeiten können und Unternehmen zukunftsfähig bleiben.</p>
+        <p>Die Teilnahme ist anonym und dauert ca. 5–7 Minuten.</p>
+        <a href="https://forms.office.com/e/LSJ6KZauRk" title="Multipassion Studie 2025/26" class="btn btn-sm-xs btn-dark ">An Studie teilnehmen</a></br></br></br>
+        <h4>Das Besondere für Multipassionierte:</h4>
+        <p>Multipassionierte Menschen – also Menschen mit vielen Interessen, hoher Lernfähigkeit und vernetztem Denken – tauchen in klassischen Studien oft nur am Rand auf oder gelten als „nicht eindeutig“. Diese Studie nimmt genau diese Vielseitigkeit ernst, ohne sie zu bewerten oder zu pathologisieren.</p>
+        <p>Sie zeigt:</p>
+        <ul>
+          <li>wo multipassionierte Stärken echten Mehrwert schaffen,</li>
+          <li>wo sie im Arbeitskontext ausgebremst werden,</li>
+          <li>und welche Rahmenbedingungen es braucht, damit Vielfalt nicht zur Überforderung, sondern zur Ressource wird.</li>
+        </ul></br>
+        <p>Wichtig: Du musst dich nicht selbst als multipassioniert sehen, um teilzunehmen. The Vergleichbarkeit unterschiedlicher Profile ist ausdrücklich Teil des Konzepts.</p></br>
+        <h4>Wann solltest du mitmachen?</h4>
+        <p>Die Studie richtet sich an alle Angestellten – unabhängig davon, ob du dich als vielseitig oder spezialisiert empfindest, ob du Führungskraft bist oder nicht, oder in welcher Branche du arbeitest.</p>
+        <p>Mitmachen sollten alle, die daran interessiert sind, dass Talente besser erkannt werden, dass Arbeit weniger einengt und mehr ermöglicht, und dass Unternehmen lernen, Vielfalt auch innerhalb einer Person produktiv zu nutzen und nicht nur als Spezialisten innerhalb von Teams. Je breiter die Perspektiven, desto aussagekräftiger die Ergebnisse.</p>
       
     </div>
   </div>
@@ -592,6 +602,7 @@ Je breiter die Perspektiven, desto aussagekräftiger die Ergebnisse.
 
 
 <!-- footer -->
+</main>
 <footer>
   <!-- newsletter -->
   <div class="newsletter">
