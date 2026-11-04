@@ -5,11 +5,6 @@
       "route": "/wohnzimmerunikate",
       "redirect": "https://adrianeniepel.lovable.app/wohnzimmerunikate",
       "statusCode": 301
-    },
-    {
-      "route": "/wohnzimmerunikate/",
-      "redirect": "https://adrianeniepel.lovable.app/wohnzimmerunikate",
-      "statusCode": 301
     }
   ],
   "mimeTypes": {
