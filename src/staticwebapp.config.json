@@ -3,7 +3,12 @@
   "routes": [
     {
       "route": "/wohnzimmerunikate",
-      "redirect": "https://adrianeniepel.lovable.app/wohnzimmerunikate",
+      "redirect": "https://adrianeniepel.de/wohnzimmerunikate",
+      "statusCode": 301
+    },
+    {
+      "route": "/hausliebe",
+      "redirect": "https://adrianeniepel.de/hausliebe",
       "statusCode": 301
     }
   ],
